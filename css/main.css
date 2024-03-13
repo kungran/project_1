@@ -35,7 +35,11 @@ body {
   margin: 0 auto;
   /* background-color: bisque; */
 }
-/* 모달 */
+
+/* min */
+/* ran */
+/* hun */
+/* 모달창 */
 .modal-wrap {
   position: fixed;
   left: 0;
@@ -115,16 +119,16 @@ body {
 .modal-close li:nth-child(2){
   border-left: 1px solid #d9d9d9;
 }
-/* min */
-/* ran */
-/* hun */
+/* footer */
 footer {
   width: 100%;
   min-width: 320px;
   height: auto;
   background-color: #666666;
+  position: fixed;
 }
 .ft_inner {
+  width: 100%;
   max-width: 1200px;
   height: 300px;
   margin: 0 auto;
@@ -177,15 +181,21 @@ footer {
 }
 .ft_info_430{
   display: none;
+  width: 100%;
+  position: absolute;
+  top: 200px;
+  text-align: center;
+  margin: 0 auto;
 }
 .ft_info_430 h2 {
-  font-size: 16px;
+  font-size: 4vw;
+  line-height: 5vw;
   font-weight: 500;
   color: #bababa;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .ft_info_430 p {
-  font-size: 16px;
+  font-size: 3.5vw;
   font-weight: 500;
   color: #bababa;
 }
