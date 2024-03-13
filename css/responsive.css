@@ -62,22 +62,14 @@
         font-size: 16px;
     }
     /* footer */
+    footer{
+      width: 100%;
+    }
     .ft_info{
         display: none;
     }
     .ft_info_430 {
     display: block;
-    width: 100%;
-    position: absolute;
-    top: 200px;
-    text-align: center;
-    margin: 0 auto;
   }
-    .ft_info_430 h2 {
-        font-size: 4vw;
-      }
-      .ft_info_430 p {
-        font-size: 3.5vw;
-      }
 }
 
