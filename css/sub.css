@@ -39,40 +39,158 @@ body {
 /* ran */
 /* hun */
 
-/* 관련 제품 */
-.related-pt{
+/* 제품 상세 정보 */
+.detaild-info {
   width: 100%;
-  /* min-width: 320px; */
+  min-width: 320px;
+  height: auto;
+  background-color: #ecf4be;
+  padding: 60px;
+}
+.info-p {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #333;
+}
+.info-p img{
+  margin-bottom: 5px;
+}
+.detaild-info h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+.detaild-info h2 {
+  font-size: 1.7rem;
+  color: #858585;
+  line-height: 20px;
+  /* margin-top: 20px;
+   margin-bottom: 20px; */
+}
+.h2-left,
+.h2-right {
+  font-size: 1.5rem;
+  color: #858585;
+  line-height: 20px;
+}
+.info-wrap {
+  width: 90vw;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  background-color: #fff;
+  /* padding: 100px; */
+}
+.info-info {
+  max-width: 600px;
+  min-width: 230px;
+  background-color: #f3f2f2;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.info-inner {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 60px;
+}
+.info-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+  gap: 20px;
+}
+.info-icon {
+  width: 120px;
+  min-width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.info-li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ababab;
+  padding: 20px;
+}
+.info-li:last-child {
+  border-bottom: none;
+}
+.info-right {
+  width: 600px;
+  /* background-color: aqua; */
+}
+.info-bottom {
+  width: 100%;
+  height: 160px;
+  background-color: #a3c100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.info-bottom h3 {
+  color: #fff;
+  font-weight: 500;
+}
+.info-bottom button {
+  width: 220px;
+  height: 50px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.info-bottom button a {
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+.info-bottom button img {
+  width: 20px;
+  height: 18px;
+  margin-bottom: 5px;
+}
+/* 관련 제품 */
+.related-pt {
+  width: 100%;
+  min-width: 320px;
   height: 500px;
   background-color: #bababa;
 }
-.re-inner{
+.re-inner {
   width: 100%;
   height: 100%;
   margin: 0 auto;
   padding-top: 30px;
   text-align: center;
 }
-.re-h1{
+.re-h1 {
   font-size: 36px;
   font-weight: 600;
   color: #fff;
 }
-.img-btgel{
-  background: url("../images/bentraxgel.png")no-repeat center;
+.img-btgel {
+  background: url("../images/bentraxgel.png") no-repeat center;
   background-size: cover;
   width: 230px;
   height: 230px;
   background-color: #fff;
   border-radius: 50%;
-margin: 40px auto;
+  margin: 40px auto;
+  cursor: pointer;
 }
-.re-h2{
+.re-h2 {
   font-size: 28px;
   font-weight: 600;
   color: #fff;
 }
-.re-p{
+.re-p {
   font-size: 20px;
   margin-top: 20px;
 }

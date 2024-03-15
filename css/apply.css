@@ -38,3 +38,123 @@ body {
 /* min */
 /* ran */
 /* hun */
+html, body {
+  height: 100%;
+  overflow: hidden; 
+}
+.wrap{
+  width: 100%;
+  height: 100%;
+  background-color: #ECF4BE;
+}
+.app-inner{
+  position: relative;
+  width: 58vw;
+  max-width: 1200px;
+  height: 100%;
+  /* background-color: aqua; */
+  margin: 0 auto;
+}
+.app-box{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 520px;
+  height: 900px;
+  background-color: #fff;
+  border-radius: 7px;
+  padding-top: 25px;
+}
+.app-info{
+  width: 440px;
+  height: 194px;
+  border: 1px solid #e8e8e8;
+  border-radius: 7px;
+  margin: 20px auto;
+}
+.app-info p{
+  text-align: center;
+  margin: 15px;
+  font-weight: 600;
+  color: #333;
+}
+.app-info li{
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 15px;
+  margin-left: 15px;
+  color: #333;
+}
+h1{
+  font-size: 27px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+.app-address{
+width: 450px;
+height: 282px;
+/* background-color: aquamarine; */
+margin: 20px auto;
+}
+.date{
+  width: 450px;
+  height: 42px;
+  margin-top: 40px;
+  border-radius: 7px;
+  border: 1px solid #d9d9d9;
+  padding: 20px;
+  color: #333;
+}
+.app-address ul{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.stap{
+  width: 64px;
+  height: 23px;
+  background-color: #e5effd;
+  font-size: 11px;
+  border-radius: 50px;
+  color: #286cc3;
+  text-align: center;
+  line-height: 22px;
+  margin: 20px auto;
+}
+select{
+ width: 220px;
+ height: 45px;
+ border-radius: 7px;
+ border: 1px solid #d9d9d9;
+ padding: 5px;
+ color: #333;
+}
+.address-bt{
+  width: 450px;
+  height: 56px;
+  border: 0;
+  background-color: #a3c100;
+  border-radius: 7px;
+  color: #fff;
+  font-weight: 600;
+}
+.app-tell{
+  width: 450px;
+  height: 282px;
+  background-color: aquamarine;
+  margin: 20px auto;
+  margin-top: 30px;
+  }
+  .tell-bt{
+    width: 450px;
+    height: 56px;
+    border: 0;
+    background-color: #778b06;
+    border-radius: 7px;
+    color: #fff;
+    font-weight: 600;
+  }
