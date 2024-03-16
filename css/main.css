@@ -42,23 +42,32 @@ body {
   position: fixed;
   width: 100%;
   height: auto;
-  margin-top: 10px;
+  margin-top: 8px;
   z-index: 99;
 }
 .header .inner {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 28%;
-  max-width: 1560px;
+  gap: 32%;
+  max-width: 1630px;
 }
 .logo {
   width: 15%;
   height: 60px;
+  margin-left: 15px;
   background-color: #fff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
   border-radius: 35px;
   text-align: center;
   line-height: 60px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s;
+}
+.logo.logoh {
+  opacity: 0;
+  visibility: hidden;
 }
 .menu-right {
   display: flex;
@@ -80,6 +89,7 @@ body {
   background-color: #fff;
   border-radius: 35px;
   z-index: 3;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
 }
 .top-menu > li {
   position: relative;
@@ -99,13 +109,14 @@ body {
   transform: translate(-50%, -50%);
   left: 50%;
   width: 100%;
-  height: 55px;
+  height: 48px;
   background-color: #333;
   border-radius: 55px;
   padding: 0 35px;
   z-index: -1;
   opacity: 0;
   visibility: hidden;
+  transition: all 0.3s;
 }
 .map-icon {
   width: 2rem;
@@ -115,51 +126,326 @@ body {
 }
 .lang {
   position: absolute;
-  right: 0;
+  right: -15px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s;
 }
-.lang > li{
+.lang.logoh {
+  opacity: 0;
+  visibility: hidden;
+}
+.lang > li {
   position: relative;
   width: 90px;
   height: 60px;
   line-height: 60px;
+  font-weight: 700;
   background-color: #fff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
   border-radius: 35px;
   text-align: center;
   margin-bottom: 5px;
 }
-.lang > li > .lang-more::after {
-  content: "";
-  display: block;
+.lang-more > img {
+  padding-left: 4px;
+}
+.lang > li:last-of-type {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 15px;
-  width: 0.8rem;
-  height: 0.7rem;
-  background: url("../images/Polygon4.png") no-repeat center / cover;
+  top: 45px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.3s ease-in-out;
+}
+.lang > li:last-of-type.show {
+  top: 63px;
+  opacity: 1;
+  visibility: visible;
 }
 /* main img slide */
 .main-img-area {
   position: relative;
   display: block;
   width: 100%;
-  height: 82vh;
-  min-height: 796px;
-  margin-top: 10px;
+  height: 100vh;
+  min-height: 951px;
+  margin-top: 15px;
 }
 .main-img-area .inner {
+  position: relative;
   width: 100%;
-  height: 100%;
-  max-width: 1640px;
+  height: 88%;
+  max-width: 1725px;
 }
 .main-img-slide {
+  position: relative;
   width: 100%;
   height: 100%;
 }
 .main-img-slide img {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.ani-product {
+  -webkit-animation: head-move 1s ease-in-out infinite;
+}
+@-webkit-keyframes head-move {
+  50% {
+    -webkit-transform: rotate(-1.3deg);
+  }
+}
+.ani-product > a > img {
+  position: absolute;
+  bottom: 90px;
+  right: -70px;
+}
+
+/* quiz section */
+.main-quiz {
+  position: relative;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  margin-top: 2%;
+}
+.main-quiz .inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1530px;
+}
+.quiz-main-title {
+  position: relative;
+  display: block;
+  font-family: "VITRO CORE TTF";
+}
+.quiz-title-bg {
+  position: relative;
+  font-size: 18rem;
+  color: #a3c100;
+  opacity: 0.4;
+}
+.quiz-text {
+  position: absolute;
+  top: 8%;
+  left: 65%;
+  font-size: 7rem;
+  color: #a3c100;
+}
+.quiz-info-text {
+  position: absolute;
+  top: 8%;
+  left: 160%;
+  font-size: 6.5rem;
+  margin-left: 50px;
+}
+.main-color {
+  color: #a3c100;
+}
+.quiz-box-bg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 58vh;
+  min-height: 520px;
+  background-color: #f5f5f5;
+  border-radius: 35px;
+
+  padding: 30px;
+}
+.quiz-box-wrap {
+  position: relative;
+  display: block;
+  margin-top: 14%;
+}
+.quiz-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 15px;
+  padding: 50px;
+}
+.quiz-title {
+  position: relative;
+  width: 100%;
+  line-height: 65px;
+  padding: 0 15px;
+  margin: 0 auto;
+  border: 1px solid #ececec;
+  border-radius: 35px;
+  font-family: "VITRO CORE TTF";
+  font-weight: 100;
+  font-size: 2.2rem;
+  text-align: center;
+  background: #fff;
+}
+.answer-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.answer-box-li {
+  width: 150px;
+  height: 150px;
+  background-color: #a3c100;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+/* js answer style */
+.jsAnswer{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  font-weight: 800;
+  font-size: 4.8rem;
+  text-align: center;
+  background-color: #a3c100;
+  border-radius: 15px;
+  z-index: 9;
+}
+.jsAnswer::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 145px;
+  height: 145px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 15px;
+  z-index: -1;
+}
+.choice-box {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.choice-box-li {
+  width: 90px;
+  line-height: 90px;
+  font-weight: 800;
+  font-size: 2.7rem;
+  text-align: center;
+  border-radius: 15px;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+.answer-sub {
+  position: relative;
+  width: 50%;
+  font-weight: 800;
+  color: #fff;
+  background: #b0b0b0;
+  margin-top: 45px;
+  padding: 15px 0;
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.answer-sub.active-as{
+  background-color: #666666;
+}
+/* quiz answer collec ver*/
+.party-popper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.quiz-box-wrap .qbg2 {
+  position: absolute;
+  top: 0;
+  /* opacity: .3; */
+  display: none;
+  z-index: 12;
+}
+.qbg2 .quiz-box{
+  overflow: hidden;
+}
+.qbg2.qbg2V{
+  display: block;
+}
+.quiz-result-title {
+  font-size: 4rem;
+  font-family: "VITRO CORE TTF";
+  color: #4b4b4b;
+}
+.qrt-l {
+  font-size: 5rem;
+  line-height: 2.25;
+  color: #333;
+}
+.qbg2 img{
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  width: 185px;
+  object-fit: cover;
+}
+.sample-apply-guide{
+  font-size: 2.2rem;
+  font-family: "VITRO CORE TTF";
+}
+.sub-apply{
+  position: relative;
+  width: 50%;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
+  background: #a3c100;
+  margin-top: 45px;
+  padding: 15px 0;
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* insta style banner area */
+.quiz-insta-bg {
+  position: absolute;
+  top: -19%;
+  right: -5%;
+  display: block;
+}
+.main-instastyle-banner {
+  width: 100%;
+  margin: 8% 12%;
+}
+.quiz-logo-bg {
+  opacity: 0.3;
+  margin-bottom: 15px;
+}
+.quiz-insta-frame {
+  width: 70%;
+  height: 50vh;
+  min-height: 450px;
+  border: 7px solid #ececec;
+  border-radius: 5px;
+}
+.quiz-insta-frame img {
+  margin-top: 35px;
+}
+.insta-text-box {
+  position: relative;
+  display: block;
+  margin-top: 15px;
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #6a6a6a;
 }
 /* ran */
 /* 쇼츠섹션 */
@@ -213,15 +499,15 @@ body {
   line-height: 25px;
   color: #333;
 }
-.modal-notice h2{
+.modal-notice h2 {
   font-size: 18px;
   font-weight: 700;
 }
-.span-md_1{
+.span-md_1 {
   background-color: #a3c100;
   color: #fff;
 }
-.span-md_2{
+.span-md_2 {
   color: #a3c100;
 }
 .modal-img {
@@ -230,7 +516,6 @@ body {
   width: 250px;
   height: 147px;
   margin: 20px auto;
-  
 }
 .modal-bt {
   width: 268px;
@@ -246,7 +531,7 @@ body {
   font-size: 20px;
   font-weight: 600;
 }
-.modal-close{
+.modal-close {
   border-top: 1px solid #d9d9d9;
   display: flex;
   justify-content: space-around;
@@ -256,12 +541,12 @@ body {
   position: absolute;
   bottom: 0;
 }
-.modal-close li{
+.modal-close li {
   width: 200px;
   font-weight: bold;
   cursor: pointer;
 }
-.modal-close li:nth-child(2){
+.modal-close li:nth-child(2) {
   border-left: 1px solid #d9d9d9;
 }
 footer {
@@ -324,7 +609,7 @@ footer {
   font-weight: 500;
   color: #bababa;
 }
-.ft_info_430{
+.ft_info_430 {
   display: none;
   width: 100%;
   position: absolute;
