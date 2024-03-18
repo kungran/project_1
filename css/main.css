@@ -650,7 +650,7 @@ body {
     top:50%;
     margin-top:-50px;
     right:30px;
-    z-index:500;
+    z-index: 20;
   }
   .quickmenu ul {
     position:relative;

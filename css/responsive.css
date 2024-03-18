@@ -55,7 +55,7 @@
     }
     .quickmenu ul li a {
         font-size: 10px;
-
+}
 }
 @media screen and (max-width: 760px){
     .video-iframe-box iframe:nth-child(2) {
@@ -83,7 +83,7 @@
         height:50px;
       }
       .quickmenu ul li img {
-        padding: 7px 0 7px;
+        padding: 9px 0 7px;
     }
 }
 @media screen and (max-width: 630px){

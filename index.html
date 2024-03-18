@@ -31,15 +31,15 @@
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/responsive.css"/>
-   
+    <link rel="stylesheet" href="css/responsive.css" />
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script> 
-  <!-- 제이쿼리 -->
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>   
+    <script src="js/main.js"></script>
+    <!-- 제이쿼리 -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- 자바스크립트 -->
-    <script src="js/html5shiv.js"></script>  
+    <script src="js/html5shiv.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
     <script src="js/respond.min.js"></script>
     <title>파티마겔 - 제품스토리 페이지</title>
@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-              
+
       <!-- quiz section -->
       <section class="main-quiz">
         <div class="inner">
@@ -158,9 +158,9 @@
           </div>
         </div>
       </section>
-      
+
       <!-- ran -->
-      
+
       <!-- 쇼츠섹션 -->
       <section class="short">
         <span class="short-icon"><img src="images/short/icon_short.png" alt="섹션 배경 아이콘" /></span>
@@ -201,158 +201,245 @@
         </div>
 
         <style>
-         /* 모달 스타일 */
-            .s-modal {
-              display: none; /* 초기에는 숨겨진 상태 */
-              position: fixed;
-              z-index: 1;
-              left: 0;
-              top: 0;
-              width: 100%;
-              height: 100%;
-              overflow: auto;
-              background-color: rgba(0, 0, 0, 0.7); /* 반투명한 배경 */
-            }
-            .s-modal-content {
-              position: relative;
-              background-color: #fefefe;
-              margin: 10% auto;
-              padding: 20px;
-              border: 1px solid #888;
-              width: 540px;
-              max-width: 600px;
-              min-width: 325px;
-              /* width: 80%; */
-              border-radius: 20px;
-              height: fit-content;
-            }
-            /* 닫기 버튼 */
-            .s-close {
-                border: none;
-              position: absolute;
-              /* color: #aaa;
+          /* 모달 스타일 */
+          .s-modal {
+            display: none; /* 초기에는 숨겨진 상태 */
+            position: fixed;
+            z-index: 99;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7); /* 반투명한 배경 */
+          }
+          .s-modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: 7% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 540px;
+            max-width: 600px;
+            min-width: 325px;
+            /* width: 80%; */
+            border-radius: 20px;
+            height: fit-content;
+          }
+          /* 닫기 버튼 */
+          .s-close {
+            border: none;
+            position: absolute;
+            /* color: #aaa;
               float: right;
               font-size: 28px;
               font-weight: bold; */
-              right: -30px;
-              top: -30px;
-              width: 27px;
-              height: 27px;
-              background: url("images/short/btn_close_livepop.png") no-repeat;
-            }
+            right: -30px;
+            top: -30px;
+            width: 27px;
+            height: 27px;
+            background: url("images/short/btn_close_livepop.png") no-repeat;
+          }
 
-            .s-close:hover,
-            .s-close:focus {
-              color: black;
-              text-decoration: none;
-              cursor: pointer;
-            }
-          </style>
+          .s-close:hover,
+          .s-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+          }
+        </style>
         <!-- 첫 번째 모달 -->
-    <div id="youtube-modal" class="s-modal">
-        <div class="s-modal-content">
-          <!-- 틱톡 영상 -->
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yakstagram/video/7191420369427860737" data-video-id="7191420369427860737" style="max-width: 605px; min-width: 325px">
-      <section>
-      <a target="_blank" title="@yakstagram" href="https://www.tiktok.com/@yakstagram?refer=embed">@yakstagram</a> 여드름약 아무거나 바르지 마세요.🙌🏻 *상태별 여드름약 정리* 🎾아프지는 않지만 알이 차려고 하는 상태 -&gt; 파티마겔 균 성장 억제효과, 각질 녹여줌 자극성이 커서 극소량 바르고
-      처음에는 2일에 한번 바르다가 적응되면 1일에 1번 -&gt; 1일 2회로 점진적으로 늘려주세요. ⚾빨갛게 알이 차고 아픈 상태 -&gt; 큐아크네, 애크논 등 여드름 균 제거 + 염증 억제 기능 피부가 민감한 사람도 무난히 사용 가능 ️ ️🏐블랙헤드, 화이드헤드, 좁쌀여드름 -&gt; 클리어틴 피지 녹이는 효과
-      자극적이면 2일에 1회 -&gt; 1일 1회 -&gt; 1일 2회로 점진적으로 적응해가기 ⚽️좁쌀, 화농성 모두 있는데 색소 침착 잘 생기는 사람 -&gt; 아젤리아 여드름균 증식 억제 + 모공 막히지 않도록 하는 기능+색소침착 방지 효과 🏀여드름 짠 직후 감염 예방 -&gt; 에스로반, 베아로반 모낭염에 잘 듣고, 추가
-      감염 예방에 좋은데 여드름과 모낭염은 육안 구분이 어렵긴 해요. 😓 *여드름이 잘 나는 분께 도움이 될만한 영양제* 💙오메가3 - 과도한 피지 분비 억제, 염증 억제 💙비타민 A D E 아연 -&gt; 염증과 관련된 비타민. 종합비타민을 드세요. 🌞여드름약 사용은 세안과 기초 스킨 로션 후에 바르고, 약을 바른
-      후 자외선차단제를 꼭 발라주세요!! 🫣여드름약이 필요한 친구가 있다면 공유 🤔궁금한 건 질문해주세요🙌🏻 <a title="약사" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EC%82%AC?refer=embed">#약사</a>
-      <a title="약국" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EA%B5%AD?refer=embed">#약국</a> <a title="약스타그램" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EC%8A%A4%ED%83%80%EA%B7%B8%EB%9E%A8?refer=embed">#약스타그램</a>
-      <a title="여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#여드름</a> <a title="손댄스" target="_blank" href="https://www.tiktok.com/tag/%EC%86%90%EB%8C%84%EC%8A%A4?refer=embed">#손댄스</a>
-      <a target="_blank" title="♬ 可愛くてごめん (feat. かぴ) - HoneyWorks" href="https://www.tiktok.com/music/可愛くてごめん-feat-かぴ-7127871335373015041?refer=embed">♬ 可愛くてごめん (feat. かぴ) - HoneyWorks</a>
+        <div id="youtube-modal" class="s-modal">
+          <div class="s-modal-content">
+            <!-- 틱톡 영상 -->
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yakstagram/video/7191420369427860737" data-video-id="7191420369427860737" style="max-width: 605px; min-width: 325px">
+              <section>
+                <a target="_blank" title="@yakstagram" href="https://www.tiktok.com/@yakstagram?refer=embed">@yakstagram</a> 여드름약 아무거나 바르지 마세요.🙌🏻 *상태별 여드름약 정리* 🎾아프지는 않지만 알이 차려고 하는 상태 -&gt; 파티마겔 균 성장 억제효과, 각질 녹여줌 자극성이 커서 극소량 바르고
+                처음에는 2일에 한번 바르다가 적응되면 1일에 1번 -&gt; 1일 2회로 점진적으로 늘려주세요. ⚾빨갛게 알이 차고 아픈 상태 -&gt; 큐아크네, 애크논 등 여드름 균 제거 + 염증 억제 기능 피부가 민감한 사람도 무난히 사용 가능 ️ ️🏐블랙헤드, 화이드헤드, 좁쌀여드름 -&gt; 클리어틴 피지 녹이는 효과
+                자극적이면 2일에 1회 -&gt; 1일 1회 -&gt; 1일 2회로 점진적으로 적응해가기 ⚽️좁쌀, 화농성 모두 있는데 색소 침착 잘 생기는 사람 -&gt; 아젤리아 여드름균 증식 억제 + 모공 막히지 않도록 하는 기능+색소침착 방지 효과 🏀여드름 짠 직후 감염 예방 -&gt; 에스로반, 베아로반 모낭염에 잘 듣고, 추가
+                감염 예방에 좋은데 여드름과 모낭염은 육안 구분이 어렵긴 해요. 😓 *여드름이 잘 나는 분께 도움이 될만한 영양제* 💙오메가3 - 과도한 피지 분비 억제, 염증 억제 💙비타민 A D E 아연 -&gt; 염증과 관련된 비타민. 종합비타민을 드세요. 🌞여드름약 사용은 세안과 기초 스킨 로션 후에 바르고, 약을
+                바른 후 자외선차단제를 꼭 발라주세요!! 🫣여드름약이 필요한 친구가 있다면 공유 🤔궁금한 건 질문해주세요🙌🏻 <a title="약사" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EC%82%AC?refer=embed">#약사</a>
+                <a title="약국" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EA%B5%AD?refer=embed">#약국</a> <a title="약스타그램" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EC%8A%A4%ED%83%80%EA%B7%B8%EB%9E%A8?refer=embed">#약스타그램</a>
+                <a title="여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#여드름</a> <a title="손댄스" target="_blank" href="https://www.tiktok.com/tag/%EC%86%90%EB%8C%84%EC%8A%A4?refer=embed">#손댄스</a>
+                <a target="_blank" title="♬ 可愛くてごめん (feat. かぴ) - HoneyWorks" href="https://www.tiktok.com/music/可愛くてごめん-feat-かぴ-7127871335373015041?refer=embed">♬ 可愛くてごめん (feat. かぴ) - HoneyWorks</a>
+              </section>
+            </blockquote>
+            <!-- 닫기 버튼 -->
+            <button class="s-close"></button>
+          </div>
+        </div>
+
+        <!-- 두 번째 모달 -->
+        <div id="youtube-modal-2" class="s-modal">
+          <div class="s-modal-content">
+            <!-- 틱톡 영상 -->
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@jinshimyaksa/video/7293048655244709138" data-video-id="7293048655244709138" style="max-width: 605px; min-width: 325px">
+              <section>
+                <a target="_blank" title="@jinshimyaksa" href="https://www.tiktok.com/@jinshimyaksa?refer=embed">@jinshimyaksa</a> <a title="여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#여드름</a>
+                <a title="좁쌀여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%A2%81%EC%8C%80%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#좁쌀여드름</a>
+                <a title="좁쌀여드름_없애는법" target="_blank" href="https://www.tiktok.com/tag/%EC%A2%81%EC%8C%80%EC%97%AC%EB%93%9C%EB%A6%84_%EC%97%86%EC%95%A0%EB%8A%94%EB%B2%95?refer=embed">#좁쌀여드름_없애는법</a>
+                <a target="_blank" title="♬ 오리지널 사운드  - 진심약사 pharmacist" href="https://www.tiktok.com/music/오리지널-사운드-진심약사-pharmacist-7293048681656290050?refer=embed">♬ 오리지널 사운드 - 진심약사 pharmacist</a>
+              </section>
+            </blockquote>
+            <!-- 닫기 버튼 -->
+            <button class="s-close"></button>
+          </div>
+        </div>
+
+        <!-- 틱톡 렌더링 자바스크립트 -->
+        <script async src="https://www.tiktok.com/embed.js"></script>
+
+        <!-- 스크립트 -->
+        <script>
+          // 첫번째 모달 창 열기
+          document.getElementById("youtube-link").addEventListener("click", function () {
+            document.getElementById("youtube-modal").style.display = "block";
+          });
+
+          // 첫 번째 모달 창 닫기
+          document.querySelectorAll("#youtube-modal .s-close").forEach(function (element) {
+            element.addEventListener("click", function () {
+              document.getElementById("youtube-modal").style.display = "none";
+            });
+          });
+
+          // 두번째 모달 창 열기
+          document.getElementById("youtube-link-2").addEventListener("click", function () {
+            document.getElementById("youtube-modal-2").style.display = "block";
+          });
+
+          // 두 번째 모달 창 닫기
+          document.querySelectorAll("#youtube-modal-2 .s-close").forEach(function (element) {
+            element.addEventListener("click", function () {
+              document.getElementById("youtube-modal-2").style.display = "none";
+            });
+          });
+        </script>
       </section>
-          </blockquote>
-          <!-- 닫기 버튼 -->
-          <button class="s-close"></button>
+
+      <!-- 비디오섹션 -->
+      <section class="video">
+        <div class="video-inner inner">
+          <div class="video-title">
+            <span>여드름 관리엔</span>
+            <span><em>간편하게 바르는 파티마겔</em></span>
+            <span>영상으로 확인하세요!</span>
+            <p>#무항생제 #염증감소 #항균작용</p>
+          </div>
+          <div class="video-title-bl"></div>
+          <!-- youtube size  width="560" height="315" -->
+          <div class="video-iframe-box">
+            <iframe width="650" height="370" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="460" height="250" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="310" height="170" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
         </div>
+      </section>
+
+      <!-- 따라다니는 퀵메뉴 -->
+      <div class="quickmenu">
+        <ul>
+          <li>
+            <a href="#" id="search-link" style="background-color: #ffff"
+              ><img src="images/short/quick_1.svg" alt="" class="quick-1" />
+              <p>신청조회</p></a
+            >
+          </li>
+          <li>
+            <a href="#" id="FAQ-link" style="background-color: #ffff"
+              ><img src="images/short/quick_2.svg" alt="" class="quick-2" />
+              <p>FAQ</p></a
+            >
+          </li>
+          <li class="quick_3">
+            <a href="#" style="background-color: #979797"><img src="images/short/quick_3.svg" alt="" class="quick-3" /><span>TOP</span></a>
+          </li>
+        </ul>
       </div>
-  
-      <!-- 두 번째 모달 -->
-      <div id="youtube-modal-2" class="s-modal">
-        <div class="s-modal-content">
-          <!-- 틱톡 영상 -->
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@jinshimyaksa/video/7293048655244709138" data-video-id="7293048655244709138" style="max-width: 605px; min-width: 325px">
-            <section>
-            <a target="_blank" title="@jinshimyaksa" href="https://www.tiktok.com/@jinshimyaksa?refer=embed">@jinshimyaksa</a> <a title="여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#여드름</a>
-            <a title="좁쌀여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%A2%81%EC%8C%80%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#좁쌀여드름</a>
-            <a title="좁쌀여드름_없애는법" target="_blank" href="https://www.tiktok.com/tag/%EC%A2%81%EC%8C%80%EC%97%AC%EB%93%9C%EB%A6%84_%EC%97%86%EC%95%A0%EB%8A%94%EB%B2%95?refer=embed">#좁쌀여드름_없애는법</a>
-            <a target="_blank" title="♬ 오리지널 사운드  - 진심약사 pharmacist" href="https://www.tiktok.com/music/오리지널-사운드-진심약사-pharmacist-7293048681656290050?refer=embed">♬ 오리지널 사운드 - 진심약사 pharmacist</a>
-          </section>
-          </blockquote>
-          <!-- 닫기 버튼 -->
-          <button class="s-close"></button>
+
+      <style>
+        /* 퀵메뉴 모달 스타일 */
+        /* 닫기 버튼 */
+        .search-modal-close {
+          border: none;
+          position: absolute;
+          /* color: #aaa;
+              float: right;
+              font-size: 28px;
+              font-weight: bold; */
+          right: -30px;
+          top: -30px;
+          width: 27px;
+          height: 27px;
+          background: url("images/short/btn_close_livepop.png") no-repeat;
+        }
+
+      </style>
+
+      <!-- 신청조회 모달 -->
+      <div id="search-modal" class="q-modal">
+        <div class="search-modal-content">
+          <!-- 신청조회 내용 -->
+          <div class="search-modal-title">
+            <img src="images/short/quick_m_icon_search.svg" alt="돋보기 아이콘" />
+            <strong>샘플 신청내역 조회</strong>
+            <p>내가 신청한 무료 샘플을 확인해보세요.</p>
+          </div>
+          <div class="search-modal-input">
+            <label for="inputNumber">휴대폰 번호</label>
+            <input type="number" placeholder="‘-’을 제외한 운송장번호를 입력하세요." />
+          </div>
+          <button class="search-modal-button">조회하기</button>
         </div>
+        <!-- 닫기 버튼 -->
+        <span class="q-modal-close"></span>
       </div>
-  
-      <!-- 틱톡 렌더링 자바스크립트 -->
-      <script async src="https://www.tiktok.com/embed.js"></script>
-  
-      <!-- 스크립트 -->
+
+      <!-- FAQ 모달 -->
+      <div id="FAQ-modal" class="q-modal">
+        <div class="FAQ-modal-content">
+          <!-- FAQ 내용 -->
+          <div class="FAQ-modal-title">
+            <img src="images/short/quick_m_icon_search.svg" alt="돋보기 이미지" />
+            <strong>샘플 신청내역 조회</strong>
+            <p>내가 신청한 무료 샘플을 확인해보세요.</p>
+          </div>
+          <div class="q-modal-input">
+            <label for="inputNumber">휴대폰 번호</label>
+            <input type="number" placeholder="‘-’을 제외한 운송장번호를 입력하세요." />
+          </div>
+          <button class="q-modal-button">조회하기</button>
+        </div>
+        <!-- 닫기 버튼 -->
+        <span class="q-close"></span>
+      </div>
+
       <script>
-        // 첫번째 모달 창 열기
-        document.getElementById("youtube-link").addEventListener("click", function () {
-          document.getElementById("youtube-modal").style.display = "block";
+        // 신청조회 모달 창 열기
+        document.getElementById("search-link").addEventListener("click", function () {
+          document.getElementById("search-link").style.display = "block";
         });
-  
-        // 첫 번째 모달 창 닫기
-        document.querySelectorAll("#youtube-modal .s-close").forEach(function (element) {
+
+        // 신청조회 모달 창 닫기
+        document.querySelectorAll("#search-modal .q-close").forEach(function (element) {
           element.addEventListener("click", function () {
-            document.getElementById("youtube-modal").style.display = "none";
+            document.getElementById("search-modal").style.display = "none";
           });
         });
-  
-        // 두번째 모달 창 열기
-        document.getElementById("youtube-link-2").addEventListener("click", function () {
-          document.getElementById("youtube-modal-2").style.display = "block";
+
+        // FAQ 모달 창 열기
+        document.getElementById("FAQ-link").addEventListener("click", function () {
+          document.getElementById("FAQ-link").style.display = "block";
         });
-  
-        // 두 번째 모달 창 닫기
-        document.querySelectorAll("#youtube-modal-2 .s-close").forEach(function (element) {
+
+        // FAQ 모달 창 닫기
+        document.querySelectorAll("#FAQ-link .s-close").forEach(function (element) {
           element.addEventListener("click", function () {
-            document.getElementById("youtube-modal-2").style.display = "none";
+            document.getElementById("FAQ-link").style.display = "none";
           });
         });
       </script>
-      </section>
-
-  
-
-           <!-- 비디오섹션 -->
-           <section class="video">
-            <div class="video-inner inner">
-            <div class="video-title">
-                <span>여드름 관리엔</span>
-                <span><em>간편하게 바르는 파티마겔</em></span>
-              <span>영상으로 확인하세요!</span>
-              <p>#무항생제 #염증감소 #항균작용</p>
-            </div>
-            <div class="video-title-bl"></div>
-                  <!-- youtube size  width="560" height="315" -->
-                  <div class="video-iframe-box">
-                  <iframe width="650" height="370" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  <iframe width="460" height="250" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  <iframe width="310" height="170" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-         </div> 
-        </div>
-        </section>
-
-          <!-- 따라다니는 퀵메뉴 -->
-  <div class="quickmenu"> 
-    <ul> 
-      <li>
-        <a href="#" style="background-color:#ffff;"><img src="images/short/quick_1.svg" alt="" class="quick-1"><p>신청조회</p></a>
-      </li> 
-      <li>
-        <a href="#" style="background-color:#ffff;"><img src="images/short/quick_2.svg" alt="" class="quick-2"><p>FAQ</p></a>
-      </li> 
-      <li class="quick_3">
-        <a href="#" style="background-color:#979797;" ><img src="images/short/quick_3.svg" alt="" class="quick-3"><span>TOP</span></a>
-      </li> 
-    </ul>
-  </div>
 
       <!-- hun -->
       <!-- 모달 -->
