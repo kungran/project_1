@@ -1,8 +1,131 @@
 @charset "utf-8";
 /* min */
 /* ran */
+@media screen and (max-width: 1400px){
+    .short-icon img {
+        display: none;
+    }
+}
+@media screen and (max-width: 1320px){
+    .short-icon img {
+        display: none;
+    }
+    .video-title {
+        padding-top: 40px;
+      }
+    .video p {
+        padding-top: 23px;
+    }
+    .video-title-bl {
+        width: 50px;
+        height: 100%;
+    }
+    .video-iframe-box iframe:nth-child(1) {
+        display: none;
+          }
+    .video-iframe-box iframe:nth-child(2) {
+        display: block;
+          }
+}
+@media screen and (max-width: 1060px){
+    .short {
+        padding: 20vw 0;
+      } 
+      .video {
+        padding: 20vw 0;
+      }
+      .video-title {
+        padding-top: 0px;
+      }
+    .video-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .video-title-bl {
+        display: none;
+    }
+    .video span {
+        padding-bottom: 5px;
+      }
+    .video em {
+        padding-bottom: 5px;
+      }
+    .video p {
+        padding-bottom: 40px;
+    }
+    .quickmenu ul li a {
+        font-size: 10px;
+
+}
+@media screen and (max-width: 760px){
+    .video-iframe-box iframe:nth-child(2) {
+        display: none;
+          }
+    .video-iframe-box iframe:nth-child(3) {
+        display: block;
+    }
+}
+@media screen and (max-width: 490px){
+    .video-iframe-box iframe:nth-child(3) {
+        display: none;
+          }
+    .video-iframe-box iframe:nth-child(4) {
+        display: block;
+    }
+    .quickmenu ul li p  {
+        display: none;
+    }
+    .quickmenu ul li span {
+        display: none;
+    }
+    .quickmenu ul li a {
+        width:50px;
+        height:50px;
+      }
+      .quickmenu ul li img {
+        padding: 7px 0 7px;
+    }
+}
+@media screen and (max-width: 630px){
+    .short span {
+        letter-spacing: -0.26667vw;
+    font-size: 8.26667vw;
+    line-height: 1.3;
+    }
+    .short-title span:nth-child(3) {
+        word-break: keep-all;
+    }
+    .video span {
+        letter-spacing: -0.26667vw;
+    font-size: 8.26667vw;
+    line-height: 1.3;
+    }
+}
 /* hun */
+
+@media screen and (max-width: 950px){
+.info-info{
+  width: 55vw;
+    flex-direction: column;
+  }
+  .h2-right{
+    margin-top: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
+  /* 제품 상세 정보 */
+  .detaild-info{
+    padding: 0;
+  }
+  .info-wrap{
+    width: 100%;
+  }
+  
+  .info-inner{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+  }
   /* footer */
     .ft_inner {
     height: 400px;
@@ -26,8 +149,26 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .info-info{
+    width: 80vw;
+  }
+/* 제품 상세 정보 */
+  .info-icon{
+    display: none;
+  }
+  .info-bottom button{
+    width: 180px;
+    height: 40px;
+  }
+  .info-bottom button a{
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 430px) {
-    /* 모달창 */
+  /* 모달창 */
     .modal-main{
         width: 300px;
         height: 400px;
