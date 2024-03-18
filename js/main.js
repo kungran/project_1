@@ -82,7 +82,6 @@ window.onload = function () {
   const topLogo = document.querySelector(".logo");
   const langBox = document.querySelector(".lang");
   let scy = 0;
-<
 
   window.addEventListener("scroll", function () {
     // 새로 고침 / url 입력해서 html 출력시
@@ -126,77 +125,83 @@ window.onload = function () {
   fnChkAnswerSub.addEventListener("click", () => {
     const userAnswer = Array.from(fnAnswerBox)
       .map((box) => box.textContent)
-      .join("");//join() 배열의 모든 요소를 하나의 문자열로 공백없이 결합
-    const collecAnswer = "파티마겔"
-    if(userAnswer == collecAnswer){
-      document.querySelector(".qbg2").classList.add("qbg2V")
+      .join(""); //join() 배열의 모든 요소를 하나의 문자열로 공백없이 결합
+    const collecAnswer = "파티마겔";
+    if (userAnswer == collecAnswer) {
+      document.querySelector(".qbg2").classList.add("qbg2V");
     }
   });
   //party popper
-  
 
   // ran
-  var swiper = new Swiper(".mySwiper", {
-    pagination: {
-      el: ".swiper-short .short-pn .swiper-pagination",
-      type: "progressbar",
+// Swiper 설정
+var swiper = new Swiper(".swiper-short", {
+  loop: true,
+  autoplay: {
+    delay: 1000, //1초의 딜레이를 주고 자동 재생된다
+  },
+  // slidesPerView: 5,
+  spaceBetween: 10, //여백
+
+  pagination: {
+    el: ".swiper-short .short-pn .swiper-pagination",
+    type: "progressbar",
+  },
+  navigation: {
+    nextEl: ".swiper-short .short-pn .swiper-button-next",
+    prevEl: ".swiper-short .short-pn .swiper-button-prev",
+  },
+  breakpoints: {
+    900: {
+      //브라우저 화면너비 900이상일때
+      slidesPerView: 5.8,
+      spaceBetween: 40,
     },
-    navigation: {
-      nextEl: ".swiper-short .short-pn .swiper-button-next",
-      prevEl: ".swiper-short .short-pn .swiper-button-prev",
+    786: {
+      slidesPerView: 4.7,
+      spaceBetween: 30,
     },
-    breakpoints: {
-      900: {
-        //브라우저 화면너비 900이상일때
-        slidesPerView: 5.8,
-        spaceBetween: 40,
-      },
-      786: {
-        slidesPerView: 4.7,
-        spaceBetween: 30,
-      },
-      600: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-      320: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      200: {
-        slidesPerView: 2.3,
-        spaceBetween: 20,
-      },
+    600: {
+      slidesPerView: 4,
+      spaceBetween: 20,
     },
-  });
+    320: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    200: {
+      slidesPerView: 2.3,
+      spaceBetween: 20,
+    },
+  },
+});
 
 /* 따라다니는 퀵메뉴 */
-    var currentPosition = parseInt($(".quickmenu").css("top"));
-    $(window).scroll(function() {
-      var position = $(window).scrollTop(); 
-      $(".quickmenu").stop().animate({"top":position+currentPosition+"px"},600);
-    });
+  var currentPosition = parseInt($(".quickmenu").css("top"));
+  $(window).scroll(function() {
+    var position = $(window).scrollTop(); 
+    $(".quickmenu").stop().animate({"top":position+currentPosition+"px"},600);
+  });
 
-    // 탑 버튼
-    window.addEventListener("load", function () {
-        // ===== top으로 가는 버튼
-        const topBtn = document.getElementById("quick_3");
-        topBtn.addEventListener("click", function (event) {
-          event.preventDefault();
-          // 조건문 수정
-          if (window.scrollY === 0) {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          } else {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          }
-        });
-    })
-
+  // 탑 버튼
+  window.addEventListener("load", function () {
+      // ===== top으로 가는 버튼
+      const topBtn = document.getElementById("quick_3");
+      topBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        // 조건문 수정
+        if (window.scrollY === 0) {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        } else {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }
+      });
+  })
   // hun
 };
