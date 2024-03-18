@@ -710,7 +710,27 @@ body {
     background-size:70px;
     z-index:10;
   }
-
+/* 퀵메뉴 모달 */
+.search-modal {
+  display: none;
+}
+        /* 닫기 버튼 */
+        .search-modal-close {
+          border: none;
+          position: absolute;
+          /* color: #aaa;
+              float: right;
+              font-size: 28px;
+              font-weight: bold; */
+          right: -30px;
+          top: -30px;
+          width: 27px;
+          height: 27px;
+          background: url("images/short/btn_close_livepop.png") no-repeat;
+        }
+        .FAQ-modal {
+          display: none;
+        }
 /* 쇼츠 */
 .short {
     position: relative;
@@ -852,7 +872,53 @@ body {
   .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
     height: 2px;
 }
+/* 쇼츠 모달 */
+  /* 모달 스타일 */
+  .s-modal {
+    display: none; /* 초기에는 숨겨진 상태 */
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* 반투명한 배경 */
+  }
+  .s-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 7% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 540px;
+    max-width: 600px;
+    min-width: 325px;
+    /* width: 80%; */
+    border-radius: 20px;
+    height: fit-content;
+  }
+  /* 닫기 버튼 */
+  .s-close {
+    border: none;
+    position: absolute;
+    /* color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold; */
+    right: -30px;
+    top: -30px;
+    width: 27px;
+    height: 27px;
+    background: url("images/short/btn_close_livepop.png") no-repeat;
+  }
 
+  .s-close:hover,
+  .s-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
   /* 비디오 */
   .video {
     position: relative;

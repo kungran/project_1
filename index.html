@@ -33,15 +33,19 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/responsive.css" />
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <!-- 제이쿼리 -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- 자바스크립트 -->
     <script src="js/html5shiv.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
     <script src="js/respond.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 틱톡 렌더링 자바스크립트 -->
+    <script async src="https://www.tiktok.com/embed.js"></script>
+    <!-- 제이쿼리 -->
+    <script src="js/main.js"></script>
+    <script src="js/apply.js"></script>
+    <script src="js/sub.js"></script>
     <title>파티마겔 - 제품스토리 페이지</title>
   </head>
   <body>
@@ -199,55 +203,6 @@
             <div class="swiper-pagination"></div>
           </div>
         </div>
-
-        <style>
-          /* 모달 스타일 */
-          .s-modal {
-            display: none; /* 초기에는 숨겨진 상태 */
-            position: fixed;
-            z-index: 99;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.7); /* 반투명한 배경 */
-          }
-          .s-modal-content {
-            position: relative;
-            background-color: #fefefe;
-            margin: 7% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 540px;
-            max-width: 600px;
-            min-width: 325px;
-            /* width: 80%; */
-            border-radius: 20px;
-            height: fit-content;
-          }
-          /* 닫기 버튼 */
-          .s-close {
-            border: none;
-            position: absolute;
-            /* color: #aaa;
-              float: right;
-              font-size: 28px;
-              font-weight: bold; */
-            right: -30px;
-            top: -30px;
-            width: 27px;
-            height: 27px;
-            background: url("images/short/btn_close_livepop.png") no-repeat;
-          }
-
-          .s-close:hover,
-          .s-close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-          }
-        </style>
         <!-- 첫 번째 모달 -->
         <div id="youtube-modal" class="s-modal">
           <div class="s-modal-content">
@@ -285,36 +240,6 @@
             <button class="s-close"></button>
           </div>
         </div>
-
-        <!-- 틱톡 렌더링 자바스크립트 -->
-        <script async src="https://www.tiktok.com/embed.js"></script>
-
-        <!-- 스크립트 -->
-        <script>
-          // 첫번째 모달 창 열기
-          document.getElementById("youtube-link").addEventListener("click", function () {
-            document.getElementById("youtube-modal").style.display = "block";
-          });
-
-          // 첫 번째 모달 창 닫기
-          document.querySelectorAll("#youtube-modal .s-close").forEach(function (element) {
-            element.addEventListener("click", function () {
-              document.getElementById("youtube-modal").style.display = "none";
-            });
-          });
-
-          // 두번째 모달 창 열기
-          document.getElementById("youtube-link-2").addEventListener("click", function () {
-            document.getElementById("youtube-modal-2").style.display = "block";
-          });
-
-          // 두 번째 모달 창 닫기
-          document.querySelectorAll("#youtube-modal-2 .s-close").forEach(function (element) {
-            element.addEventListener("click", function () {
-              document.getElementById("youtube-modal-2").style.display = "none";
-            });
-          });
-        </script>
       </section>
 
       <!-- 비디오섹션 -->
@@ -358,27 +283,8 @@
         </ul>
       </div>
 
-      <style>
-        /* 퀵메뉴 모달 스타일 */
-        /* 닫기 버튼 */
-        .search-modal-close {
-          border: none;
-          position: absolute;
-          /* color: #aaa;
-              float: right;
-              font-size: 28px;
-              font-weight: bold; */
-          right: -30px;
-          top: -30px;
-          width: 27px;
-          height: 27px;
-          background: url("images/short/btn_close_livepop.png") no-repeat;
-        }
-
-      </style>
-
       <!-- 신청조회 모달 -->
-      <div id="search-modal" class="q-modal">
+      <div id="search-modal" class="search-modal">
         <div class="search-modal-content">
           <!-- 신청조회 내용 -->
           <div class="search-modal-title">
@@ -397,7 +303,7 @@
       </div>
 
       <!-- FAQ 모달 -->
-      <div id="FAQ-modal" class="q-modal">
+      <div id="FAQ-modal" class="FAQ-modal">
         <div class="FAQ-modal-content">
           <!-- FAQ 내용 -->
           <div class="FAQ-modal-title">
@@ -414,32 +320,6 @@
         <!-- 닫기 버튼 -->
         <span class="q-close"></span>
       </div>
-
-      <script>
-        // 신청조회 모달 창 열기
-        document.getElementById("search-link").addEventListener("click", function () {
-          document.getElementById("search-link").style.display = "block";
-        });
-
-        // 신청조회 모달 창 닫기
-        document.querySelectorAll("#search-modal .q-close").forEach(function (element) {
-          element.addEventListener("click", function () {
-            document.getElementById("search-modal").style.display = "none";
-          });
-        });
-
-        // FAQ 모달 창 열기
-        document.getElementById("FAQ-link").addEventListener("click", function () {
-          document.getElementById("FAQ-link").style.display = "block";
-        });
-
-        // FAQ 모달 창 닫기
-        document.querySelectorAll("#FAQ-link .s-close").forEach(function (element) {
-          element.addEventListener("click", function () {
-            document.getElementById("FAQ-link").style.display = "none";
-          });
-        });
-      </script>
 
       <!-- hun -->
       <!-- 모달 -->
