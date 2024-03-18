@@ -6,13 +6,23 @@
     <meta name="description" content="여드름 연고는 파티마겔" />
     <meta name="keywords" content="파티마겔 , 여드름 치료제, 여드름 연고, 파티마겔2.5%, 무항생제 여드름 연고, 결정성 여드름, 심상성 여드름" />
     <!-- favicon 적용 -->
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon_package_v0.16/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package_v0.16/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_package_v0.16/favicon-16x16.png" />
-    <link rel="manifest" href="images/favicon_package_v0.16/site.webmanifest" />
-    <link rel="mask-icon" href="images/favicon_package_v0.16/safari-pinned-tab.svg" color="#5BBAD5" />
-    <meta name="msapplication-TileColor" content="#DA532C" />
-    <meta name="theme-color" content="#FFFFFF" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="imageimages/png" sizes="192x192" href="images/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="imageimages/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="imageimages/png" sizes="96x96" href="images/favicon/favicon-96x96.png" />
+    <link rel="icon" type="imageimages/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- css 초기화 -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/reset.css" />
@@ -40,6 +50,20 @@
       <!-- ran -->
       <!-- hun -->
       <form class="app-inner">
+        <div class="app-left">
+          <ul class="app-left-top">
+            <li>
+              <h1><span>여드름,</span><br />뭘 발라야 할까?</h1>
+            </li>
+            <li>
+              <div class="model-img"><img src="/images/model.png" alt="모델" /></div>
+            </li>
+          </ul>
+          <ul class="app-left-bottom">
+            <div class="gel-img"><img src="images/modal-img.png" alt="겔"></div>
+            <h1>무항생제 여드름 치료제 <br /><span>파티마겔</span></h1>
+          </ul>
+        </div>
         <div class="app-box">
           <ul class="app-info">
             <p>배송 안내</p>
@@ -47,7 +71,6 @@
             <li>잘못된 배송정보로 인해 제품을 못 받아보실 경우 재발송<br />되지 않습니다.</li>
             <li>신청 후 익일 발송을 원칙으로 하나 택배사 사정에 의해 <br />변동이 있을 수 있습니다.</li>
           </ul>
-
           <div class="app-address">
             <p class="stap">#STEP 1</p>
             <h1>약국 선택하기</h1>
@@ -69,22 +92,17 @@
           <div class="app-tell">
             <p class="stap">#STEP 2</p>
             <h1>샘플 신청하기</h1>
-            <form class="tell-nb">
-              <h3>전화 번호</h3>
-                <label for="tell" class="tell">
-              <input type="tel" class="tel"/ placeholder="'-'를 제외한 숫자만 입력해 주세요.">
-                <button class="code-bt">인증 요청</button>
-              </label>
-            </form>
-
-            <form class="tell-nb">
-              <label for="tell" class="tell">
-              <h3>인증 번호</h3>
-             <input type="tel" class="tel2"/>
-            </label>
-            </form>
-            <button type="submit" class="tell-bt">신청하기</button>
-          
+            <ul class="tell-nb">
+              <li><h3>전화 번호</h3></li>
+              <li><label for="tell" class="tell"></label></li>
+              <li><input type="tel" class="tel"/ placeholder="'-'를 제외한 숫자만 입력해 주세요."></li>
+              <li><button class="code-bt">인증 요청</button></li>
+            </ul>
+            <ul class="tell-nb2">
+              <li><h3>인증 번호</h3></li>
+              <li><input type="tel" class="tel2" /></li>
+            </ul>
+            <button type="submit" class="tell-bt" onclick="">신청하기</button>
           </div>
         </div>
       </form>
