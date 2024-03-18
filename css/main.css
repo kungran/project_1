@@ -362,6 +362,12 @@ body {
 }
 /* quiz answer collec ver*/
 
+.party-popper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .quiz-box-wrap .qbg2 {
   position: absolute;
   top: 0;
@@ -369,6 +375,7 @@ body {
   display: none;
   z-index: 12;
 }
+
 /* party-popper */
 #drawing_canvas {
   position: absolute;
@@ -380,6 +387,7 @@ body {
 }
 .qbg2 .quiz-box {
   position: relative;
+
   overflow: hidden;
 }
 .qbg2.qbg2V {
@@ -430,10 +438,12 @@ body {
   display: none;
   z-index: 24;
 }
+
 .show-qbg3{
   display: block;
 }
 .qrt-2 {
+
   position: relative;
   display: block;
   text-align: center;
@@ -705,18 +715,20 @@ body {
   margin-top: -50px;
   right: 30px;
   z-index: 20;
+
 }
 .quickmenu ul {
   position: relative;
-  float: left;
+  /* float:left; */
   width: 100%;
-  display: inline-block;
+  display: block;;
 }
 .quickmenu ul li {
   width: 100%;
-  float: left;
+  /* float: left; */
   text-align: center;
-  display: inline-block;
+  display: block;
+
   margin-bottom: 3px;
 }
 .quickmenu ul li a {
@@ -849,7 +861,7 @@ body {
   } */
 
 /* 쇼츠 스와이퍼 버튼 */
-/* 공통 */
+
 .swiper-button-prev {
   opacity: 0;
   z-index: 9999;
@@ -962,7 +974,8 @@ body {
   top: -30px;
   width: 27px;
   height: 27px;
-  background: url("images/short/btn_close_livepop.png") no-repeat;
+  background: url("../images/short/btn_close_livepop.png") no-repeat;
+
 }
 
 .s-close:hover,
