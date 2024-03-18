@@ -82,6 +82,7 @@ window.onload = function () {
   const topLogo = document.querySelector(".logo");
   const langBox = document.querySelector(".lang");
   let scy = 0;
+<
 
   window.addEventListener("scroll", function () {
     // 새로 고침 / url 입력해서 html 출력시
@@ -135,17 +136,7 @@ window.onload = function () {
   
 
   // ran
-  
-
-// Swiper 설정
-var swiper = new Swiper(".swiper-short", {
-    loop: true,
-    autoplay: {
-      delay: 1000, //1초의 딜레이를 주고 자동 재생된다
-    },
-    // slidesPerView: 5,
-    spaceBetween: 10, //여백
-
+  var swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-short .short-pn .swiper-pagination",
       type: "progressbar",
@@ -206,5 +197,6 @@ var swiper = new Swiper(".swiper-short", {
           }
         });
     })
+
   // hun
 };
