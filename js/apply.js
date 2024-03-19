@@ -39,5 +39,9 @@ $(document).ready(function() {
         $gugun.append($("<option>").val(this).text(this));
       });
     });
+    const showConfirmation = document.getElementsByClassName("tell-bt")
+    showConfirmation.addEventListner("click" , function(){
+      const form = document.getElementsByClassName("app-box")
+    })
   });
   
