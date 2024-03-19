@@ -105,6 +105,19 @@ window.onload = function () {
   langM.addEventListener("click", () => {
     langM.classList.remove("show");
   });
+  //ani product link
+  var fnScNavLinkElement = document.querySelector(".ani-product a");
+  fnScNavLinkElement.addEventListener("click", function (e) {
+    e.preventDefault();
+    var targetSectionId = this.getAttribute("href");
+    var targetSection = document.querySelector(targetSectionId);
+    var targetPosition = targetSection.offsetTop;
+  
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth"
+    });
+  });
   //quiz area
   const fnAnswerBox = document.querySelectorAll(".answer-box .answer-box-li");
   const fnChoiceBox = document.querySelectorAll(".choice-box .choice-box-li");
@@ -146,7 +159,7 @@ window.onload = function () {
         viewHeight = 350,
         drawingCanvas = document.getElementById("drawing_canvas"),
         ctx,
-        timeStep = 1 / 60;
+        timeStep = 1 / 50;
 
       Point = function (x, y) {
         this.x = x || 0;
@@ -483,50 +496,50 @@ window.onload = function () {
       document.getElementById("youtube-modal-2").style.display = "none";
     });
   });
-  
-      // 세번째 모달 창 열기
-      document.getElementById("youtube-link-3").addEventListener("click", function () {
-        document.getElementById("youtube-modal-3").style.display = "block";
-      });
-      // 세번째 모달 창 닫기
-      document.querySelectorAll("#youtube-modal-3 .s-close").forEach(function (element) {
-        element.addEventListener("click", function () {
-          document.getElementById("youtube-modal-3").style.display = "none";
-        });
-      });
 
-      // 네번째 모달 창 열기
-      document.getElementById("youtube-link-4").addEventListener("click", function () {
-        document.getElementById("youtube-modal-4").style.display = "block";
-      });
-      // 네번째 모달 창 닫기
-      document.querySelectorAll("#youtube-modal-4 .s-close").forEach(function (element) {
-        element.addEventListener("click", function () {
-          document.getElementById("youtube-modal-4").style.display = "none";
-        });
-      });
+  // 세번째 모달 창 열기
+  document.getElementById("youtube-link-3").addEventListener("click", function () {
+    document.getElementById("youtube-modal-3").style.display = "block";
+  });
+  // 세번째 모달 창 닫기
+  document.querySelectorAll("#youtube-modal-3 .s-close").forEach(function (element) {
+    element.addEventListener("click", function () {
+      document.getElementById("youtube-modal-3").style.display = "none";
+    });
+  });
 
-      // 다섯번째 모달 창 열기
-      document.getElementById("youtube-link-5").addEventListener("click", function () {
-        document.getElementById("youtube-modal-5").style.display = "block";
-      });
-      // 다섯번째 모달 창 닫기
-      document.querySelectorAll("#youtube-modal-5 .s-close").forEach(function (element) {
-        element.addEventListener("click", function () {
-          document.getElementById("youtube-modal-5").style.display = "none";
-        });
-      });
+  // 네번째 모달 창 열기
+  document.getElementById("youtube-link-4").addEventListener("click", function () {
+    document.getElementById("youtube-modal-4").style.display = "block";
+  });
+  // 네번째 모달 창 닫기
+  document.querySelectorAll("#youtube-modal-4 .s-close").forEach(function (element) {
+    element.addEventListener("click", function () {
+      document.getElementById("youtube-modal-4").style.display = "none";
+    });
+  });
 
-      // 여섯번째 모달 창 열기
-      document.getElementById("youtube-link-6").addEventListener("click", function () {
-        document.getElementById("youtube-modal-6").style.display = "block";
-      });
-      // 여섯번째 모달 창 닫기
-      document.querySelectorAll("#youtube-modal-6 .s-close").forEach(function (element) {
-        element.addEventListener("click", function () {
-          document.getElementById("youtube-modal-6").style.display = "none";
-        });
-      });
+  // 다섯번째 모달 창 열기
+  document.getElementById("youtube-link-5").addEventListener("click", function () {
+    document.getElementById("youtube-modal-5").style.display = "block";
+  });
+  // 다섯번째 모달 창 닫기
+  document.querySelectorAll("#youtube-modal-5 .s-close").forEach(function (element) {
+    element.addEventListener("click", function () {
+      document.getElementById("youtube-modal-5").style.display = "none";
+    });
+  });
+
+  // 여섯번째 모달 창 열기
+  document.getElementById("youtube-link-6").addEventListener("click", function () {
+    document.getElementById("youtube-modal-6").style.display = "block";
+  });
+  // 여섯번째 모달 창 닫기
+  document.querySelectorAll("#youtube-modal-6 .s-close").forEach(function (element) {
+    element.addEventListener("click", function () {
+      document.getElementById("youtube-modal-6").style.display = "none";
+    });
+  });
 
   /* 따라다니는 퀵메뉴 */
   var currentPosition = parseInt($(".quickmenu").css("top"));
@@ -582,14 +595,14 @@ window.onload = function () {
     });
   });
 
-// 수직 스크롤 값 가져오기
-var scrollTop = window.scrollY || document.documentElement.scrollTop;
+  // 수직 스크롤 값 가져오기
+  var scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-// 수평 스크롤 값 가져오기
-var scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+  // 수평 스크롤 값 가져오기
+  var scrollLeft = window.scrollX || document.documentElement.scrollLeft;
 
-console.log("수직 스크롤 값: " + scrollTop);
-console.log("수평 스크롤 값: " + scrollLeft);
+  console.log("수직 스크롤 값: " + scrollTop);
+  console.log("수평 스크롤 값: " + scrollLeft);
 
   // hun
 };
