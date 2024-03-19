@@ -42,9 +42,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-
+ <!-- 제이쿼리 -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <!-- 자바스크립트 -->
+    <!-- html5 자바스크립트 -->
     <script src="js/html5shiv.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
     <script src="js/respond.min.js"></script>
@@ -54,11 +54,8 @@
     <script async src="//www.instagram.com/embed.js"></script>
     <!-- 틱톡 렌더링 자바스크립트 -->
     <script async src="https://www.tiktok.com/embed.js"></script>
-
-    <!-- 제이쿼리 -->
+<!-- 해당 자바스크립트 -->
     <script src="js/main.js"></script>
-    <script src="js/apply.js"></script>
-    <script src="js/sub.js"></script>
     <title>파티마겔 - 제품스토리 페이지</title>
 
         <!-- Google tag (gtag.js) -->
@@ -230,55 +227,55 @@
           </li>
         </ul>
       </div>
-
-      <!-- 신청조회 모달 -->
-      <div id="search-modal" class="search-modal">
-        <div class="search-modal-content">
-          <div class="search-modal-inner">
-          <!-- 신청조회 내용 -->
-          <div class="search-modal-title">
-            <img src="images/short/quick_m_icon_search.svg" alt="돋보기 아이콘" />
-            <strong>샘플 신청내역 조회</strong>
-            <p>내가 신청한 무료 샘플을 확인해보세요.</p>
-          </div>
-          <div class="search-modal-input">
-            <label for="inputNumber">휴대폰 번호</label>
-            <input type="number" placeholder="‘-’을 제외한 운송장번호를 입력하세요." />
-          </div>
-          <button class="search-modal-button">조회하기</button>
-                  <!-- 닫기 버튼 -->
-        <span class="q-modal-close"></span>
-        </div>
-      </div>
-      </div>
-
-      <!-- FAQ 모달 -->
-      <div id="FAQ-modal" class="FAQ-modal">
-        <div class="FAQ-modal-content">
-          <div class="FAQ-modal-inner">
-          <!-- FAQ 내용 -->
-          <div class="FAQ-modal-title">
-            <img src="images/short/quick_m_icon_qustion.svg" alt="물음표 이미지" />
-            <p></p><em>파티마겔</em>에 대해서 자주 묻는 질문과 답변입니다.</p>
-          </div>
-          <div class="FAQ-box">
-            <em><span>Q.</span> 어떤 성분이 함유되어 있나요?</em>
-            <hr/>
-            <em><span>Q.</span> 어떤 성분이 함유되어 있나요?</em>
-            <hr/>
-            <em><span>Q.</span> 어떤 성분이 함유되어 있나요?</em>
-            <hr/>
-            <em><span>Q.</span> 어떤 성분이 함유되어 있나요?</em>
-            <hr/>
-            <em><span>Q.</span> 어떤 성분이 함유되어 있나요?</em>
-            <hr/>
-            <em><span>Q.</span> 어떤 성분이 함유되어 있나요?</em>
-          </div>
-        <!-- 닫기 버튼 -->
-        <span class="q-close"></span>
-      </div>
-      </div>
-      </div>
+          
+              <!-- 신청조회 모달 -->
+              <div id="search-modal" class="search-modal">
+                <div class="search-modal-content">
+                  <div class="search-modal-inner">
+                  <!-- 신청조회 내용 -->
+                  <div class="search-modal-title">
+                    <img src="images/short/quick_m_icon_search.svg" alt="돋보기 아이콘" />
+                    <strong>샘플 신청내역 조회</strong>
+                    <p>내가 신청한 무료 샘플을 확인해보세요.</p>
+                  </div>
+                  <div class="search-modal-input">
+                    <label for="inputNumber">휴대폰 번호</label>
+                    <input type="tel"  placeholder="‘-’를 제외한 숫자만 입력해 주세요." required/>
+                  </div>
+                  <button class="search-modal-button"><a href="#">조회하기</a></button>
+                          <!-- 닫기 버튼 -->
+                <span class="q-m-close"></span>
+                </div>
+              </div>
+              </div>
+        
+              <!-- FAQ 모달 -->
+              <div id="FAQ-modal" class="FAQ-modal">
+                <div class="FAQ-modal-content">
+                  <div class="FAQ-modal-inner">
+                  <!-- FAQ 내용 -->
+                  <div class="FAQ-modal-title">
+                    <img src="images/short/quick_m_icon_qustion.svg" alt="물음표 이미지" />
+                    <p></p><em>파티마겔</em>에 대해서 자주 묻는 질문과 답변입니다.</p>
+                  </div>
+                  <div class="FAQ-box">
+                    <em><span>Q.</span> 어떤 성분이 함유되어 있나요?</em>
+                    <hr/>
+                    <em><span>Q.</span> 얼마나 사용해야 하나요?</em>
+                    <hr/>
+                    <em><span>Q.</span> 어디서 파나요?</em>
+                    <hr/>
+                    <em><span>Q.</span> 사용량이 어떻게 되나요?</em>
+                    <hr/>
+                    <em><span>Q.</span> 어떤 효과가 있나요?</em>
+                    <hr/>
+                    <em><span>Q.</span> 어린이에게 사용 할 수 있나요?</em>
+                  </div>
+                <!-- 닫기 버튼 -->
+                <span class="q-m-close"></span>
+              </div>
+              </div>
+              </div>
 
       <!-- 쇼츠 -->
       <section class="short">
@@ -286,7 +283,7 @@
         <div class="short-title inner">
           <span>여드름균 막는 <em>항균·항염</em></span>
           <span>각질층 녹이는 <em>각질용해 작용</em></span>
-          <span>여드름 치료제인파티마겔을 영상으로 확인하세요!</span>
+          <span>여드름 치료제 파티마겔을 영상으로 확인하세요!</span>
         </div>
         <!-- 쇼츠 스와이퍼 -->
         <div class="swiper swiper-short">
