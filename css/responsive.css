@@ -102,7 +102,12 @@
     }
 }
 /* hun */
+@media screen and (max-width: 1200px){
+  .app-left{
+    display: none;
+  }
 
+}
 @media screen and (max-width: 950px){
 .info-info{
   width: 55vw;
