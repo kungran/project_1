@@ -791,10 +791,10 @@ body {
   transform: translate(-50%, -50%);
   width: 422px;
   height: 359px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px gray;
 }
 
 .search-modal-inner {
@@ -811,7 +811,7 @@ body {
   margin: 10px auto;
   /* background-color: aqua; */
 }
-.search-modal-title strong{
+.search-modal-title strong {
   font-family: inherit;
   font-size: 27px;
   font-weight: 700;
@@ -823,43 +823,42 @@ body {
   color: #616161;
 }
 .search-modal-input {
-    display: flex;
-    /* width: 220px; */
-    width: 100%;
-    max-width: 330px;
-    min-width: 170px;
-    /* height: 4vh; */
-    height: 39px;
-    border-radius: 20px;
-    background-color: #FFFFFF;
-    margin: 0 auto;
-    /* margin-right: 7px; */
-    line-height: 35px;
-    font-size: 13px;
+  display: flex;
+  /* width: 220px; */
+  width: 100%;
+  max-width: 330px;
+  min-width: 170px;
+  /* height: 4vh; */
+  height: 39px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  /* margin-right: 7px; */
+  line-height: 35px;
+  font-size: 13px;
 }
 .search-modal-input label {
   padding-left: 19px;
   font-family: inherit;
-  color:#616161;
+  color: #616161;
   margin-right: 15px;
 }
 .search-modal-input label::after {
   content: "";
   float: left;
-  transform: translate(77px, 11px);
+  transform: translate(69px, 11px);
   width: 1px;
   height: 16px;
-    background-color: #BFBFBF;
+  background-color: #bfbfbf;
 }
 .search-modal-input input {
-  border: none; 
+  border: none;
   outline: none; /* 클릭 시 아웃라인 제거 */
   width: 60%;
-   
-  background: #FFFFFF;
+  background: #ffffff;
 }
 .search-modal-input input::placeholder {
-  color: #BFBFBF;
+  color: #bfbfbf;
 }
 .search-modal-button {
   width: 268px;
@@ -895,6 +894,7 @@ body {
 .FAQ-modal {
   display: none;
 }
+
 /* 쇼츠 */
 .short {
   position: relative;
@@ -902,7 +902,7 @@ body {
   height: 100%;
   text-align: center;
   background-color: #f5f5f5;
-   padding: 160px 0 80px;
+  padding: 160px 0 80px;
 }
 
 .short-icon {
@@ -1050,18 +1050,19 @@ body {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7); /* 반투명한 배경 */
 }
+
 .s-modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: 7% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 540px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 395px; /*수정함*/
+  min-width: 310px;
   max-width: 600px;
-  min-width: 325px;
-  /* width: 80%; */
   border-radius: 20px;
   height: fit-content;
+  border: 1px solid #888;
+  background-color: #fefefe;
 }
 /* 닫기 버튼 */
 .s-close {
