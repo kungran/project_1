@@ -39,9 +39,35 @@ $(document).ready(function() {
         $gugun.append($("<option>").val(this).text(this));
       });
     });
-    const showConfirmation = document.getElementsByClassName("tell-bt")
-    showConfirmation.addEventListner("click" , function(){
-      const form = document.getElementsByClassName("app-box")
-    })
+    $('.js-click-modal').click(function(){
+      $('.container').addClass('modal-open');
+    });
+    
+    $('.js-close-modal').click(function(){
+      $('.container').removeClass('modal-open');
+    });
+    document.getElementsByClassName("js-click-modal").click.visibility ='visible';		
+
+document.getElementsByClassName("js-close-modal").click.visibility ='hidden';
+    // const showConfirmation = document.getElementsByClassName("tell-bt")
+    // showConfirmation.addEventListner("click" , function(){
+    //   const form = document.getElementsByClassName("app-box")
+    //   const fconfirmation = document.getElementById("confirmation")
+    //   // 입력된 폼 데이터 가져오기
+    //   const date = form.date.value
+    //   const sido = form.sido.value
+    //   const gugun = form.gugun.value
+    //   // 확인 메시지 생성
+    //   const fconfirmationMessage = `
+    //     <h2>신청 내용 확인</h2>
+    //     <p><strong>시/도 : </strong>${date}</p>
+    //     <p><strong>시/도 : </strong>${sido}</p>
+    //     <p><strong>구/군 : </strong>${gugun}</p>
+    //     `
+    //      // 확인메시지 표시 및 폼 숨기기
+    //      fconfirmation.innerHTML = fconfirmationMessage
+    //      form.style.display = "none"
+    //      fconfirmation.style.display = "block"
+    // })
   });
   

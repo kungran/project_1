@@ -55,17 +55,19 @@
         <div class="app-left">
           <ul class="app-left-top">
             <li>
-              
-              <div class="speech"><img src="/images/speech.png" alt="말풍선"><h1><span>여드름,</span><br />뭘 발라야 할까?</h1></div>
+              <div class="speech">
+                <img src="/images/speech.png" alt="말풍선" />
+                <h1><span>여드름,</span><br />뭘 발라야 할까?</h1>
+              </div>
             </li>
             <li>
               <div class="model-img"><img src="/images/model.png" alt="모델" /></div>
             </li>
           </ul>
           <ul class="app-left-bottom">
-            <div class="gel-img"><img src="images/modal-img.png" alt="겔"></div>
+            <div class="gel-img"><img src="images/modal-img.png" alt="겔" /></div>
             <h1><span>無항생제</span> 여드름 치료제</h1>
-            <div class="logo-img"><img src="/images/logo-bg-wt.png" alt="로고"></div>
+            <div class="logo-img"><img src="/images/logo-bg-wt.png" alt="로고" /></div>
           </ul>
         </div>
         <form class="app-box">
@@ -78,28 +80,37 @@
           <div class="app-address">
             <p class="stap">#STEP 1</p>
             <h1>약국 선택하기</h1>
-            <input type="date" min="2024-03-01" max="2024-05-31" class="date" />
+            <input type="date" min="2024-03-01" max="2024-05-31" class="date" id="date" value="date" />
             <ul>
               <li>
-                <select name="sido" id="sido">
+                <select name="sido" id="sido" value="sido">
                   <option value="">시/도 선택</option>
                 </select>
               </li>
               <li>
-                <select name="gugun" id="gugun">
+                <select name="gugun" id="gugun" value="gugun">
                   <option value="">구/군 선택</option>
                 </select>
               </li>
             </ul>
-            <button type="submit" class="address-bt">약국 조회하기</button>
+
+            <div class="container">
+              <a class="btn js-click-modal">약국 조회하기</a>
+              <div class="modal">
+                <div class="add-header"></div>
+                <div class="add-body">
+                  <a class="btn js-close-modal"><img src="images/close.png" alt="닫기" /></a>
+                </div>
+              </div>
+            </div>
           </div>
+
           <div class="app-tell">
             <p class="stap">#STEP 2</p>
             <h1>샘플 신청하기</h1>
             <ul class="tell-nb">
               <li><h3>전화 번호</h3></li>
-              <li><label for="tell" class="tell"></label></li>
-              <li><input type="tel" class="tel"/ placeholder="'-'를 제외한 숫자만 입력해 주세요."></li>
+              <li><input type="tel" class="tel" id="tel" placeholder="'-'를 제외한 숫자만 입력해 주세요." /></li>
               <li><button class="code-bt">인증 요청</button></li>
             </ul>
             <ul class="tell-nb2">
@@ -109,6 +120,9 @@
             <button type="submit" class="tell-bt" onclick="showConfirmation()">신청하기</button>
           </div>
         </form>
+        <div id="confirmation">
+          <!-- js 출력 -->
+        </div>
       </div>
     </div>
   </body>
