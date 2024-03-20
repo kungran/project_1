@@ -103,10 +103,14 @@
 }
 /* hun */
 @media screen and (max-width: 1200px){
+  .app-inner{
+    position: relative;
+    width: 520px;
+    margin: 0 auto;
+  }
   .app-left{
     display: none;
   }
-
 }
 @media screen and (max-width: 950px){
 .info-info{
@@ -153,7 +157,6 @@
     font-size: 16px;
   }
 }
-
 @media screen and (max-width: 500px) {
   .info-info{
     width: 80vw;
