@@ -51,6 +51,7 @@ body {
   align-items: center;
   gap: 32%;
   max-width: 1630px;
+  padding-top: 10px;
 }
 .logo {
   width: 15%;
