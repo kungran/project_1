@@ -452,7 +452,7 @@ window.onload = function () {
       900: {
         //브라우저 화면너비 900이상일때
         slidesPerView: 5.8,
-        spaceBetween: 40,
+        spaceBetween: 50,
       },
       786: {
         slidesPerView: 4.7,
