@@ -36,6 +36,102 @@ body {
   /* background-color: bisque; */
 }
 /* min */
+/* qna area*/
+.sub-qna-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 30px;
+  background-color: #a3c100;
+}
+.sub-qna-wrapper .inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1480px;
+  margin-top: 40px;
+}
+.qna-click-list {
+  position: relative;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.qna-click-list-li {
+  position: relative;
+  width: 65%;
+  height: calc(100% / 5);
+}
+.fn-qcl:hover{
+  transform: translateY(-10%);
+}
+
+.qna-click-list-li:nth-of-type(2) {
+  position: absolute;
+  top: 17%;
+  right: 0;
+}
+.qna-click-list-li:nth-of-type(3) {
+  position: relative;
+  margin-top: 80px;
+}
+.qna-click-list-li:nth-of-type(3)::after{
+  content: "";
+  display: block;
+  position: absolute;
+}
+.qna-click-list-li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.qcl-emoji{
+  position: absolute;
+  bottom: 15px;
+  left: 20%;
+  display: block;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 25px;
+}
+.qna-click-list-li .qcl-emoji img{
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+.qna-content {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 35px;
+  box-shadow: 2px 7px 6px rgba(0, 0, 0, 0.15);
+}
+.sw-qna {
+  width: 100%;
+  height: 100%;
+}
+.sw-qna .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.sw-qna .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.sw-qna .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
 /* ran */
 /* hun */
 
@@ -52,7 +148,7 @@ body {
   font-weight: 600;
   color: #333;
 }
-.info-p img{
+.info-p img {
   margin-bottom: 5px;
 }
 .detaild-info h1 {

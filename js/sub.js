@@ -1,5 +1,5 @@
-window.onload = function(){
-//min
+window.onload = function () {
+  //min
   //menu area
   //topmenu
   // index 페이지의 메뉴 항목을 찾아서 해당 항목에 active 클래스를 추가합니다.
@@ -79,8 +79,32 @@ window.onload = function(){
   langM.addEventListener("click", () => {
     langM.classList.remove("show");
   });
-// ran
+  //qna swiper
+  const swQna = new Swiper(".sw-qna", {
+    loop: true,
+    effect: "fade",
+    speed: 300,
+    on: {
+      slidesChange: function () {
+        const idx = this.realIndex;
+        for (let menu of menus) {
+          menu.classList.remove("act");
+        }
+        menus[idx].classList.add("act");
+      },
+    },
+  });
+  const menus = document.querySelectorAll(".sub-qna-wrapper .qna-click-list .fn-qcl");
+  function getElementIndex(element) {
+    return Array.from(element.parentElement.children).indexOf(element);
+  }
+  // 메뉴 항목에 대한 이벤트 핸들러 설정
+  menus.forEach((menu, idx) => {
+    menu.addEventListener("mouseover", () => {
+      swQna.slideTo(idx);
+    });
+  });
+  // ran
 
-// hun
-}
-
+  // hun
+};
