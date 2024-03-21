@@ -51,7 +51,7 @@ body {
   align-items: center;
   gap: 32%;
   max-width: 1630px;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 .logo {
   width: 15%;
@@ -176,19 +176,15 @@ body {
   position: relative;
   width: 100%;
   height: 88%;
-  max-width: 1725px;
+  max-width: 1728px;
 }
 .main-img-slide {
   position: relative;
   width: 100%;
   height: 100%;
+  background: url("../images/main-img_psd.png")no-repeat center/ cover;
 }
-.main-img-slide img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 .ani-product {
   -webkit-animation: head-move 1s ease-in-out infinite;
 }
@@ -209,38 +205,44 @@ body {
   display: block;
   height: 100vh;
   width: 100%;
-  margin-top: 2%;
+  /* margin-top: 2%; */
   padding: 35px;
 }
 .main-quiz .inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 5%;
   max-width: 1530px;
+}
+.main-quiz .quiz-insta-bg {
+  position: absolute;
+  top: -20%;
+  right: 0;
+  display: block;
 }
 .quiz-main-title {
   position: relative;
   display: block;
-  font-family: "VITRO CORE TTF";
+  font-family:"VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  margin-left: 15px;
 }
 .quiz-title-bg {
-  position: relative;
-  font-size: 18rem;
+  position: absolute;
+  top: 9px;
+  left: -1%;
+  font-size: 8rem;
   color: #a3c100;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 .quiz-text {
-  position: absolute;
-  top: 8%;
-  left: 65%;
-  font-size: 7rem;
+  font-size: 8rem;
+  text-transform: uppercase;
   color: #a3c100;
 }
 .quiz-info-text {
-  position: absolute;
-  top: 8%;
-  left: 160%;
   font-size: 6.5rem;
-  margin-left: 50px;
+  margin-left: 20px;
 }
 .main-color {
   color: #a3c100;
@@ -254,11 +256,11 @@ body {
   background-color: #f5f5f5;
   border-radius: 35px;
   padding: 30px;
+  margin-top: 5%;
 }
-.quiz-box-wrap {
+.main-quiz .quiz-box-wrap {
   position: relative;
   display: block;
-  margin-top: 14%;
 }
 .quiz-box {
   position: relative;
@@ -281,7 +283,7 @@ body {
   margin: 0 auto;
   border: 1px solid #ececec;
   border-radius: 35px;
-  font-family: "VITRO CORE TTF";
+  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
   font-weight: 100;
   font-size: 2.2rem;
   text-align: center;
@@ -396,7 +398,7 @@ body {
 }
 .quiz-result-title {
   font-size: 4rem;
-  font-family: "VITRO CORE TTF";
+  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
   color: #4b4b4b;
   z-index: 5;
 }
@@ -416,7 +418,7 @@ body {
 
 .sample-apply-guide {
   font-size: 2.2rem;
-  font-family: "VITRO CORE TTF";
+  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
   z-index: 5;
 }
 .sub-apply {
@@ -481,15 +483,10 @@ body {
 }
 
 /* insta style banner area */
-.quiz-insta-bg {
-  position: absolute;
-  top: -19%;
-  right: -5%;
-  display: block;
-}
+
 .main-instastyle-banner {
   width: 100%;
-  margin: 8% 12%;
+  /* margin: 8% 12%; */
 }
 .quiz-logo-bg {
   opacity: 0.3;
@@ -516,7 +513,7 @@ body {
 .quiz-box-wrap {
   position: relative;
   display: block;
-  margin-top: 14%;
+  margin-top: 5%;
 }
 .quiz-box {
   position: relative;
@@ -538,7 +535,7 @@ body {
   margin: 0 auto;
   border: 1px solid #ececec;
   border-radius: 35px;
-  font-family: "VITRO CORE TTF";
+  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
   font-weight: 100;
   font-size: 2.2rem;
   text-align: center;
@@ -640,7 +637,7 @@ body {
 }
 .quiz-result-title {
   font-size: 4rem;
-  font-family: "VITRO CORE TTF";
+  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
   color: #4b4b4b;
 }
 .qrt-l {
@@ -657,7 +654,7 @@ body {
 }
 .sample-apply-guide {
   font-size: 2.2rem;
-  font-family: "VITRO CORE TTF";
+  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
 }
 .sub-apply {
   position: relative;
@@ -682,7 +679,7 @@ body {
 }
 .main-instastyle-banner {
   width: 100%;
-  margin: 8% 12%;
+  margin: 10% 0 0 10%;
 }
 .quiz-logo-bg {
   opacity: 0.3;
