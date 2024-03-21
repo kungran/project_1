@@ -1035,6 +1035,9 @@ body {
 .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
   height: 2px;
 }
+.wiper-pagination-progressbar-fill {
+  height: 2px;
+}
 /* 쇼츠 모달 */
 /* 모달 스타일 */
 .s-modal {
