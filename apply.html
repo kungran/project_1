@@ -71,29 +71,33 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   
-    <div class="wrap">
-      <!-- min -->
-      <!-- ran -->
-      <!-- hun -->
-      <div class="app-inner">
-        <div class="app-left">
-          <ul class="app-left-top">
-            <li>
-              <div class="speech">
-                <img src="/images/speech.png" alt="말풍선" />
-                <h1><span>여드름,</span><br />뭘 발라야 할까?</h1>
-              </div>
-            </li>
-            <li>
-              <div class="model-img"><img src="/images/model.png" alt="모델" /></div>
-            </li>
-          </ul>
-          <ul class="app-left-bottom">
-            <div class="gel-img"><img src="images/modal-img.png" alt="겔" /></div>
-            <h1><span>無항생제</span> 여드름 치료제</h1>
-            <div class="logo-img"><img src="/images/logo-bg-wt.png" alt="로고" /></div>
-          </ul>
-        </div>
+  <div class="wrap">
+    <!-- min -->
+    <!-- ran -->
+    <!-- hun -->
+    <div class="tg-logo">
+      <a href="index.html"><img src="images/logo_b.png" alt="태극" /></a>
+    </div>
+    <div class="app-inner">
+      <div class="app-left">
+        <ul class="app-left-top">
+          <li>
+            <div class="speech">
+              <img src="/images/speech.png" alt="말풍선" />
+              <h1><span>여드름,</span><br />뭘 발라야 할까?</h1>
+            </div>
+          </li>
+          <li>
+            <div class="model-img"><img src="/images/model.png" alt="모델" /></div>
+          </li>
+        </ul>
+        <ul class="app-left-bottom">
+          <div class="gel-img"><img src="images/modal-img.png" alt="겔" /></div>
+          <h1><span>無항생제</span> 여드름 치료제</h1>
+          <div class="logo-img"><img src="/images/logo-bg-wt.png" alt="로고" /></div>
+        </ul>
+      </div>
+      <div class="app-page">
         <form class="app-box">
           <ul class="app-info">
             <p>배송 안내</p>
@@ -119,7 +123,7 @@
             </ul>
 
             <div class="container">
-              <a class="btn js-click-modal">약국 조회하기</a>
+              <a class="btn js-click-modal" id="js-click-modal">약국 조회하기</a>
               <div class="modal">
                 <div class="add-header"></div>
                 <div class="add-body">
@@ -135,19 +139,33 @@
             <ul class="tell-nb">
               <li><h3>전화 번호</h3></li>
               <li><input type="tel" class="tel" id="tel" placeholder="'-'를 제외한 숫자만 입력해 주세요." /></li>
-              <li><button class="code-bt">인증 요청</button></li>
+              <li><button class="code-bt" id="code-bt">인증 요청</button></li>
             </ul>
             <ul class="tell-nb2">
               <li><h3>인증 번호</h3></li>
-              <li><input type="tel" class="tel2" /></li>
+              <li>
+                <div class="tel-wrap" id="tel-wrap">
+                  <input type="tel" id="tel2" class="tel2"">
+                  <span class="time" id="time"></span>
+                </div>
+              </li>
+              <li><button class="btn_auth" id="btn_auth">인증 하기</button></li>
             </ul>
-            <button type="submit" class="tell-bt" onclick="showConfirmation()">신청하기</button>
           </div>
+          <button id="app-bt">신청 하기</button>
         </form>
-        <div id="confirmation">
-          <!-- js 출력 -->
+        <div class="app-modal_wrap">
+          <div class="app-modal_top">
+            <div class="check_img">
+              <img src="images/check.png" alt="체크" />
+            </div>
+            <p>샘플 신청이 <br />완료되었습니다.</p>
+            <h1>자세한 사항은 <span>카카오톡, 문자</span>로 확인해주세요.</h1>
+          </div>
+          <button class="modal_close"><a href="index.html">메인으로 가기</a></button>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
