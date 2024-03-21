@@ -1174,12 +1174,9 @@ body {
   font-size: 18px;
   font-weight: 700;
 }
-.span-md_1 {
+.span-md{
   background-color: #a3c100;
   color: #fff;
-}
-.span-md_2 {
-  color: #a3c100;
 }
 .modal-img {
   background: url("../images/modal-img.png") no-repeat center;

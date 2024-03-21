@@ -338,6 +338,11 @@
     margin-top: 20px;
   }
 }
+@media screen and (max-width: 830px){
+  .tg-logo{
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   /* 제품 상세 정보 */
   .detaild-info {
