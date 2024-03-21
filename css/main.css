@@ -211,7 +211,7 @@ body {
 .main-quiz .inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 5%;
   max-width: 1530px;
 }
@@ -248,7 +248,8 @@ body {
   color: #a3c100;
 }
 .quiz-box-bg {
-  position: relative;
+  position: absolute;
+  top: 0;
   display: block;
   width: 100%;
   height: 58vh;
@@ -288,6 +289,9 @@ body {
   font-size: 2.2rem;
   text-align: center;
   background: #fff;
+}
+.quiz-main-box{
+  position: relative;
 }
 .answer-box {
   position: relative;
@@ -1177,9 +1181,12 @@ body {
   font-size: 18px;
   font-weight: 700;
 }
-.span-md{
+.span-md_1 {
   background-color: #a3c100;
   color: #fff;
+}
+.span-md_2 {
+  color: #a3c100;
 }
 .modal-img {
   background: url("../images/modal-img.png") no-repeat center;

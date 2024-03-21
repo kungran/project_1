@@ -192,3 +192,4 @@ $btnAuth.on('click', function(e) {
   $('#app-bt').prop('disabled', false);
 });
 });
+
