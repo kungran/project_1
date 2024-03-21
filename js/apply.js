@@ -23,7 +23,6 @@ $(document).ready(function () {
   $("#date").val(getCurrentDate());
   // 현재 날짜 이전의 날짜 선택 불가능하도록 설정
   $("#date").attr("min", getCurrentDate());
-
   //hun
   var area0 = ["서울특별시", "인천광역시", "대전광역시", "광주광역시", "대구광역시", "울산광역시", "부산광역시", "경기도", "강원도", "충청북도", "충청남도", "전라북도", "전라남도", "경상북도", "경상남도", "제주도"];
   var areas = [
@@ -103,91 +102,93 @@ $(document).ready(function () {
     ["서귀포시", "제주시", "남제주군", "북제주군"],
   ];
 
-  // Populate the 시/도 dropdown
-  $("#sido").append(
-    area0.map(function (area) {
+ // Populate the 시/도 dropdown
+ $("#sido").append(area0.map(function(area) {
+  return $("<option>").val(area).text(area);
+}));
 
-      return $("<option>").val(area).text(area);
-    })
-  );
+// 시/도 선택 change event
+$("#sido").change(function() {
+  var index = $("#sido option").index($("#sido option:selected")) - 1; // Adjusted for zero-indexing and the placeholder option
+  var selectedArea = areas[index] || [];
+  var $gugun = $("#gugun").empty().append("<option value=''>구/군 선택</option>");
 
-  // 시/도 선택 change event
-  $("#sido").change(function () {
-    var index = $("#sido option").index($("#sido option:selected")) - 1; // Adjusted for zero-indexing and the placeholder option
-    var selectedArea = areas[index] || [];
-    var $gugun = $("#gugun").empty().append("<option value=''>구/군 선택</option>");
-
-    $.each(selectedArea, function () {
-      $gugun.append($("<option>").val(this).text(this));
-    });
-
-    function openModal() {
-      document.querySelector(".app-modal_wrap").style.display = "block";
-    }
-
-    // 모달 닫기 함수
-    function closeModal() {
-      document.querySelector(".app-modal_wrap").style.display = "none";
-    }
-    $('#app-bt').prop('disabled', true);
-    // 신청하기 버튼 클릭 시 모달 열기
-    document.getElementById("app-bt").addEventListener("click", function (event) {
-      event.preventDefault(); // 폼 제출 이벤트 방지
-      openModal();
-    });
-
-    // // 모달 외부 클릭 시 모달 닫기 이벤트 추가
-    // document.querySelector(".app-modal_wrap").addEventListener("click", function (event) {
-    //   if (event.target.classList.contains(".app-modal_wrap")) {
-    //     closeModal();
-    //   }
-    // });
-
-    let seconds; // 남은 시간 변수
-    let countdown; // 카운트다운을 관리하는 변수
-    const $timeSpan = $('.time'); // 시간을 표시할 요소
-    const $btnSend = $('.code-bt'); // "인증번호 받기" 버튼 요소
-    const $btnAuth = $('.btn_auth') // "인증 하기" 버튼 요소
-
-    $('#btn_auth').prop('disabled', true);
- 
-    // 시간을 업데이트하고 화면에 표시하는 함수
-    const updateCountdown = function() {
-        if (seconds >= 0) {
-            const minutes = Math.floor(seconds / 60);
-            const remainingSeconds = seconds % 60;
-            $timeSpan.text(`${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`);
-            seconds--;
-        } else {
-            clearInterval(countdown);
-            alert('인증번호 유효시간이 만료되었습니다.');
-        }
-    };
-
-    // "인증번호 받기" 버튼 클릭 이벤트 핸들러
-    $btnSend.on('click', function(e) {
-        e.preventDefault();
-        $btnSend.text('재전송');
-        alert('인증번호가 발송되었습니다.');
-
-        $('#btn_auth').prop('disabled', false);
-
-        clearInterval(countdown);
-        seconds = 180; // 3분(180초)
-
-        updateCountdown();
-        // 1초마다 카운트다운 업데이트
-        countdown = setInterval(updateCountdown, 1000); 
-    });
-    $btnAuth.on('click', function(e) {
-      e.preventDefault();
-      $btnSend.text('인증 요청');
-      alert('인증이 완료되었습니다.');
-
-      $timeSpan.hide();
-      // 신청 하기 버튼 활성화
-      $('#app-bt').prop('disabled', false);
+  $.each(selectedArea, function() {
+    $gugun.append($("<option>").val(this).text(this));
   });
 });
+$('.js-click-modal').click(function(){
+  $('.container').addClass('modal-open');
+});
 
- 
+$('.js-close-modal').click(function(){
+  $('.container').removeClass('modal-open');
+});
+function openModal() {
+  document.querySelector(".app-modal_wrap").style.display = "block";
+}
+
+// 모달 닫기 함수
+function closeModal() {
+  document.querySelector(".app-modal_wrap").style.display = "none";
+}
+$('#app-bt').prop('disabled', true);
+// 신청하기 버튼 클릭 시 모달 열기
+document.getElementById("app-bt").addEventListener("click", function (event) {
+  event.preventDefault(); // 폼 제출 이벤트 방지
+  openModal();
+});
+
+// // 모달 외부 클릭 시 모달 닫기 이벤트 추가
+// document.querySelector(".app-modal_wrap").addEventListener("click", function (event) {
+//   if (event.target.classList.contains(".app-modal_wrap")) {
+//     closeModal();
+//   }
+// });
+
+let seconds; // 남은 시간 변수
+let countdown; // 카운트다운을 관리하는 변수
+const $timeSpan = $('.time'); // 시간을 표시할 요소
+const $btnSend = $('.code-bt'); // "인증번호 받기" 버튼 요소
+const $btnAuth = $('.btn_auth') // "인증 하기" 버튼 요소
+
+$('#btn_auth').prop('disabled', true);
+
+// 시간을 업데이트하고 화면에 표시하는 함수
+const updateCountdown = function() {
+    if (seconds >= 0) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        $timeSpan.text(`${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`);
+        seconds--;
+    } else {
+        clearInterval(countdown);
+        alert('인증번호 유효시간이 만료되었습니다.');
+    }
+};
+
+// "인증번호 받기" 버튼 클릭 이벤트 핸들러
+$btnSend.on('click', function(e) {
+    e.preventDefault();
+    $btnSend.text('재전송');
+    alert('인증번호가 발송되었습니다.');
+
+    $('#btn_auth').prop('disabled', false);
+
+    clearInterval(countdown);
+    seconds = 180; // 3분(180초)
+
+    updateCountdown();
+    // 1초마다 카운트다운 업데이트
+    countdown = setInterval(updateCountdown, 1000); 
+});
+$btnAuth.on('click', function(e) {
+  e.preventDefault();
+  $btnSend.text('인증 요청');
+  alert('인증이 완료되었습니다.');
+
+  $timeSpan.hide();
+  // 신청 하기 버튼 활성화
+  $('#app-bt').prop('disabled', false);
+});
+});
