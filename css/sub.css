@@ -36,6 +36,15 @@ body {
   /* background-color: bisque; */
 }
 /* min */
+/* menu */
+.header .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32%;
+  max-width: 1630px;
+  padding-top: 10px;
+}
 /* qna area*/
 .sub-qna-wrapper {
   position: relative;
