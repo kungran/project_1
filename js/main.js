@@ -159,7 +159,7 @@ window.onload = function () {
         viewHeight = 350,
         drawingCanvas = document.getElementById("drawing_canvas"),
         ctx,
-        timeStep = 1 / 50;
+        timeStep = 1 / 40;
 
       Point = function (x, y) {
         this.x = x || 0;
