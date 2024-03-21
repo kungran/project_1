@@ -112,10 +112,10 @@ window.onload = function () {
     var targetSectionId = this.getAttribute("href");
     var targetSection = document.querySelector(targetSectionId);
     var targetPosition = targetSection.offsetTop;
-  
+
     window.scrollTo({
       top: targetPosition,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   });
   //quiz area
