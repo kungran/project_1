@@ -75,9 +75,6 @@
       <!-- min -->
       <!-- ran -->
       <!-- hun -->
-      <div class="tg-logo">
-        <a href="index.html"><img src="images/logo_b.png" alt="태극" /></a>
-      </div>
       <div class="app-inner">
         <div class="app-left">
           <ul class="app-left-top">
@@ -97,125 +94,58 @@
             <div class="logo-img"><img src="/images/logo-bg-wt.png" alt="로고" /></div>
           </ul>
         </div>
-        <div class="app-page">
-          <form class="app-box">
-            <ul class="app-info">
-              <p>배송 안내</p>
-              <li>샘플 제품 신청 시 지정하신 약국으로 발송됩니다.</li>
-              <li>잘못된 배송정보로 인해 제품을 못 받아보실 경우 재발송<br />되지 않습니다.</li>
-              <li>신청 후 익일 발송을 원칙으로 하나 택배사 사정에 의해 <br />변동이 있을 수 있습니다.</li>
+        <form class="app-box">
+          <ul class="app-info">
+            <p>배송 안내</p>
+            <li>샘플 제품 신청 시 지정하신 약국으로 발송됩니다.</li>
+            <li>잘못된 배송정보로 인해 제품을 못 받아보실 경우 재발송<br />되지 않습니다.</li>
+            <li>신청 후 익일 발송을 원칙으로 하나 택배사 사정에 의해 <br />변동이 있을 수 있습니다.</li>
+          </ul>
+          <div class="app-address">
+            <p class="stap">#STEP 1</p>
+            <h1>약국 선택하기</h1>
+            <input type="date" min="2024-03-01" max="2024-05-31" class="date" id="date" value="date" />
+            <ul>
+              <li>
+                <select name="sido" id="sido" value="sido">
+                  <option value="">시/도 선택</option>
+                </select>
+              </li>
+              <li>
+                <select name="gugun" id="gugun" value="gugun">
+                  <option value="">구/군 선택</option>
+                </select>
+              </li>
             </ul>
-            <div class="app-address">
-              <p class="stap">#STEP 1</p>
-              <h1>약국 선택하기</h1>
-              <input type="date" min="2024-03-01" max="2024-05-31" class="date" id="date" value="date" />
-              <ul>
-                <li>
-                  <select name="sido" id="sido" value="sido">
-                    <option value="">시/도 선택</option>
-                  </select>
-                </li>
-                <li>
-                  <select name="gugun" id="gugun" value="gugun">
-                    <option value="">구/군 선택</option>
-                  </select>
-                </li>
-              </ul>
 
             <div class="container">
               <a class="btn js-click-modal">약국 조회하기</a>
               <div class="modal">
-                <div class="add-header">
-                  <a class="btn js-close-modal"><img src="images/close.png" alt="닫기" /></a>
-
-                </div>
+                <div class="add-header"></div>
                 <div class="add-body">
-                  <div class="add-body-txt-box">
-                    <div class="add-body-title">전국약국조회</div>
-                    <div class="add-body-txt">상품을 수령하실 약국을 선택해주세요.</div>
-                  </div>
-                  <!-- 약국 리스트 -->
-                  <ul class="modal-list">
-                    <li class="modal-list-li">
-                      <img src="images/phamacy1.png" alt="약국이미지" />
-                      <div class="ml-txt-box">
-                        <div class="ml-store-title">광장약국</div>
-                        <div class="ml-store-address">대구광역시 중구 삼덕동</div>
-                      </div>
-                      <button class="ml-store-choice">약국 선택하기</button>
-                    </li>
-                    <li class="modal-list-li">
-                      <img src="images/pharmacy2.jpg" alt="약국이미지" />
-                      <div class="ml-txt-box">
-                        <div class="ml-store-title">메디홈약국</div>
-                        <div class="ml-store-address">대구광역시 중구 삼덕동</div>
-                      </div>
-                      <button class="ml-store-choice">약국 선택하기</button>
-                    </li>
-                    <li class="modal-list-li">
-                      <img src="images/pharmacy3.jpg" alt="약국이미지" />
-                      <div class="ml-txt-box">
-                        <div class="ml-store-title">우리안약국</div>
-                        <div class="ml-store-address">대구광역시 중구 삼덕동</div>
-                      </div>
-                      <button class="ml-store-choice">약국 선택하기</button>
-                    </li>
-                    <li class="modal-list-li">
-                      <img src="images/pharmacy4.png" alt="약국이미지" />
-                      <div class="ml-txt-box">
-                        <div class="ml-store-title">웰스팜약국</div>
-                        <div class="ml-store-address">대구광역시 중구 삼덕동</div>
-                      </div>
-                      <button class="ml-store-choice">약국 선택하기</button>
-                    </li>
-                    <li class="modal-list-li">
-                      <img src="images/pharmacy5.jpg" alt="약국이미지" />
-                      <div class="ml-txt-box">
-                        <div class="ml-store-title">해림온누리약국</div>
-                        <div class="ml-store-address">대구광역시 중구 삼덕동</div>
-                      </div>
-                      <button class="ml-store-choice">약국 선택하기</button>
-                    </li>
-                  </ul>
+                  <a class="btn js-close-modal"><img src="images/close.png" alt="닫기" /></a>
                 </div>
               </div>
             </div>
-
           </div>
+
+          <div class="app-tell">
+            <p class="stap">#STEP 2</p>
+            <h1>샘플 신청하기</h1>
+            <ul class="tell-nb">
+              <li><h3>전화 번호</h3></li>
+              <li><input type="tel" class="tel" id="tel" placeholder="'-'를 제외한 숫자만 입력해 주세요." /></li>
+              <li><button class="code-bt">인증 요청</button></li>
+            </ul>
+            <ul class="tell-nb2">
+              <li><h3>인증 번호</h3></li>
+              <li><input type="tel" class="tel2" /></li>
+            </ul>
+            <button type="submit" class="tell-bt" onclick="showConfirmation()">신청하기</button>
+          </div>
+        </form>
+        <div id="confirmation">
           <!-- js 출력 -->
-          <div class="adr-confirm"></div>
-
-            <div class="app-tell">
-              <p class="stap">#STEP 2</p>
-              <h1>샘플 신청하기</h1>
-              <ul class="tell-nb">
-                <li><h3>전화 번호</h3></li>
-                <li><input type="tel" class="tel" id="tel" placeholder="'-'를 제외한 숫자만 입력해 주세요." /></li>
-                <li><button class="code-bt" id="code-bt">인증 요청</button></li>
-              </ul>
-              <ul class="tell-nb2">
-                <li><h3>인증 번호</h3></li>
-                <li>
-                  <div class="tel-wrap" id="tel-wrap">
-                    <input type="tel" id="tel2" class="tel2"">
-                    <span class="time" id="time"></span>
-                  </div>
-                </li>
-                <li><button class="btn_auth" id="btn_auth">인증 하기</button></li>
-              </ul>
-            </div>
-            <button id="app-bt">신청 하기</button>
-          </form>
-          <div class="app-modal_wrap">
-            <div class="app-modal_top">
-              <div class="check_img">
-                <img src="images/check.png" alt="체크" />
-              </div>
-              <p>샘플 신청이 <br />완료되었습니다.</p>
-              <h1>자세한 사항은 <span>카카오톡, 문자</span>로 확인해주세요.</h1>
-            </div>
-            <button class="modal_close"><a href="index.html">메인으로 가기</a></button>
-          </div>
         </div>
       </div>
     </div>
