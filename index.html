@@ -60,11 +60,15 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- 인스타 렌더링 자바스크립트 -->
-    <script async src="//www.instagram.com/embed.js"></script>
+    <!-- <script async src="//www.instagram.com/embed.js"></script> -->
     <!-- 틱톡 렌더링 자바스크립트 -->
     <!-- <script async src="https://www.tiktok.com/embed.js"></script> -->
     <!-- 해당 자바스크립트 -->
     <script src="js/main.js"></script>
+    <!-- aos acc -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/ran.js"></script>
     <title>파티마겔 - 여드름은 짜지말고 바르자</title>
 
@@ -329,14 +333,13 @@
         <div id="youtube-modal" class="s-modal">
           <div class="s-modal-content">
             <!-- 틱톡 영상 -->
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yakstagram/video/7191420369427860737" data-video-id="7191420369427860737" style="max-width: 605px; min-width: 325px">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yakstagram/video/7191420369427860737" data-video-id="7191420369427860737" style="max-width: 395px; min-width: 305px">
               <section>
-                <a target="_blank" title="@yakstagram" href="https://www.tiktok.com/@yakstagram?refer=embed">@yakstagram</a> 여드름약 아무거나 바르지 마세요.🙌🏻 *상태별 여드름약 정리* 🎾아프지는 않지만 알이 차려고 하는 상태 -&gt; 파티마겔 균 성장
-                억제효과, 각질 녹여줌 자극성이 커서 극소량 바르고 처음에는 2일에 한번 바르다가 적응되면 1일에 1번 -&gt; 1일 2회로 점진적으로 늘려주세요. ⚾빨갛게 알이 차고 아픈 상태 -&gt; 큐아크네, 애크논 등 여드름 균 제거 + 염증 억제 기능 피부가
-                민감한 사람도 무난히 사용 가능 ️ ️🏐블랙헤드, 화이드헤드, 좁쌀여드름 -&gt; 클리어틴 피지 녹이는 효과 자극적이면 2일에 1회 -&gt; 1일 1회 -&gt; 1일 2회로 점진적으로 적응해가기 ⚽️좁쌀, 화농성 모두 있는데 색소 침착 잘 생기는 사람 -&gt;
-                아젤리아 여드름균 증식 억제 + 모공 막히지 않도록 하는 기능+색소침착 방지 효과 🏀여드름 짠 직후 감염 예방 -&gt; 에스로반, 베아로반 모낭염에 잘 듣고, 추가 감염 예방에 좋은데 여드름과 모낭염은 육안 구분이 어렵긴 해요. 😓 *여드름이 잘
-                나는 분께 도움이 될만한 영양제* 💙오메가3 - 과도한 피지 분비 억제, 염증 억제 💙비타민 A D E 아연 -&gt; 염증과 관련된 비타민. 종합비타민을 드세요. 🌞여드름약 사용은 세안과 기초 스킨 로션 후에 바르고, 약을 바른 후 자외선차단제를 꼭
-                발라주세요!! 🫣여드름약이 필요한 친구가 있다면 공유 🤔궁금한 건 질문해주세요🙌🏻 <a title="약사" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EC%82%AC?refer=embed">#약사</a>
+                <a target="_blank" title="@yakstagram" href="https://www.tiktok.com/@yakstagram?refer=embed">@yakstagram</a> 여드름약 아무거나 바르지 마세요.🙌🏻 *상태별 여드름약 정리* 🎾아프지는 않지만 알이 차려고 하는 상태 -&gt; 파티마겔 균 성장 억제효과, 각질 녹여줌 자극성이 커서 극소량 바르고
+                처음에는 2일에 한번 바르다가 적응되면 1일에 1번 -&gt; 1일 2회로 점진적으로 늘려주세요. ⚾빨갛게 알이 차고 아픈 상태 -&gt; 큐아크네, 애크논 등 여드름 균 제거 + 염증 억제 기능 피부가 민감한 사람도 무난히 사용 가능 ️ ️🏐블랙헤드, 화이드헤드, 좁쌀여드름 -&gt; 클리어틴 피지 녹이는 효과
+                자극적이면 2일에 1회 -&gt; 1일 1회 -&gt; 1일 2회로 점진적으로 적응해가기 ⚽️좁쌀, 화농성 모두 있는데 색소 침착 잘 생기는 사람 -&gt; 아젤리아 여드름균 증식 억제 + 모공 막히지 않도록 하는 기능+색소침착 방지 효과 🏀여드름 짠 직후 감염 예방 -&gt; 에스로반, 베아로반 모낭염에 잘 듣고, 추가
+                감염 예방에 좋은데 여드름과 모낭염은 육안 구분이 어렵긴 해요. 😓 *여드름이 잘 나는 분께 도움이 될만한 영양제* 💙오메가3 - 과도한 피지 분비 억제, 염증 억제 💙비타민 A D E 아연 -&gt; 염증과 관련된 비타민. 종합비타민을 드세요. 🌞여드름약 사용은 세안과 기초 스킨 로션 후에 바르고, 약을
+                바른 후 자외선차단제를 꼭 발라주세요!! 🫣여드름약이 필요한 친구가 있다면 공유 🤔궁금한 건 질문해주세요🙌🏻 <a title="약사" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EC%82%AC?refer=embed">#약사</a>
                 <a title="약국" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EA%B5%AD?refer=embed">#약국</a>
                 <a title="약스타그램" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EC%8A%A4%ED%83%80%EA%B7%B8%EB%9E%A8?refer=embed">#약스타그램</a>
                 <a title="여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#여드름</a>
@@ -344,6 +347,7 @@
                 <a target="_blank" title="♬ 可愛くてごめん (feat. かぴ) - HoneyWorks" href="https://www.tiktok.com/music/可愛くてごめん-feat-かぴ-7127871335373015041?refer=embed">♬ 可愛くてごめん (feat. かぴ) - HoneyWorks</a>
               </section>
             </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
             <!-- 닫기 버튼 -->
             <button class="s-close"></button>
           </div>
@@ -353,7 +357,7 @@
         <div id="youtube-modal-2" class="s-modal">
           <div class="s-modal-content">
             <!-- 틱톡 영상 -->
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@jinshimyaksa/video/7293048655244709138" data-video-id="7293048655244709138" style="max-width: 605px; min-width: 325px">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@jinshimyaksa/video/7293048655244709138" data-video-id="7293048655244709138" style="max-width: 395px; min-width: 305px">
               <section>
                 <a target="_blank" title="@jinshimyaksa" href="https://www.tiktok.com/@jinshimyaksa?refer=embed">@jinshimyaksa</a> <a title="여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#여드름</a>
                 <a title="좁쌀여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%A2%81%EC%8C%80%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#좁쌀여드름</a>
@@ -361,6 +365,7 @@
                 <a target="_blank" title="♬ 오리지널 사운드  - 진심약사 pharmacist" href="https://www.tiktok.com/music/오리지널-사운드-진심약사-pharmacist-7293048681656290050?refer=embed">♬ 오리지널 사운드 - 진심약사 pharmacist</a>
               </section>
             </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
             <!-- 닫기 버튼 -->
             <button class="s-close"></button>
           </div>
@@ -369,19 +374,19 @@
         <!-- 세번째 모달 -->
         <div id="youtube-modal-3" class="s-modal">
           <div class="s-modal-content">
-            <!-- 인스타 영상 -->
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@oderkorea8/video/7105718511971962114" data-video-id="7105718511971962114" data-embed-from="embed_page" style="max-width: 605px; min-width: 325px">
+            <!-- 틱톡 영상 -->
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@oderkorea8/video/7105718511971962114" data-video-id="7105718511971962114" data-embed-from="embed_page" style="max-width: 395px; min-width: 305px;">
               <section>
                 <a target="_blank" title="@oderkorea8" href="https://www.tiktok.com/@oderkorea8?refer=embed">@oderkorea8</a>
                 <p>có ai ở hàn mua loại này hiệu thuốc có bán dùng hết mụn đầu đen ấy ạ..</p>
                 <a target="_blank" title="♬ nhạc nền - omeri - Ở đây có đồ đẹp❤️❤️❤️" href="https://www.tiktok.com/music/nhạc-nền-omeri-7105718491160136450?refer=embed">♬ nhạc nền - omeri - Ở đây có đồ đẹp❤️❤️❤️</a>
               </section>
             </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
             <!-- 닫기 버튼 -->
             <button class="s-close"></button>
           </div>
         </div>
-
 
         <!-- 네번째 모달 -->
         <div id="youtube-modal-4" class="s-modal">
@@ -391,7 +396,7 @@
               class="instagram-media"
               data-instgrm-permalink="https://www.instagram.com/reel/C4Kev8srFbx/?utm_source=ig_embed&amp;utm_campaign=loading"
               data-instgrm-version="14"
-              style="background: #fff; border: 0; border-radius: 3px; box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15); margin: 1px; max-width: 540px; min-width: 326px; padding: 0; width: 99.375%; width: -webkit-calc(100% - 2px); width: calc(100% - 2px)">
+              style="background: #fff; border: 0; border-radius: 3px; box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15); margin: 1px; max-width: 395px; min-width: 305px; padding: 0; width: 99.375%; width: -webkit-calc(100% - 2px); width: calc(100% - 2px)">
               <div style="padding: 16px">
                 <a href="https://www.instagram.com/reel/C4Kev8srFbx/?utm_source=ig_embed&amp;utm_campaign=loading" style="background: #ffffff; line-height: 0; padding: 0 0; text-align: center; text-decoration: none; width: 100%" target="_blank">
                   <div style="display: flex; flex-direction: row; align-items: center">
@@ -400,8 +405,6 @@
                       <div style="background-color: #f4f4f4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px"></div>
                       <div style="background-color: #f4f4f4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px"></div>
                     </div>
-
-    
                   </div>
                   <div style="padding: 19% 0"></div>
                   <div style="display: block; height: 50px; margin: 0 auto 12px; width: 50px">
@@ -446,12 +449,11 @@
                 </p>
               </div>
             </blockquote>
+    <script async src="//www.instagram.com/embed.js"></script>
             <!-- 닫기 버튼 -->
             <button class="s-close"></button>
           </div>
-
         </div>
-
 
         <!-- 다섯번째 모달 -->
         <div id="youtube-modal-5" class="s-modal">
@@ -461,7 +463,7 @@
               class="instagram-media"
               data-instgrm-permalink="https://www.instagram.com/reel/CrF8MR2ABsg/?utm_source=ig_embed&amp;utm_campaign=loading"
               data-instgrm-version="14"
-              style="background: #fff; border: 0; border-radius: 3px; box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15); margin: 1px; max-width: 540px; min-width: 326px; padding: 0; width: 99.375%; width: -webkit-calc(100% - 2px); width: calc(100% - 2px)">
+              style="background: #fff; border: 0; border-radius: 3px; box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15); margin: 1px; max-width: 395px; min-width: 305px; padding: 0; width: 99.375%; width: -webkit-calc(100% - 2px); width: calc(100% - 2px)">
               <div style="padding: 16px">
                 <a href="https://www.instagram.com/reel/CrF8MR2ABsg/?utm_source=ig_embed&amp;utm_campaign=loading" style="background: #ffffff; line-height: 0; padding: 0 0; text-align: center; text-decoration: none; width: 100%" target="_blank">
                   <div style="display: flex; flex-direction: row; align-items: center">
@@ -470,8 +472,6 @@
                       <div style="background-color: #f4f4f4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px"></div>
                       <div style="background-color: #f4f4f4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px"></div>
                     </div>
-
-      
                   </div>
                   <div style="padding: 19% 0"></div>
                   <div style="display: block; height: 50px; margin: 0 auto 12px; width: 50px">
@@ -516,79 +516,70 @@
                 </p>
               </div>
             </blockquote>
+    <script async src="//www.instagram.com/embed.js"></script>
             <!-- 닫기 버튼 -->
             <button class="s-close"></button>
           </div>
-
         </div>
-
 
         <!-- 여섯번째 모달 -->
         <div id="youtube-modal-6" class="s-modal">
           <div class="s-modal-content">
             <!-- 틱톡 영상 -->
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tla12345dms/video/7119073517647269121" data-video-id="7119073517647269121" style="max-width: 605px; min-width: 325px">
-              <section>
-                <a target="_blank" title="@tla12345dms" href="https://www.tiktok.com/@tla12345dms?refer=embed">@tla12345dms</a> <a title="추천" target="_blank" href="https://www.tiktok.com/tag/%EC%B6%94%EC%B2%9C?refer=embed">#추천</a
-                ><a title="여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#여드름</a><a title="좁살여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%A2%81%EC%82%B4%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#좁살여드름</a
-                ><a title="뾰루지" target="_blank" href="https://www.tiktok.com/tag/%EB%BE%B0%EB%A3%A8%EC%A7%80?refer=embed">#뾰루지</a><a title="여드름흉터" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84%ED%9D%89%ED%84%B0?refer=embed">#여드름흉터</a
-                ><a title="화농성여드름" target="_blank" href="https://www.tiktok.com/tag/%ED%99%94%EB%86%8D%EC%84%B1%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#화농성여드름</a
-                ><a title="깨끗한피부" target="_blank" href="https://www.tiktok.com/tag/%EA%B9%A8%EB%81%97%ED%95%9C%ED%94%BC%EB%B6%80?refer=embed">#깨끗한피부</a
-                ><a title="한방에해결" target="_blank" href="https://www.tiktok.com/tag/%ED%95%9C%EB%B0%A9%EC%97%90%ED%95%B4%EA%B2%B0?refer=embed">#한방에해결</a><a title="추천" target="_blank" href="https://www.tiktok.com/tag/%EC%B6%94%EC%B2%9C?refer=embed">#추천</a
-                ><a title="추천" target="_blank" href="https://www.tiktok.com/tag/%EC%B6%94%EC%B2%9C?refer=embed">#추천</a><a title="추천" target="_blank" href="https://www.tiktok.com/tag/%EC%B6%94%EC%B2%9C?refer=embed">#추천</a
-                ><a title="관리자님잘생겼어요" target="_blank" href="https://www.tiktok.com/tag/%EA%B4%80%EB%A6%AC%EC%9E%90%EB%8B%98%EC%9E%98%EC%83%9D%EA%B2%BC%EC%96%B4%EC%9A%94?refer=embed">#관리자님잘생겼어요</a>
-                <a target="_blank" title="♬ Don′t do That - Leellamarz &#38; TOIL" href="https://www.tiktok.com/music/Don′t-do-That-7099435275365681154?refer=embed">♬ Don′t do That - Leellamarz &#38; TOIL</a>
-              </section>
-            </blockquote>
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@noxe0_/video/7224477845706329346" data-video-id="7224477845706329346" style="max-width: 395px; min-width: 305px;" > <section> <a target="_blank" title="@noxe0_" href="https://www.tiktok.com/@noxe0_?refer=embed">@noxe0_</a> 여드름 박멸템 추천 ❤️ <a title="올리브영" target="_blank" href="https://www.tiktok.com/tag/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81?refer=embed">#올리브영</a> <a title="여드름추천템" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84%EC%B6%94%EC%B2%9C%ED%85%9C?refer=embed">#여드름추천템</a> <a title="08" target="_blank" href="https://www.tiktok.com/tag/08?refer=embed">#08</a> <a target="_blank" title="♬ omg sped up all - 🎧" href="https://www.tiktok.com/music/omg-sped-up-all-7183980149879180075?refer=embed">♬ omg sped up all - 🎧</a> </section> </blockquote>
             <script async src="https://www.tiktok.com/embed.js"></script>
             <!-- 닫기 버튼 -->
             <button class="s-close"></button>
           </div>
-
         </div>
       </section>
-<script>
-   var swiper = new Swiper(".swiper-short", {
-    loop: true,
-    autoplay: {
-      delay: 1000, //1초의 딜레이를 주고 자동 재생된다
-    },
-    // slidesPerView: 5,
-    spaceBetween: 10, //여백
+      <script>
+        var swiper = new Swiper(".swiper-short", {
+          loop: true,
+          autoplay: {
+            delay: 1000, //1초의 딜레이를 주고 자동 재생된다
+          },
+          // slidesPerView: 5.8,
+          // spaceBetween: 10, //여백
 
-    pagination: {
-      el: ".swiper-short .short-pn .swiper-pagination",
-      type: "progressbar",
-    },
-    navigation: {
-      nextEl: ".swiper-short .short-pn .swiper-button-next",
-      prevEl: ".swiper-short .short-pn .swiper-button-prev",
-    },
-    breakpoints: {
-      900: {
-        //브라우저 화면너비 900이상일때
-        slidesPerView: 5.8,
-        spaceBetween: 50,
-      },
-      786: {
-        slidesPerView: 4.7,
-        spaceBetween: 30,
-      },
-      600: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-      320: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      200: {
-        slidesPerView: 2.3,
-        spaceBetween: 20,
-      },
-    },
-  });
-</script>
+          pagination: {
+            el: ".swiper-short .short-pn .swiper-pagination",
+            type: "progressbar",
+          },
+          navigation: {
+            nextEl: ".swiper-short .short-pn .swiper-button-next",
+            prevEl: ".swiper-short .short-pn .swiper-button-prev",
+          },
+          breakpoints: {
+            1000: {
+              //브라우저 화면너비 900이상일때
+              slidesPerView: 5.8,
+              spaceBetween: 50,
+            },
+            900: {
+              //브라우저 화면너비 900이상일때
+              slidesPerView: 5,
+              spaceBetween: 40,
+            },
+            786: {
+              slidesPerView: 4.7,
+              spaceBetween: 30,
+            },
+            600: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            320: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            200: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          },
+        });
+      </script>
       <!-- 비디오섹션 -->
       <section class="video">
         <div class="video-inner inner">
@@ -601,38 +592,10 @@
           <div class="video-title-bl"></div>
           <!-- youtube size  width="560" height="315" -->
           <div class="video-iframe-box">
-            <iframe
-              width="650"
-              height="370"
-              src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-            <iframe
-              width="460"
-              height="250"
-              src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-            <iframe
-              width="310"
-              height="170"
-              src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <iframe width="650" height="370" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="460" height="250" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="310" height="170" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
       </section>

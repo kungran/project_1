@@ -698,10 +698,10 @@ color: #fff;
 }
 .quickmenu ul li {
   width: 100%;
-  /* float: left; */
+  float: left;
   text-align: center;
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 .quickmenu ul li a {
   position: relative;
@@ -1034,9 +1034,9 @@ color: #fff;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 395px; /*수정함*/
+  width: 30%; /*수정함*/
   min-width: 310px;
-  max-width: 600px;
+  max-width: 395px;
   border-radius: 20px;
   height: fit-content;
   border: 1px solid #888;
