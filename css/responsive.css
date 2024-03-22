@@ -337,6 +337,11 @@
     margin-top: 20px;
   }
 }
+@media screen and (max-width: 820px){
+  .tg-logo{
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   /* 제품 상세 정보 */
   .detaild-info{
@@ -372,6 +377,11 @@
   .ft_info p {
     font-size: 16px;
   }
+}
+@media screen and (max-width: 540px){
+.app-box{
+width: 100%;
+}
 }
 @media screen and (max-width: 500px) {
   .info-info{
@@ -436,5 +446,11 @@
     .ft_info_430 {
     display: block;
   }
+}
+@media screen and (max-width: 320px){
+  /* .app-page{
+    width: 280px;
+    margin: 0 auto;
+  } */
 }
 
