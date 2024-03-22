@@ -105,6 +105,12 @@ window.onload = function () {
   langM.addEventListener("click", () => {
     langM.classList.remove("show");
   });
+  //480 point logo img chg
+  const fnLogoChg = document.querySelector(".logo > a > img");
+  const innerWidth = window.innerWidth;
+  if (innerWidth <= 480) {
+    fnLogoChg.src = "images/favicon/apple-icon-76x76.png";
+  }
   //ani product link
   var fnScNavLinkElement = document.querySelector(".ani-product a");
   fnScNavLinkElement.addEventListener("click", function (e) {
@@ -112,11 +118,21 @@ window.onload = function () {
     var targetSectionId = this.getAttribute("href");
     var targetSection = document.querySelector(targetSectionId);
     var targetPosition = targetSection.offsetTop;
-  
+
     window.scrollTo({
       top: targetPosition,
-      behavior: "smooth"
+      behavior: "smooth",
     });
+  });
+  var fnAniImgChg = document.querySelector(".ani-img");
+  var fnAniArea = document.querySelector(".ani-product");
+
+  fnAniArea.addEventListener("mouseenter", function () {
+    fnAniImgChg.src = "images/ani-product-h-01.png";
+  });
+
+  fnAniArea.addEventListener("mouseleave", function () {
+    fnAniImgChg.src = "images/ani-product.png";
   });
   //quiz area
   const fnAnswerBox = document.querySelectorAll(".answer-box .answer-box-li");
@@ -131,7 +147,11 @@ window.onload = function () {
       fnAnswerBox[currentIdx].textContent = box.textContent;
       fnAnswerBox[currentIdx].classList.add("jsAnswer");
       currentIdx++;
-      fnChkAnswerSub.classList.add("active-as");
+      // 모든 fnAnswerBox가 채워졌는지 확인하고 정답 확인 및 버튼 활성화/비활성화
+      const isAllFilled = Array.from(fnAnswerBox).every((li) => li.textContent.trim().length > 0);
+      if (isAllFilled) {
+        fnChkAnswerSub.classList.add("active-as");
+      }
     }
   }
 
