@@ -111,13 +111,13 @@ window.addEventListener("load", function () {
   });
 
   /* 따라다니는 퀵메뉴 */
-  var currentPosition = parseInt($(".quickmenu").css("top"));
-  $(window).scroll(function () {
-    var position = $(window).scrollTop();
-    $(".quickmenu")
-      .stop()
-      .animate({ top: position + currentPosition + "px" }, 600);
-  });
+  // var currentPosition = parseInt($(".quickmenu").css("top"));
+  // $(window).scroll(function () {
+  //   var position = $(window).scrollTop();
+  //   $(".quickmenu")
+  //     .stop()
+  //     .animate({ top: position + currentPosition + "px" }, 600);
+  // });
 
   // 신청조회 모달 창 열기
   document.getElementById("search-link").addEventListener("click", function () {

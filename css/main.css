@@ -684,6 +684,7 @@ color: #fff;
 /* 퀵메뉴 */
 .quickmenu {
   position: absolute;
+  position: fixed;
   width: 80px;
   top: 50%;
   margin-top: -50px;
@@ -1011,10 +1012,11 @@ color: #fff;
 .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
 .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
   height: 2px;
+  overflow: hidden;
 }
-.wiper-pagination-progressbar-fill {
+/* .short-pn .swiper-pagination .swiper-pagination-progressbar-fill{
   height: 2px;
-}
+} */
 /* 쇼츠 모달 */
 /* 모달 스타일 */
 .s-modal {
@@ -1036,7 +1038,7 @@ color: #fff;
   transform: translate(-50%, -50%);
   width: 30%; /*수정함*/
   min-width: 310px;
-  max-width: 395px;
+  max-width: 540px;
   border-radius: 20px;
   height: fit-content;
   border: 1px solid #888;
@@ -1050,8 +1052,8 @@ color: #fff;
       float: right;
       font-size: 28px;
       font-weight: bold; */
-  right: -30px;
-  top: -30px;
+  right: 0;
+  top: -35px;
   width: 27px;
   height: 27px;
   background: url("../images/short/btn_close_livepop.png") no-repeat;
