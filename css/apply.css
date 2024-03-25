@@ -63,7 +63,7 @@ body {
   margin: 0 auto;
   /* margin-left: 20px;
   margin-right: 20px; */
-  
+  overflow: hidden;
 }
 .app-left {
   width: 650px;
@@ -142,6 +142,8 @@ body {
   min-width: 320px;
   height: 900px;
   max-width: 520px;
+  /* overflow-y: auto; */
+  
 }
 
 .app-box {
@@ -154,7 +156,7 @@ body {
   background-color: #fff;
   border-radius: 7px;
   padding-top: 25px;
-  /* overflow-y: auto; */
+
 }
 .app-box-1200 {
   position: absolute;
@@ -312,26 +314,34 @@ select {
 /* js style */
 .find-store-result {
   width: 100%;
-  height: auto;
+  height: 233px;
   background-color: #e5effd;
   margin-top: 15px;
   line-height: 1.24;
   text-align: center;
   padding: 20px;
   display: none;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .cfr-title {
   font-size: 1.7rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #286cc3;
 }
 .cfr-store {
   font-weight: 700;
+  margin-bottom: 10px;
 }
 .cfr-addr {
   font-size: 1.4rem;
+  margin-bottom: 5px;
 }
+.confirm-link{
+  
+}
+
 
 .add-body {
   position: relative;
@@ -424,7 +434,7 @@ select {
   width: 450px;
   height: 282px;
   /* background-color: aquamarine; */
-  margin: 20px auto;
+  margin: 30px auto;
 }
 .tell-nb {
   display: flex;
@@ -439,6 +449,7 @@ select {
   display: flex;
   width: 450px;
   height: 42px;
+  margin-top: 20px;
   margin-bottom: 20px;
   background-color: #ecf4be;
   border: 1px solid #d9d9d9;
@@ -502,7 +513,7 @@ select {
   height: 16px;
   position: absolute;
   right: 120px;
-  bottom: 135px;
+  bottom: 131px;
   color: rgb(236, 85, 30);
   font-size: 13px;
 }
@@ -526,13 +537,17 @@ select {
   color: #fff;
   font-weight: 600;
   cursor: pointer;
-  position: absolute;
+  /* position: absolute;
   bottom: 40px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
   margin: 0 auto;
+  margin-top: 5px;
 }
-
+.btn_auth_success{
+  background-color: #778b06;
+  color: #fff;
+}
 .app-modal_wrap {
   display: none;
   width: 132vw;
