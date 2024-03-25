@@ -182,7 +182,51 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url("../images/main-img_psd.png")no-repeat center/ 100%;
+  background: url("../images/main-img_img.png") no-repeat center/ 100%;
+}
+/* img txt animation */
+/* JUMP */
+.img-txt-box {
+  cursor: default;
+  position: absolute;
+  top: 27%;
+  left: -36%;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-size: 6.7rem;
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
+}
+
+.img-txt1,
+.img-txt2,
+.img-txt3 {
+  position: relative;
+  top: 5px;
+  display: inline-block;
+  -webkit-animation: bounce 0.3s ease 10 alternate;
+  color: #ff6200;
+  text-shadow: 0 1px 0 #ffffff, 0 2px 0 #ffffff, 0 3px 0 #ffffff, 0 4px 0 #ffffff, 0 5px 0 #ffffff, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0);
+}
+
+.img-txt1 {
+  -webkit-animation-delay: 0.1s;
+}
+
+.img-txt2 {
+  -webkit-animation-delay: 0.2s;
+}
+
+.img-txt3 {
+  -webkit-animation-delay: 0.3s;
+}
+
+/* ANIMATION */
+@-webkit-keyframes bounce {
+  100% {
+    top: 0;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc, 0 50px 25px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .ani-product {
@@ -195,8 +239,9 @@ body {
 }
 .ani-product > a > img {
   position: absolute;
-  bottom: 90px;
-  right: -70px;
+  bottom: 240px;
+  right: 0;
+  z-index: 9;
 }
 
 /* quiz section */
@@ -223,22 +268,41 @@ body {
 }
 .quiz-main-title {
   position: relative;
-  display: block;
-  font-family:"VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  display: flex;
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
   margin-left: 15px;
-}
-.quiz-title-bg {
-  position: absolute;
-  top: 9px;
-  left: -1%;
-  font-size: 8rem;
-  color: #a3c100;
-  opacity: 0.3;
 }
 .quiz-text {
   font-size: 8rem;
   text-transform: uppercase;
   color: #a3c100;
+  text-shadow: -7px 8px 0px #ddea94;
+}
+/* aos */
+.quiz-text {
+  position: relative;
+  top: -10%;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  animation: bounce 0.3s ease 4 alternate;
+}
+.qtb1 {
+  animation-delay: 0.1s;
+}
+.qtb2 {
+  animation-delay: 0.2s;
+}
+.qtb3 {
+  animation-delay: 0.3s;
+}
+.qtb4 {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  100% {
+    top: -20px;
+  }
 }
 .quiz-info-text {
   font-size: 6.5rem;
@@ -283,16 +347,16 @@ body {
   margin: 0 auto;
   border: 1px solid #ececec;
   border-radius: 35px;
-  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
   font-weight: 100;
   font-size: 2.2rem;
   text-align: center;
   background: #fff;
 }
-.fs-noBr{
+.fs-noBr {
   display: none;
 }
-.quiz-main-box{
+.quiz-main-box {
   position: relative;
 }
 .answer-box {
@@ -353,11 +417,12 @@ body {
   border-radius: 15px;
   background: #f1f1f1;
   cursor: pointer;
+  transition: all .3s;
 }
-.choice-box-li:hover{
-transform: translateY(-10%);
-background-color: #a3c100;
-color: #fff;
+.choice-box-li:hover {
+  transform: translateY(-10%);
+  background-color: #a3c100;
+  color: #fff;
 }
 .answer-sub {
   position: relative;
@@ -409,7 +474,7 @@ color: #fff;
 }
 .quiz-result-title {
   font-size: 4rem;
-  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
   color: #4b4b4b;
   z-index: 5;
 }
@@ -429,7 +494,7 @@ color: #fff;
 
 .sample-apply-guide {
   font-size: 2.2rem;
-  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
   z-index: 5;
 }
 .sub-apply {
@@ -496,21 +561,26 @@ color: #fff;
 /* insta style banner area */
 
 .main-instastyle-banner {
+  position: relative;
   width: 100%;
   /* margin: 8% 12%; */
 }
 .quiz-logo-bg {
+  position: relative;
   opacity: 0.3;
   margin-bottom: 15px;
 }
 .quiz-insta-frame {
+  position: relative;
   width: 70%;
   height: 50vh;
   min-height: 450px;
   border: 7px solid #ececec;
   border-radius: 5px;
+  z-index: -1;
 }
 .quiz-insta-frame img {
+  position: relative;
   margin-top: 35px;
 }
 .insta-text-box {
@@ -614,7 +684,7 @@ color: #fff;
 }
 .quiz-result-title {
   font-size: 4rem;
-  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
   color: #4b4b4b;
 }
 .qrt-l {
@@ -631,7 +701,7 @@ color: #fff;
 }
 .sample-apply-guide {
   font-size: 2.2rem;
-  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
 }
 .sub-apply {
   position: relative;

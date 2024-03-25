@@ -49,7 +49,7 @@ body {
   height: 100%;
   background-color: #ecf4be;
 }
-.tg-logo{
+.tg-logo {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -103,7 +103,7 @@ body {
   color: #fff;
 }
 
-.model-img img{
+.model-img img {
   width: 350px;
   height: 360px;
 }
@@ -132,7 +132,7 @@ body {
   width: 400px;
   height: 110px;
 }
-.app-page{
+.app-page {
   position: absolute;
   right: 0;
   top: 50%;
@@ -154,6 +154,7 @@ body {
   background-color: #fff;
   border-radius: 7px;
   padding-top: 25px;
+  /* overflow-y: auto; */
 }
 .app-box-1200 {
   position: absolute;
@@ -170,12 +171,14 @@ body {
 }
 .app-info {
   /* width: 75vw; */
-  width: 440px;
+  width: 85%;
   /* max-width: 440px; */
   height: 194px;
   border: 1px solid #e8e8e8;
   border-radius: 7px;
   margin: 20px auto;
+  background-color: #fff;
+  z-index: 9;
 }
 .app-info p {
   text-align: center;
@@ -238,7 +241,6 @@ select {
   color: #333;
 }
 
-
 /* .container {
   width: 100%;
   height: 100%;
@@ -257,8 +259,8 @@ select {
   text-align: left;
   border-radius: 7px;
   z-index: 999;
-}
 
+}
 
 .add-header {
   position: relative;
@@ -296,6 +298,29 @@ select {
   text-align: center;
   line-height: 55px;
   margin: 0 auto;
+}
+/* js style */
+.find-store-result {
+  width: 100%;
+  height: auto;
+  background-color: #e5effd;
+  margin-top: 15px;
+  line-height: 1.24;
+  text-align: center;
+  padding: 20px;
+  display: none;
+}
+.cfr-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #286cc3;
+}
+.cfr-store {
+  font-weight: 700;
+}
+.cfr-addr {
+  font-size: 1.4rem;
 }
 
 .add-body {
@@ -380,7 +405,6 @@ select {
   cursor: pointer;
   background-color: #dfdfdf;
   color: #5a5a5a;
-
 }
 
 .container.modal-open .modal {
@@ -453,7 +477,7 @@ select {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
-.tel2{
+.tel2 {
   width: 250px;
   height: 40px;
   border: none;
@@ -461,7 +485,7 @@ select {
   border-bottom-right-radius: 6px; */
   text-align: center;
 }
-.time{
+.time {
   width: 50px;
   height: 16px;
   position: absolute;
@@ -496,7 +520,7 @@ select {
   transform: translateX(-50%);
   margin: 0 auto;
 }
-.app-modal_wrap{
+.app-modal_wrap {
   display: none;
   width: 132vw;
   height: 900px;
@@ -508,7 +532,7 @@ select {
   z-index: 999;
   border-radius: 7px;
 }
-.modal_close{
+.modal_close {
   position: absolute;
   bottom: 40px;
   left: 50%;
@@ -519,14 +543,14 @@ select {
   background-color: #a3c100;
   border-radius: 7px;
   text-align: center;
-line-height: 55px;
-cursor: pointer;
+  line-height: 55px;
+  cursor: pointer;
 }
-.modal_close a{
+.modal_close a {
   color: #fff;
   font-weight: 600;
 }
-.check_img img{
+.check_img img {
   width: 150px;
   height: 150px;
   position: absolute;
@@ -535,7 +559,7 @@ cursor: pointer;
   transform: translateX(-50%);
 }
 
-.app-modal_wrap p{
+.app-modal_wrap p {
   position: absolute;
   top: 250px;
   left: 50%;
@@ -545,16 +569,17 @@ cursor: pointer;
   text-align: center;
   line-height: 60px;
 }
-.app-modal_wrap h1{
+.app-modal_wrap h1 {
   position: absolute;
   top: 400px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 20px
+  font-size: 20px;
 }
-.app-modal_wrap h1 span{
+.app-modal_wrap h1 span {
   color: #778b06;
-}.app-modal_top{
+}
+.app-modal_top {
   width: 132vw;
   height: 500px;
   max-width: 520px;

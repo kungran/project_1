@@ -87,13 +87,16 @@ window.onload = function () {
     // 새로 고침 / url 입력해서 html 출력시
     // 1.스크롤바의 픽셀 위치값을 파악해서
     scy = this.document.documentElement.scrollTop;
+    const innerWidth = window.innerWidth;
     // 2.class 적용 여부 결정
-    if (scy > 0) {
-      topLogo.classList.add("logoh");
-      langBox.classList.add("logoh");
-    } else {
-      topLogo.classList.remove("logoh");
-      langBox.classList.remove("logoh");
+    if (innerWidth > 480) {
+      if (scy > 0) {
+        topLogo.classList.add("logoh");
+        langBox.classList.add("logoh");
+      } else {
+        topLogo.classList.remove("logoh");
+        langBox.classList.remove("logoh");
+      }
     }
   });
   //language
@@ -105,12 +108,6 @@ window.onload = function () {
   langM.addEventListener("click", () => {
     langM.classList.remove("show");
   });
-  //480 point logo img chg
-  const fnLogoChg = document.querySelector(".logo > a > img");
-  const innerWidth = window.innerWidth;
-  if (innerWidth <= 480) {
-    fnLogoChg.src = "images/favicon/apple-icon-76x76.png";
-  }
   //ani product link
   var fnScNavLinkElement = document.querySelector(".ani-product a");
   fnScNavLinkElement.addEventListener("click", function (e) {
@@ -118,11 +115,25 @@ window.onload = function () {
     var targetSectionId = this.getAttribute("href");
     var targetSection = document.querySelector(targetSectionId);
     var targetPosition = targetSection.offsetTop;
+    var targetImage = document.querySelector(".main-instastyle-banner");
+    var fnAniMove = document.querySelector(".ani-product > a > img");
+    const innerWidth = window.innerWidth;
+    const innerheight = window.innerHeight;
 
     window.scrollTo({
       top: targetPosition,
       behavior: "smooth",
     });
+    if (innerWidth > 480) {
+      var aniProductElement = document.querySelector(".ani-product");
+      aniProductElement.style.animation = "none";
+      fnAniMove.style.position = "absolute";
+      fnAniMove.style.bottom = -targetImage.offsetHeight + "px";
+      fnAniMove.style.right = "0";
+    }
+    if (innerHeight < 620) {
+      fnAniMove.style.bottom = -(targetImage.offsetHeight + 180) + "px";
+    }
   });
   var fnAniImgChg = document.querySelector(".ani-img");
   var fnAniArea = document.querySelector(".ani-product");
@@ -134,7 +145,9 @@ window.onload = function () {
   fnAniArea.addEventListener("mouseleave", function () {
     fnAniImgChg.src = "images/ani-product.png";
   });
+
   //quiz area
+  AOS.init();
   const fnAnswerBox = document.querySelectorAll(".answer-box .answer-box-li");
   const fnChoiceBox = document.querySelectorAll(".choice-box .choice-box-li");
   const fnChkAnswerSub = document.querySelector(".answer-sub");
@@ -450,6 +463,5 @@ window.onload = function () {
     }
   });
 
-  
   // hun
 };
