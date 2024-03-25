@@ -551,6 +551,26 @@
       .quickmenu ul li img {
         padding: 9px 0 7px;
     }
+    .top-button {
+      right: 17px;
+      bottom: 5px;
+    }
+    .top-button .chat-btn img {
+position: absolute;
+top: -20px;
+left: -30px;
+width: 60px;
+animation: updown 1.5s infinite;
+    }
+    .top-button .chat-btn span {
+      right: 20px;
+      top: 0;
+      box-shadow: none;
+      background-color: none;
+    }
+    .top-button .shop-btn {
+      display: none;
+    }
 }
 @media screen and (max-width: 630px){
     .short span {
@@ -558,17 +578,19 @@
     font-size: 8.26667vw;
     line-height: 1.3;
     }
-    .short-title span:nth-child(3) {
+    .short-title > span:nth-child(3) {
         word-break: keep-all;
-        font-size: 3.73333vw;
+        /* font-size: 3.73333vw; */
+        font-size: 4vw; 
     }
     .video span {
         letter-spacing: -0.26667vw;
     font-size: 8.26667vw;
     line-height: 1.3;
     }
-    .video-title p {
-      font-size: 3.73333vw;
+    .video-title > p {
+      /* font-size: 3.73333vw; */
+      font-size: 4vw; 
     }
 }
 /* hun */
