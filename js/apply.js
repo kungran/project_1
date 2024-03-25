@@ -39,14 +39,20 @@ $(document).ready(function () {
      <h2 class="cfr-title">예약하신 약국을 확인해주세요.</h2>
      <p class="cfr-store">${chsido}</p>
      <p class="cfr-addr">${chgugun}</p>
+     <a class="confirm-link">다시 선택하기</a> <!-- 링크 추가 -->
   
    `;
+   $('.app-address').hide();
     resultLoad.html(resultLoadMsg); // jQuery 객체에 대해 innerHTML 대신 html() 사용
     resultLoad.css({
       display: "block",
     });
     storeModal.hide();
+    // 다시 선택하기 링크 클릭 이벤트 처리
+  $(".confirm-link").on("click", function() {
+    location.reload(); // 페이지 리로드
   });
+})
   //hun
   var area0 = ["서울특별시", "인천광역시", "대전광역시", "광주광역시", "대구광역시", "울산광역시", "부산광역시", "경기도", "강원도", "충청북도", "충청남도", "전라북도", "전라남도", "경상북도", "경상남도", "제주도"];
   var areas = [
@@ -158,7 +164,6 @@ $(document).ready(function () {
 $('.js-close-modal').click(function(){
   $('.container').removeClass('modal-open');
 });
-
 
   // // 모달 외부 클릭 시 모달 닫기 이벤트 추가
   // document.querySelector(".app-modal_wrap").addEventListener("click", function (event) {

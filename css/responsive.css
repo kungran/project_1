@@ -847,7 +847,11 @@
     display: block;
   }
 }
-
+@media screen and (max-width: 550px){
+  .FAQ-box em {
+    padding: 3.93333vw 4.66667vw;
+  }
+}
 @media screen and (max-width: 490px){
     .video-iframe-box iframe:nth-child(3) {
         display: none;
