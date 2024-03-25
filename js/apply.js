@@ -241,9 +241,3 @@ document.getElementById("app-bt").addEventListener("click", function (event) {
   openModal();
 });
 });
-
-    $timeSpan.hide();
-    // 신청 하기 버튼 활성화
-    $("#app-bt").prop("disabled", false);
-  });
-});
