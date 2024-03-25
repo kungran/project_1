@@ -110,35 +110,61 @@ window.addEventListener("load", function () {
     });
   });
 
-  /* 따라다니는 퀵메뉴 */
-  var currentPosition = parseInt($(".quickmenu").css("top"));
-  $(window).scroll(function () {
-    var position = $(window).scrollTop();
-    $(".quickmenu")
-      .stop()
-      .animate({ top: position + currentPosition + "px" }, 600);
-  });
 
-  // 신청조회 모달 창 열기
-  document.getElementById("search-link").addEventListener("click", function () {
-    document.getElementById("search-modal").style.display = "block";
-  });
-  // 신청조회 모달 창 닫기
-  document.querySelectorAll("#search-modal .q-m-close").forEach(function (element) {
-    element.addEventListener("click", function () {
-      document.getElementById("search-modal").style.display = "none";
-    });
-  });
+// // ===== 퀵메뉴 신청조회 클릭
+// const searchBtn = document.getElementById("search-btn");
+// const searchModal = document.querySelector(".search-modal");
+
+// searchBtn.addEventListener("click", function (event) {
+//   // chat-text-box의 display 속성을 토글하여 나타내거나 숨김
+//   if (
+//     searchModal.style.display === "none" ||
+//     searchModal.style.display === ""
+//   ) {
+//     searchModal.style.display = "block";
+//   } else {
+//     searchModal.style.display = "none";
+//   }
+// });
+
+// // ===== 퀵메뉴 신청조회 닫기
+// const quickClose = document.getElementById("q-m-close");
+// const SearchModal = document.querySelector(".search-modal");
+
+// quickClose.addEventListener("click", function (event) {
+//   // chat-text-box의 display 속성을 토글하여 나타내거나 숨김
+//   if (
+//     SearchModal.style.display === "block" ||
+//     SearchModal.style.display === ""
+//   ) {
+//     SearchModal.style.display = "none";
+//   } else {
+//     SearchModal.style.display = "block";
+//   }
+// });
+
+
 
   // FAQ 모달 창 열기
-  document.getElementById("FAQ-link").addEventListener("click", function () {
-    document.getElementById("FAQ-link").style.display = "block";
+  document.getElementById("FAQ-btn").addEventListener("click", function () {
+    document.getElementById("FAQ-modal").style.display = "block";
   });
 
   // FAQ 모달 창 닫기
-  document.querySelectorAll("#FAQ-link .s-close").forEach(function (element) {
+  document.querySelectorAll("#FAQ-modal .q-m-close").forEach(function (element) {
     element.addEventListener("click", function () {
-      document.getElementById("FAQ-link").style.display = "none";
+      document.getElementById("FAQ-modal").style.display = "none";
+    });
+  });
+  
+//   신청조회 모달 창 열기
+  document.getElementById("search-btn").addEventListener("click", function () {
+    document.getElementById("search-modal").style.display = "block";
+  });
+//   신청조회 모달 창 닫기
+  document.querySelectorAll("#search-modal .q-m-close").forEach(function (element) {
+    element.addEventListener("click", function () {
+      document.getElementById("search-modal").style.display = "none";
     });
   });
 
@@ -151,7 +177,7 @@ window.addEventListener("load", function () {
     // 조건문 수정
     if (window.scrollY === 0) {
       window.scrollTo({
-        top: 0,
+        top: 2952,
         behavior: "smooth",
       });
     } else {
