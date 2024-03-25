@@ -1212,10 +1212,11 @@ footer {
   max-width: 1200px;
   height: 300px;
   margin: 0 auto;
+ 
 }
 .ft_inner .ft-top {
-  width: 100%;
-  max-width: 1200px;
+  width: 96%;
+  max-width: 1165px;
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -1228,6 +1229,7 @@ footer {
   height: 40px;
   height: auto;
   justify-content: space-between;
+  padding-left: 20px;
 }
 .logo_tg img {
   width: 110px;
@@ -1247,6 +1249,7 @@ footer {
   width: auto;
   position: absolute;
   top: 110px;
+  padding-left: 20px;
 }
 .ft_info h2 {
   font-size: 16px;
