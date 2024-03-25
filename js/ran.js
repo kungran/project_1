@@ -110,6 +110,7 @@ window.addEventListener("load", function () {
     });
   });
 
+
 // // ===== 퀵메뉴 신청조회 클릭
 // const searchBtn = document.getElementById("search-btn");
 // const searchModal = document.querySelector(".search-modal");
@@ -141,6 +142,7 @@ window.addEventListener("load", function () {
 //     SearchModal.style.display = "block";
 //   }
 // });
+
 
 
   // FAQ 모달 창 열기
