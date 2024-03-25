@@ -62,12 +62,12 @@
     <!-- 인스타 렌더링 자바스크립트 -->
     <!-- <script async src="//www.instagram.com/embed.js"></script> -->
     <!-- 틱톡 렌더링 자바스크립트 -->
-    <!-- <script async src="https://www.tiktok.com/embed.js"></script> -->
+    <script async src="https://www.tiktok.com/embed.js"></script>
     <!-- 해당 자바스크립트 -->
     <script src="js/main.js"></script>
     <!-- aos acc -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- aos -->
+    <!-- aos -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/ran.js"></script>
     <title>파티마겔 - 여드름은 짜지말고 바르자</title>
@@ -150,7 +150,10 @@
             <div class="quiz-main-box">
               <div class="quiz-box-bg">
                 <div class="quiz-box">
-                  <p class="quiz-title">벤조일퍼옥사이드 기반의<br class="fs-noBr"> <span class="main-color">무항생제</span> 여드름 연고의 이름은?</p>
+                  <p class="quiz-title">
+                    벤조일퍼옥사이드 기반의<br class="fs-noBr" />
+                    <span class="main-color">무항생제</span> 여드름 연고의 이름은?
+                  </p>
                   <ul class="answer-box">
                     <li class="answer-box-li"></li>
                     <li class="answer-box-li"></li>
@@ -178,7 +181,8 @@
                   </p>
                   <p class="sample-apply-guide">
                     <span class="main-color">무항생제</span>
-                    여드름 연고 파티마겔<br class="fs-noBr"> 지금 만나러가기
+                    여드름 연고 파티마겔<br class="fs-noBr" />
+                    지금 만나러가기
                   </p>
                   <img src="images/presents.png" alt="결과창선물이미지" />
                   <a href="apply.html" class="sub-apply">샘플신청 바로가기</a>
@@ -189,7 +193,10 @@
                 <div class="quiz-box">
                   <p class="quiz-result-title">
                     <span class="qrt-2">앗...</span>
-                    <span class="qrt-2-1">한번만<br class="fs-noBr"> 다시 풀어볼래요...?</span>
+                    <span class="qrt-2-1"
+                      >한번만<br class="fs-noBr" />
+                      다시 풀어볼래요...?</span
+                    >
                     <img src="images/quiz_wrong_icon2.png" alt="이모지" />
                   </p>
                   <p class="quiz-retry-guide">
@@ -221,47 +228,38 @@
       </section>
       <!-- ran -->
 
-      <!-- 따라다니는 퀵메뉴 -->
-      <div class="quickmenu">
+      <!-- top button -->
+      <div class="top-button">
+        <a href="#" id="FAQ-btn" class="FAQ-btn">
+          <img src="images/search-icon2.png" alt="chat" />
+          <span>무엇이 궁금하신가요?</span>
+        </a>
+        <a href="#" id="search-btn" class="search-btn">신청내역</a>
+        <a href="#" class="top-btn" id="top-btn">
+          <img src="images/top-btn.png" alt="top-btn" id="top-btn-img" />
+        </a>
+      </div>
+
+      <!-- 퀵메뉴 -->
+      <!-- <div class="quickmenu">
         <ul>
           <li>
-            <a href="#" id="search-link" style="background-color: #ffff"
-              ><img src="images/short/quick_1.png" alt="" class="quick-1" />
+            <a href="#" id="search-link" style="background-color: #ffffff42"
+              ><img src="images/search.svg" alt="" class="quick-1" />
               <p>신청조회</p></a
             >
           </li>
           <li>
-            <a href="#" id="FAQ-link" style="background-color: #ffff"
-              ><img src="images/short/quick_2.png" alt="" class="quick-2" />
+            <a href="#" id="FAQ-link" style="background-color: #ffffff42"
+              ><img src="images/FAQ.svg" alt="" class="quick-2" />
               <p>FAQ</p></a
             >
           </li>
           <li class="quick_3">
-            <a href="#" style="background-color: #979797"><img src="images/short/quick_3.png" alt="" class="quick-3" /><span>TOP</span></a>
+            <a href="#" style="background-color: #86868687"><img src="images/short/quick_3.png" alt="" class="quick-3" /><span>TOP</span></a>
           </li>
         </ul>
-      </div>
-
-      <!-- 신청조회 모달 -->
-      <div id="search-modal" class="search-modal">
-        <div class="search-modal-content">
-          <div class="search-modal-inner">
-            <!-- 신청조회 내용 -->
-            <div class="search-modal-title">
-              <img src="images/short/quick_m_icon_search.png" alt="돋보기 아이콘" />
-              <strong>샘플 신청내역 조회</strong>
-              <p>내가 신청한 무료 샘플을 확인해보세요.</p>
-            </div>
-            <div class="search-modal-input">
-              <label for="inputNumber">휴대폰 번호</label>
-              <input type="tel" placeholder="‘-’를 제외한 숫자만 입력해 주세요." required />
-            </div>
-            <button class="search-modal-button"><a href="#">조회하기</a></button>
-            <!-- 닫기 버튼 -->
-            <span class="q-m-close"></span>
-          </div>
-        </div>
-      </div>
+      </div> -->
 
       <!-- FAQ 모달 -->
       <div id="FAQ-modal" class="FAQ-modal">
@@ -269,8 +267,7 @@
           <div class="FAQ-modal-inner">
             <!-- FAQ 내용 -->
             <div class="FAQ-modal-title">
-              <img src="images/short/quick_m_icon_qustion.png" alt="물음표 이미지" />
-              <p><em>파티마겔</em>에 대해서 자주 묻는 질문과 답변입니다.</p>
+              <em>파티마겔</em><p>에 대해서 자주 묻는 질문과 답변입니다.</p>
             </div>
             <div class="FAQ-box">
               <em><span>Q.</span> 어떤 성분이 함유되어 있나요?</em>
@@ -291,6 +288,27 @@
         </div>
       </div>
 
+      <!-- 신청조회 모달 -->
+      <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+          <div class="search-modal-inner">
+            <!-- 신청조회 내용 -->
+            <div class="search-modal-title">
+              <strong>신청내역 조회</strong>
+              <h4></h4>
+              <p>내가 신청한 체험샘플을 확인해보세요.</p>
+            </div>
+            <div class="search-modal-input">
+              <label for="inputNumber">휴대폰 번호</label>
+              <input type="tel" placeholder="‘-’를 제외한 숫자만 입력해 주세요." required />
+            </div>
+            <button class="search-modal-button"><a href="#">조회하기</a></button>
+            <!-- 닫기 버튼 -->
+            <span id="q-m-close" class="q-m-close"></span>
+          </div>
+        </div>
+      </div>
+
       <!-- 쇼츠 -->
       <section class="short">
         <span class="short-icon"><img src="images/short/icon_short.png" alt="섹션 배경 아이콘" /></span>
@@ -299,6 +317,7 @@
           <span>각질층 녹이는 <em>각질용해 작용</em></span>
           <span>여드름 치료제 파티마겔을 영상으로 확인하세요!</span>
         </div>
+
         <!-- 쇼츠 스와이퍼 -->
         <div class="swiper swiper-short">
           <div class="sw-arrow1">
@@ -329,11 +348,12 @@
             <div class="swiper-pagination"></div>
           </div>
         </div>
+
         <!-- 첫 번째 모달 -->
         <div id="youtube-modal" class="s-modal">
           <div class="s-modal-content">
             <!-- 틱톡 영상 -->
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yakstagram/video/7191420369427860737" data-video-id="7191420369427860737" style="max-width: 395px; min-width: 305px">
+            <!-- <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yakstagram/video/7191420369427860737" data-video-id="7191420369427860737" style="max-width: 322px; min-width: 180px; border: 1px solid rgb(22 24 35 / 12%)">
               <section>
                 <a target="_blank" title="@yakstagram" href="https://www.tiktok.com/@yakstagram?refer=embed">@yakstagram</a> 여드름약 아무거나 바르지 마세요.🙌🏻 *상태별 여드름약 정리* 🎾아프지는 않지만 알이 차려고 하는 상태 -&gt; 파티마겔 균 성장 억제효과, 각질 녹여줌 자극성이 커서 극소량 바르고
                 처음에는 2일에 한번 바르다가 적응되면 1일에 1번 -&gt; 1일 2회로 점진적으로 늘려주세요. ⚾빨갛게 알이 차고 아픈 상태 -&gt; 큐아크네, 애크논 등 여드름 균 제거 + 염증 억제 기능 피부가 민감한 사람도 무난히 사용 가능 ️ ️🏐블랙헤드, 화이드헤드, 좁쌀여드름 -&gt; 클리어틴 피지 녹이는 효과
@@ -346,8 +366,7 @@
                 <a title="손댄스" target="_blank" href="https://www.tiktok.com/tag/%EC%86%90%EB%8C%84%EC%8A%A4?refer=embed">#손댄스</a>
                 <a target="_blank" title="♬ 可愛くてごめん (feat. かぴ) - HoneyWorks" href="https://www.tiktok.com/music/可愛くてごめん-feat-かぴ-7127871335373015041?refer=embed">♬ 可愛くてごめん (feat. かぴ) - HoneyWorks</a>
               </section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
+            </blockquote> -->
             <!-- 닫기 버튼 -->
             <button class="s-close"></button>
           </div>
@@ -357,7 +376,7 @@
         <div id="youtube-modal-2" class="s-modal">
           <div class="s-modal-content">
             <!-- 틱톡 영상 -->
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@jinshimyaksa/video/7293048655244709138" data-video-id="7293048655244709138" style="max-width: 395px; min-width: 305px">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@jinshimyaksa/video/7293048655244709138" data-video-id="7293048655244709138" style="max-width: 322px; min-width: 180px; border: 1px solid rgb(22 24 35 / 12%)">
               <section>
                 <a target="_blank" title="@jinshimyaksa" href="https://www.tiktok.com/@jinshimyaksa?refer=embed">@jinshimyaksa</a> <a title="여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#여드름</a>
                 <a title="좁쌀여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%A2%81%EC%8C%80%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#좁쌀여드름</a>
@@ -365,7 +384,6 @@
                 <a target="_blank" title="♬ 오리지널 사운드  - 진심약사 pharmacist" href="https://www.tiktok.com/music/오리지널-사운드-진심약사-pharmacist-7293048681656290050?refer=embed">♬ 오리지널 사운드 - 진심약사 pharmacist</a>
               </section>
             </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
             <!-- 닫기 버튼 -->
             <button class="s-close"></button>
           </div>
@@ -375,14 +393,13 @@
         <div id="youtube-modal-3" class="s-modal">
           <div class="s-modal-content">
             <!-- 틱톡 영상 -->
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@oderkorea8/video/7105718511971962114" data-video-id="7105718511971962114" data-embed-from="embed_page" style="max-width: 395px; min-width: 305px;">
+            <!-- <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@oderkorea8/video/7105718511971962114" data-video-id="7105718511971962114" data-embed-from="embed_page" style="max-width: 322px; min-width: 180px; border: 1px solid rgb(22 24 35 / 12%)">
               <section>
                 <a target="_blank" title="@oderkorea8" href="https://www.tiktok.com/@oderkorea8?refer=embed">@oderkorea8</a>
                 <p>có ai ở hàn mua loại này hiệu thuốc có bán dùng hết mụn đầu đen ấy ạ..</p>
                 <a target="_blank" title="♬ nhạc nền - omeri - Ở đây có đồ đẹp❤️❤️❤️" href="https://www.tiktok.com/music/nhạc-nền-omeri-7105718491160136450?refer=embed">♬ nhạc nền - omeri - Ở đây có đồ đẹp❤️❤️❤️</a>
               </section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
+            </blockquote> -->
             <!-- 닫기 버튼 -->
             <button class="s-close"></button>
           </div>
@@ -392,11 +409,11 @@
         <div id="youtube-modal-4" class="s-modal">
           <div class="s-modal-content">
             <!-- 인스타 영상 -->
-            <blockquote
+            <!-- <blockquote
               class="instagram-media"
               data-instgrm-permalink="https://www.instagram.com/reel/C4Kev8srFbx/?utm_source=ig_embed&amp;utm_campaign=loading"
               data-instgrm-version="14"
-              style="background: #fff; border: 0; border-radius: 3px; box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15); margin: 1px; max-width: 395px; min-width: 305px; padding: 0; width: 99.375%; width: -webkit-calc(100% - 2px); width: calc(100% - 2px)">
+              style="background: #fff; border: 0; border-radius: 3px; box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15); margin: 1px; max-width: 322px; min-width: 180px; padding: 0; width: 99.375%; width: -webkit-calc(100% - 2px); width: calc(100% - 2px)">
               <div style="padding: 16px">
                 <a href="https://www.instagram.com/reel/C4Kev8srFbx/?utm_source=ig_embed&amp;utm_campaign=loading" style="background: #ffffff; line-height: 0; padding: 0 0; text-align: center; text-decoration: none; width: 100%" target="_blank">
                   <div style="display: flex; flex-direction: row; align-items: center">
@@ -448,8 +465,7 @@
                   >
                 </p>
               </div>
-            </blockquote>
-    <script async src="//www.instagram.com/embed.js"></script>
+            </blockquote> -->
             <!-- 닫기 버튼 -->
             <button class="s-close"></button>
           </div>
@@ -459,11 +475,11 @@
         <div id="youtube-modal-5" class="s-modal">
           <div class="s-modal-content">
             <!-- 인스타 영상 -->
-            <blockquote
+            <!-- <blockquote
               class="instagram-media"
               data-instgrm-permalink="https://www.instagram.com/reel/CrF8MR2ABsg/?utm_source=ig_embed&amp;utm_campaign=loading"
               data-instgrm-version="14"
-              style="background: #fff; border: 0; border-radius: 3px; box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15); margin: 1px; max-width: 395px; min-width: 305px; padding: 0; width: 99.375%; width: -webkit-calc(100% - 2px); width: calc(100% - 2px)">
+              style="background: #fff; border: 0; border-radius: 3px; box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15); margin: 1px; max-width: 322px; min-width: 180px; padding: 0; width: 99.375%; width: -webkit-calc(100% - 2px); width: calc(100% - 2px)">
               <div style="padding: 16px">
                 <a href="https://www.instagram.com/reel/CrF8MR2ABsg/?utm_source=ig_embed&amp;utm_campaign=loading" style="background: #ffffff; line-height: 0; padding: 0 0; text-align: center; text-decoration: none; width: 100%" target="_blank">
                   <div style="display: flex; flex-direction: row; align-items: center">
@@ -515,8 +531,7 @@
                   >
                 </p>
               </div>
-            </blockquote>
-    <script async src="//www.instagram.com/embed.js"></script>
+            </blockquote> -->
             <!-- 닫기 버튼 -->
             <button class="s-close"></button>
           </div>
@@ -526,8 +541,13 @@
         <div id="youtube-modal-6" class="s-modal">
           <div class="s-modal-content">
             <!-- 틱톡 영상 -->
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@noxe0_/video/7224477845706329346" data-video-id="7224477845706329346" style="max-width: 395px; min-width: 305px;" > <section> <a target="_blank" title="@noxe0_" href="https://www.tiktok.com/@noxe0_?refer=embed">@noxe0_</a> 여드름 박멸템 추천 ❤️ <a title="올리브영" target="_blank" href="https://www.tiktok.com/tag/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81?refer=embed">#올리브영</a> <a title="여드름추천템" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84%EC%B6%94%EC%B2%9C%ED%85%9C?refer=embed">#여드름추천템</a> <a title="08" target="_blank" href="https://www.tiktok.com/tag/08?refer=embed">#08</a> <a target="_blank" title="♬ omg sped up all - 🎧" href="https://www.tiktok.com/music/omg-sped-up-all-7183980149879180075?refer=embed">♬ omg sped up all - 🎧</a> </section> </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
+            <!-- <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@noxe0_/video/7224477845706329346" data-video-id="7224477845706329346" style="max-width: 322px; min-width: 180px; border: 1px solid rgb(22 24 35 / 12%)">
+              <section>
+                <a target="_blank" title="@noxe0_" href="https://www.tiktok.com/@noxe0_?refer=embed">@noxe0_</a> 여드름 박멸템 추천 ❤️ <a title="올리브영" target="_blank" href="https://www.tiktok.com/tag/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81?refer=embed">#올리브영</a>
+                <a title="여드름추천템" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84%EC%B6%94%EC%B2%9C%ED%85%9C?refer=embed">#여드름추천템</a> <a title="08" target="_blank" href="https://www.tiktok.com/tag/08?refer=embed">#08</a>
+                <a target="_blank" title="♬ omg sped up all - 🎧" href="https://www.tiktok.com/music/omg-sped-up-all-7183980149879180075?refer=embed">♬ omg sped up all - 🎧</a>
+              </section>
+            </blockquote> -->
             <!-- 닫기 버튼 -->
             <button class="s-close"></button>
           </div>
@@ -536,20 +556,22 @@
       <script>
         var swiper = new Swiper(".swiper-short", {
           loop: true,
-          autoplay: {
-            delay: 1000, //1초의 딜레이를 주고 자동 재생된다
-          },
-          // slidesPerView: 5.8,
-          // spaceBetween: 10, //여백
+          //   autoplay: {
+          //     delay: 1000, //1초의 딜레이를 주고 자동 재생된다
+          //   },
+          //   slidesPerView: 5.8,
+          //   spaceBetween: 10, //여백
 
           pagination: {
-            el: ".swiper-short .short-pn .swiper-pagination",
+            el: ".swiper-short .swiper-pagination",
             type: "progressbar",
+            clickable: true,
           },
           navigation: {
-            nextEl: ".swiper-short .short-pn .swiper-button-next",
-            prevEl: ".swiper-short .short-pn .swiper-button-prev",
+            nextEl: ".swiper-short .swiper-button-next",
+            prevEl: ".swiper-short .swiper-button-prev",
           },
+          clickable: true,
           breakpoints: {
             1000: {
               //브라우저 화면너비 900이상일때
@@ -655,24 +677,24 @@
           <div class="ft-top">
             <div class="ft_left">
               <div class="logo_tg">
-                <a href="#"><img src="/images/tg_logo.png" alt="태극" /></a>
+                <a href="#"><img src="images/tg_logo.png" alt="태극" /></a>
               </div>
               <div class="logo_lg">
-                <a href="#"><img src="/images/lg_logo.png" alt="lg" /></a>
+                <a href="#"><img src="images/lg_logo.png" alt="lg" /></a>
               </div>
             </div>
             <ul class="ft_right">
               <li class="yt_logo">
-                <a href="#"><img src="/images/youtube_logo.png" alt="유튜브" /></a>
+                <a href="#"><img src="images/youtube_logo.png" alt="유튜브" /></a>
               </li>
               <li class="ins_logo">
-                <a href="#"><img src="/images/insta_logo.png" alt="인스타그램" /></a>
+                <a href="#"><img src="images/insta_logo.png" alt="인스타그램" /></a>
               </li>
               <li class="fb_logo">
-                <a href="#"><img src="/images/facebook_logo.png" alt="페이스북" /></a>
+                <a href="#"><img src="images/facebook_logo.png" alt="페이스북" /></a>
               </li>
               <li class="naver_logo">
-                <a href="#"><img src="/images/naver_logo.png" alt="네이버" /></a>
+                <a href="#"><img src="images/youtube_logo.png" alt="네이버" /></a>
               </li>
             </ul>
           </div>

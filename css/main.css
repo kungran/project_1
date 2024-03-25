@@ -182,7 +182,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url("../images/main-img_psd.png")no-repeat center/ 100%;
+  background: url("../images/main-img_psd.png") no-repeat center/ 100%;
 }
 
 .ani-product {
@@ -224,7 +224,7 @@ body {
 .quiz-main-title {
   position: relative;
   display: block;
-  font-family:"VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
   margin-left: 15px;
 }
 .quiz-title-bg {
@@ -283,16 +283,16 @@ body {
   margin: 0 auto;
   border: 1px solid #ececec;
   border-radius: 35px;
-  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
   font-weight: 100;
   font-size: 2.2rem;
   text-align: center;
   background: #fff;
 }
-.fs-noBr{
+.fs-noBr {
   display: none;
 }
-.quiz-main-box{
+.quiz-main-box {
   position: relative;
 }
 .answer-box {
@@ -354,10 +354,10 @@ body {
   background: #f1f1f1;
   cursor: pointer;
 }
-.choice-box-li:hover{
-transform: translateY(-10%);
-background-color: #a3c100;
-color: #fff;
+.choice-box-li:hover {
+  transform: translateY(-10%);
+  background-color: #a3c100;
+  color: #fff;
 }
 .answer-sub {
   position: relative;
@@ -409,7 +409,7 @@ color: #fff;
 }
 .quiz-result-title {
   font-size: 4rem;
-  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
   color: #4b4b4b;
   z-index: 5;
 }
@@ -429,7 +429,7 @@ color: #fff;
 
 .sample-apply-guide {
   font-size: 2.2rem;
-  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
   z-index: 5;
 }
 .sub-apply {
@@ -614,7 +614,7 @@ color: #fff;
 }
 .quiz-result-title {
   font-size: 4rem;
-  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
   color: #4b4b4b;
 }
 .qrt-l {
@@ -631,7 +631,7 @@ color: #fff;
 }
 .sample-apply-guide {
   font-size: 2.2rem;
-  font-family: "VITRO CORE TTF", 'TTHakgyoansimJiugaeR';
+  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
 }
 .sub-apply {
   position: relative;
@@ -682,8 +682,9 @@ color: #fff;
 }
 /* ran */
 /* 퀵메뉴 */
-.quickmenu {
+/* .quickmenu {
   position: absolute;
+  position: fixed;
   width: 80px;
   top: 50%;
   margin-top: -50px;
@@ -692,7 +693,6 @@ color: #fff;
 }
 .quickmenu ul {
   position: relative;
-  /* float:left; */
   width: 100%;
   display: block;
 }
@@ -712,10 +712,9 @@ color: #fff;
   font-size: 13px;
   border-radius: 50px;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 50px inset, rgba(0, 0, 0, 0.1) -1px 4px 10px, rgba(0, 0, 0, 0.1) 1px 2px 5px;
-  /* border: 1px solid #6f6f6f; */
 }
 .quickmenu ul li a p {
-  color: #595959;
+  color: #ffffff;
 }
 .quickmenu ul li a span {
   color: #fff;
@@ -745,18 +744,161 @@ color: #fff;
   background-repeat: no-repeat;
   background-size: 70px;
   z-index: 10;
+} */
+
+/* top 버튼 */
+.top-button {
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-button .FAQ-btn span {
+  position: absolute;
+  top: 30px;
+  right: 68px;
+  width: 169px;
+  background-color: #fff;
+  border-radius: 23px;
+  padding: 8px 10px;
+  font-family: inherit;
+  text-align: center;
+  font-weight: 200;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+  display: none;
+}
+.top-button .FAQ-btn:hover span {
+  display: block;
+}
+.top-button .FAQ-btn {
+  position: absolute;
+  bottom: 102px;
+  animation: updown 1.5s infinite;
+  /* -webkit-animation:updown 1.5s infinite; */
+  /* 다른 브라우저에서도 작동 될 수 있게 하기 위해 -webkit을 사용. */
+}
+.top-button .search-btn {
+  position: relative;
+  display: block;
+  width: 55px;
+  border-radius: 50%;
+  line-height: 55px;
+  background-color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+.top-button .top-btn {
+  background-color: #9c9c9c85;
+  width: 55px;
+  border-radius: 50%;
+  line-height: 55px;
+  text-align: center;
+}
+.top-button .top-btn img {
+  transform: rotate(180deg);
+}
+.top-button .top-btn img.up {
+  transform: rotate(0deg);
+  /* 이미지의 위아래를 전환시키기 위해 적용 */
+}
+/* 애내메이션 효과 */
+@keyframes updown {
+  0% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-10%);
+  }
+  100% {
+    transform: translatey(0);
+  }
 }
 
 /* 퀵메뉴 모달 */
-/* 신청조회 모달 */
-.search-modal {
-  display: none; /* 초기에는 숨겨진 상태 */
+/* FAQ 모달 */
+.FAQ-modal {
+  display: none; /*초기에는 숨겨진 상태*/
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.FAQ-modal-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 323px;
+  height: 574px;
+  background-color: #f1f5f8;
+  border-radius: 7px;
+  /* box-shadow: 5px 5px gray; */
+}
+.FAQ-modal-inner {
+  width: 295px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 41px 0 57px;
+  font-family: inherit;
+  /* background-color: #d0d4b4; */
+}
+.FAQ-modal-title {
+  word-wrap: break-word;
+  font-family: inherit;
+  font-size: 27px;
+  padding-bottom: 30px;
+  color: #333333;
+}
+.FAQ-modal-title em {
+  font-weight: 700;
+}
+.FAQ-box {
+  width: 295px;
+  height: 365px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: #ffffff;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 50px inset, rgba(0, 0, 0, 0.1) -1px 1px 10px, rgba(0, 0, 0, 0.1) 0.5px 0.5px 2px;
+}
+.FAQ-box em span {
+  color: #a3c100;
+  padding-right: 11px;
+}
+.FAQ-box em {
+  display: block;
+  padding: 21px;
+}
+.FAQ-modal-inner hr {
+  display: block; 
+  margin: auto;
+  width: 250px;
+  border: 0;
+  height: 1px;
+  background: #E9E6E3;
+ 
+}
+
+/* 신청조회 모달 */
+.search-modal {
+  display: none; /*초기에는 숨겨진 상태*/
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 .search-modal-content {
@@ -766,83 +908,76 @@ color: #fff;
   transform: translate(-50%, -50%);
   width: 422px;
   height: 359px;
-  background-color: #f2f2f2;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 5px 5px gray;
+  background-color: #ffffff;
+  border-radius: 7px;
+  /* box-shadow: 5px 5px gray; */
 }
-
 .search-modal-inner {
-  width: 400px;
+  width: 355px;
   height: 200px;
   margin: 0 auto;
   padding: 41px 0 57px;
   /* background-color: #d0d4b4; */
 }
-.search-modal-title > img {
-  display: block;
-  width: 35px;
-  height: 35px;
-  margin: 10px auto;
-  /* background-color: aqua; */
-}
-.search-modal-title strong {
-  font-family: inherit;
-  font-size: 27px;
-  font-weight: 700;
-  color: #616161;
-}
 .search-modal-title {
   font-family: inherit;
-  font-size: 14px;
-  color: #616161;
+  padding-bottom: 38px;
 }
+.search-modal-title strong {
+  padding: 10px 0;
+  font-size: 27px;
+  font-weight: 700;
+  color: #333333;
+}
+.search-modal-title h4 {
+  text-align: center;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 5px 0;
+}
+.search-modal-title p {
+  padding-top: 13px;
+}
+
 .search-modal-input {
   display: flex;
-  /* width: 220px; */
+  justify-content: center;
   width: 100%;
-  max-width: 330px;
-  min-width: 170px;
-  /* height: 4vh; */
-  height: 39px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  margin: 0 auto;
-  /* margin-right: 7px; */
-  line-height: 35px;
-  font-size: 13px;
+  height: 42px;
+  margin-bottom: 52px;
+  background-color: #f5f5f5;
+  border: 1px solid #d9d9d9;
+  border-radius: 7px;
+  font-size: 16px;
 }
 .search-modal-input label {
-  padding-left: 19px;
-  font-family: inherit;
-  color: #616161;
-  margin-right: 15px;
-}
-.search-modal-input label::after {
-  content: "";
-  float: left;
-  transform: translate(69px, 11px);
-  width: 1px;
-  height: 16px;
-  background-color: #bfbfbf;
+  text-align: center;
+  width: 110px;
+  height: 40px;
+  font-weight: 600;
+  line-height: 40px;
+  border-right: 1px solid #d9d9d9;
 }
 .search-modal-input input {
   border: none;
-  outline: none; /* 클릭 시 아웃라인 제거 */
-  width: 60%;
+  /* outline: none;*/ /*클릭 시 아웃라인 제거 */
+  width: 240px;
+  height: 38px;
+  padding-left: 10px;
+  font-size: 16px;
   background: #ffffff;
 }
 .search-modal-input input::placeholder {
   color: #bfbfbf;
 }
 .search-modal-button {
+  border: none;
+  cursor: pointer;
   width: 268px;
   height: 52px;
+  border-radius: 7px;
   background-color: #a3c100;
-  border-radius: 8px;
-  border: none;
-  margin-top: 30px;
-  cursor: pointer;
+  display: block;
+  margin: auto;
 }
 .search-modal-button a {
   color: #fff;
@@ -857,17 +992,13 @@ color: #fff;
       float: right;
       font-size: 28px;
       font-weight: bold; */
-  right: 20px;
-  top: 21px;
+  right: 10px;
+  top: 10px;
   width: 27px;
   height: 27px;
   border: none;
   background: url("../images/short/quick_m_close.png") no-repeat center;
-}
-
-/* FAQ 모달 */
-.FAQ-modal {
-  display: none;
+  cursor: pointer;
 }
 
 /* 쇼츠 */
@@ -978,6 +1109,9 @@ color: #fff;
   width: 100%;
   height: 100%;
 }
+.short .swiper-wrapper .swiper-slide a img:hover {
+  opacity: 0.6;
+}
 .short .swiper-wrapper .swiper-slide a img::after {
   content: "";
   display: block;
@@ -1011,10 +1145,11 @@ color: #fff;
 .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
 .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
   height: 2px;
+  overflow: hidden;
 }
-.wiper-pagination-progressbar-fill {
+/* .short-pn .swiper-pagination .swiper-pagination-progressbar-fill{
   height: 2px;
-}
+} */
 /* 쇼츠 모달 */
 /* 모달 스타일 */
 .s-modal {
@@ -1036,7 +1171,7 @@ color: #fff;
   transform: translate(-50%, -50%);
   width: 30%; /*수정함*/
   min-width: 310px;
-  max-width: 395px;
+  max-width: 540px;
   border-radius: 20px;
   height: fit-content;
   border: 1px solid #888;
@@ -1050,10 +1185,11 @@ color: #fff;
       float: right;
       font-size: 28px;
       font-weight: bold; */
-  right: -30px;
-  top: -30px;
+  right: 0;
+  top: -35px;
   width: 27px;
   height: 27px;
+  cursor: pointer;
   background: url("../images/short/btn_close_livepop.png") no-repeat;
 }
 
