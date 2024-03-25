@@ -1294,6 +1294,9 @@ body {
   text-align: center;
   /* align-items: center; */
 }
+.video img {
+  display: none;
+}
 
 /* 비디오 타이틀 */
 .video-title {
