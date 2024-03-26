@@ -1005,26 +1005,47 @@
     display: block;
   }
 }
-@media screen and (max-width: 490px) {
-  .video-iframe-box iframe:nth-child(3) {
-    display: none;
-  }
-  .video-iframe-box iframe:nth-child(4) {
-    display: block;
-  }
-  .quickmenu ul li p {
-    display: none;
-  }
-  .quickmenu ul li span {
-    display: none;
-  }
-  .quickmenu ul li a {
-    width: 50px;
-    height: 50px;
-  }
-  .quickmenu ul li img {
-    padding: 9px 0 7px;
-  }
+
+@media screen and (max-width: 490px){
+    .video-iframe-box iframe:nth-child(3) {
+        display: none;
+          }
+    .video-iframe-box iframe:nth-child(4) {
+        display: block;
+    }
+    .quickmenu ul li p  {
+        display: none;
+    }
+    .quickmenu ul li span {
+        display: none;
+    }
+    .quickmenu ul li a {
+        width:50px;
+        height:50px;
+      }
+      .quickmenu ul li img {
+        padding: 9px 0 7px;
+    }
+    .top-button {
+      right: 17px;
+      bottom: 5px;
+    }
+    .top-button .chat-btn img {
+position: absolute;
+top: -20px;
+left: -30px;
+width: 60px;
+animation: updown 1.5s infinite;
+    }
+    .top-button .chat-btn span {
+      right: 20px;
+      top: 0;
+      box-shadow: none;
+      background-color: none;
+    }
+    .top-button .shop-btn {
+      display: none;
+    }
 }
 @media screen and (max-width: 630px) {
   .short span {
@@ -1106,10 +1127,9 @@
     font-size: 16px;
   }
 }
-@media screen and (max-width: 540px) {
-  .app-box {
-    width: 100%;
-  }
+
+@media screen and (max-width: 550px){
+
 }
 @media screen and (max-width: 500px) {
   .info-info {
@@ -1131,47 +1151,155 @@
 }
 @media screen and (max-width: 430px) {
   /* 모달창 */
-  .modal-main {
-    width: 300px;
-    height: 400px;
-  }
-  .modal-notice {
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 22px;
-  }
-  .modal-notice h2 {
-    font-size: 14px;
-  }
-  .modal-img {
-    width: 200px;
-    height: 120px;
-  }
-  .modal-bt {
-    width: 150px;
-    height: 40px;
-    margin-top: 15px;
-    border-radius: 6px;
-  }
-  .modal-bt a {
-    font-size: 16px;
-  }
-  .modal-close {
-    width: 300px;
-    height: 50px;
-  }
-  .modal-close li {
-    font-size: 16px;
-  }
-  /* footer */
-  footer {
-    width: 100%;
-  }
-  .ft_info {
-    display: none;
-  }
-  .ft_info_430 {
+    .modal-main{
+        width: 300px;
+        height: 400px;
+    }
+    .modal-notice{
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 22px;
+    }
+    .modal-notice h2{
+        font-size: 14px;
+    }
+    .modal-img{
+        width: 200px;
+        height: 120px;
+    }
+    .modal-bt{
+        width: 150px;
+        height: 40px;
+        margin-top: 15px;
+        border-radius: 6px;
+    }
+    .modal-bt a{
+        font-size: 16px;
+    }
+    .modal-close{
+        width: 300px;
+        height: 50px;
+    }
+    .modal-close li{
+        font-size: 16px;
+    }
+
+    .app-inner{
+      width: 95vw;
+      height: 100%;
+      margin: 0 auto;
+    }
+      .app-box{
+    width: 95vw;
+    height: 93vh;
+    
+    }
+    .app-info{
+      width: 80.5vw;  
+      height: 15vh;
+    }
+    .stap {
+      margin: 1.5vh auto;
+    }
+    h1 {
+      font-size: 3vh;
+    }
+    .app-tell h1 {
+      font-size: 3vh;
+    }
+    .app-address{
+      width: 82vw;
+      height: 29vh;
+      margin: 3% auto;
+      font-size: 14px;
+    }
+    .date{
+      width: 82vw;
+      margin-top: 2vh;
+      height: 4.5vh;
+      padding: 2vh;
+    }
+    select{
+      width: 40vw;
+      height: 4.5vh;
+      /* min-height: 42px; */
+    }
+    .js-click-modal{
+      width: 82vw;
+      height: 5vh;
+      margin-top: 0;
+      line-height: 5.5vh;
+    }
+    
+    
+    
+    .app-tell{
+      width: 82vw;
+      
+    }
+    .tell-nb{
+      width: 82vw;
+      height: 4.5vh;
+    }
+    .tell-nb h3{
+      width: 20vw;
+      height: 4.5vh;
+      font-size: 3.5vw;
+    }
+    .tel{
+      width: 46vw;
+      height: 4.5vh;
+      font-size: 3vw;
+    }
+    .tel-wrap{
+      width: 46vw;
+      font-size: 3vw;
+    }
+    .code-bt{
+      width: 16vw;
+      height: 4.5vh;
+      font-size: 3.5vw;
+    }
+    .tell-nb2{
+      width: 82vw;
+      height: 4.5vh;
+    }
+    .tell-nb2 h3{
+      width: 20vw;
+      height: 4.5vh;
+      font-size: 3.5vw;
+    }
+    .tel2{
+      width: 46vw;
+      height: 4.5vh;
+      font-size: 3vw;
+    }
+    .btn_auth{
+      width: 16vw;
+      height: 4.5vh;
+      font-size: 3.5vw;
+    }
+    .app-bt{
+      width: 82vw;
+    }
+    .time{
+      right: 21vw;
+    }
+    .app-info li{
+      font-size: 3vw;
+      margin-left: 10vw;
+      margin-top: 0.5vh;
+    }
+    /* footer */
+    footer{
+      width: 100%;
+    }
+    .ft_info{
+        display: none;
+    }
+    .ft_info_430 {
+
     display: block;
   }
 }
