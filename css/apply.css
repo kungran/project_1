@@ -139,7 +139,6 @@ body {
   top: 50%;
   transform: translateY(-50%);
   width: 132vw;
-  min-width: 320px;
   height: 900px;
   max-width: 520px;
   /* overflow-y: auto; */
@@ -339,7 +338,7 @@ select {
   margin-bottom: 5px;
 }
 .confirm-link{
-  
+  cursor: pointer;
 }
 
 
