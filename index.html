@@ -38,7 +38,7 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-    <meta property="og:image" content="https://patimagel.vercel.app/images/thum.png" />
+    <meta property="og:image" content="https://patimagel.vercel.app/images/thumbnail.png" />
     <!-- css 초기화 -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/reset.css" />
@@ -62,7 +62,7 @@
     <!-- 인스타 렌더링 자바스크립트 -->
     <!-- <script async src="//www.instagram.com/embed.js"></script> -->
     <!-- 틱톡 렌더링 자바스크립트 -->
-    <script async src="https://www.tiktok.com/embed.js"></script>
+    <!-- <script async src="https://www.tiktok.com/embed.js"></script> -->
     <!-- 해당 자바스크립트 -->
     <script src="js/main.js"></script>
     <!-- aos acc -->
@@ -121,17 +121,28 @@
       <!-- main img slide -->
       <div class="main-img-area">
         <div class="inner">
+          <!-- slide text -->
+          <div class="img-txt-box"><span class="img-txt1">여</span><span class="img-txt2">드</span><span class="img-txt3">름</span></div>
           <div class="main-img-slide">
-            <div class="img-txt-box"><span class="img-txt1">여</span><span class="img-txt2">드</span><span class="img-txt3">름</span></div>
+            <img src="images/main-img_img.png" alt="파티마겔메인이미지" />
           </div>
         </div>
+        <div class="ani-product">
+          <!-- 클릭하면 퀴즈 섹션으로 넘어가야됨 -->
+          <a href="#quiz-area">
+            <img src="images/ani-product.png" alt="파티마겔연고이미지" class="ani-img" />
+          </a>
+        </div>
       </div>
-      <div class="ani-product">
-        <!-- 클릭하면 퀴즈 섹션으로 넘어가야됨 -->
-        <a href="#quiz-area">
-          <img src="images/ani-product.png" alt="파티마겔연고이미지" class="ani-img" />
-        </a>
-      </div>
+      <script>
+        //main slide img chg
+        const chgMainImg = document.querySelector(".main-img-slide > img");
+        const innerWidth = window.innerWidth;
+        if (innerWidth < 780) {
+          chgMainImg.src = "images/main_img_mobile.png";
+        }
+      </script>
+
       <!-- quiz section -->
       <section class="main-quiz" id="quiz-area">
         <div class="inner">
@@ -219,6 +230,7 @@
               <img src="images/logo_b.png" alt="태극제약로고" />
             </div>
             <div class="quiz-insta-frame">
+              <img src="images/ani-product.png" alt="연고이미지" id="insta-img" />
               <img src="images/cream-texture.png" alt="크림제형사진" />
             </div>
             <div class="insta-text-box">
@@ -361,66 +373,18 @@
             <!-- 틱톡 영상 -->
             <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yakstagram/video/7191420369427860737" data-video-id="7191420369427860737" style="max-width: 322px; min-width: 180px; border: 1px solid rgb(22 24 35 / 12%)">
               <section>
-                <a
-                  target="_blank"
-                  title="@yakstagram"
-                  href="https://www.tiktok.com/@yakstagram?refer=embed"
-                  >@yakstagram</a
-                >
-                여드름약 아무거나 바르지 마세요.🙌🏻 *상태별 여드름약 정리*
-                🎾아프지는 않지만 알이 차려고 하는 상태 -&gt; 파티마겔 균 성장
-                억제효과, 각질 녹여줌 자극성이 커서 극소량 바르고 처음에는 2일에
-                한번 바르다가 적응되면 1일에 1번 -&gt; 1일 2회로 점진적으로
-                늘려주세요. ⚾빨갛게 알이 차고 아픈 상태 -&gt; 큐아크네, 애크논
-                등 여드름 균 제거 + 염증 억제 기능 피부가 민감한 사람도 무난히
-                사용 가능 ️ ️🏐블랙헤드, 화이드헤드, 좁쌀여드름 -&gt; 클리어틴
-                피지 녹이는 효과 자극적이면 2일에 1회 -&gt; 1일 1회 -&gt; 1일
-                2회로 점진적으로 적응해가기 ⚽️좁쌀, 화농성 모두 있는데 색소
-                침착 잘 생기는 사람 -&gt; 아젤리아 여드름균 증식 억제 + 모공
-                막히지 않도록 하는 기능+색소침착 방지 효과 🏀여드름 짠 직후 감염
-                예방 -&gt; 에스로반, 베아로반 모낭염에 잘 듣고, 추가 감염 예방에
-                좋은데 여드름과 모낭염은 육안 구분이 어렵긴 해요. 😓 *여드름이
-                잘 나는 분께 도움이 될만한 영양제* 💙오메가3 - 과도한 피지 분비
-                억제, 염증 억제 💙비타민 A D E 아연 -&gt; 염증과 관련된 비타민.
-                종합비타민을 드세요. 🌞여드름약 사용은 세안과 기초 스킨 로션
-                후에 바르고, 약을 바른 후 자외선차단제를 꼭 발라주세요!!
-                🫣여드름약이 필요한 친구가 있다면 공유 🤔궁금한 건 질문해주세요🙌🏻
-                <a
-                  title="약사"
-                  target="_blank"
-                  href="https://www.tiktok.com/tag/%EC%95%BD%EC%82%AC?refer=embed"
-                  >#약사</a
-                >
-                <a
-                  title="약국"
-                  target="_blank"
-                  href="https://www.tiktok.com/tag/%EC%95%BD%EA%B5%AD?refer=embed"
-                  >#약국</a
-                >
-                <a
-                  title="약스타그램"
-                  target="_blank"
-                  href="https://www.tiktok.com/tag/%EC%95%BD%EC%8A%A4%ED%83%80%EA%B7%B8%EB%9E%A8?refer=embed"
-                  >#약스타그램</a
-                >
-                <a
-                  title="여드름"
-                  target="_blank"
-                  href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed"
-                  >#여드름</a
-                >
-                <a
-                  title="손댄스"
-                  target="_blank"
-                  href="https://www.tiktok.com/tag/%EC%86%90%EB%8C%84%EC%8A%A4?refer=embed"
-                  >#손댄스</a
-                >
-                <a
-                  target="_blank"
-                  title="♬ 可愛くてごめん (feat. かぴ) - HoneyWorks"
-                  href="https://www.tiktok.com/music/可愛くてごめん-feat-かぴ-7127871335373015041?refer=embed"
-                  >♬ 可愛くてごめん (feat. かぴ) - HoneyWorks</a
-                >
+                <a target="_blank" title="@yakstagram" href="https://www.tiktok.com/@yakstagram?refer=embed">@yakstagram</a>
+                여드름약 아무거나 바르지 마세요.🙌🏻 *상태별 여드름약 정리* 🎾아프지는 않지만 알이 차려고 하는 상태 -&gt; 파티마겔 균 성장 억제효과, 각질 녹여줌 자극성이 커서 극소량 바르고 처음에는 2일에 한번 바르다가 적응되면 1일에 1번 -&gt; 1일 2회로
+                점진적으로 늘려주세요. ⚾빨갛게 알이 차고 아픈 상태 -&gt; 큐아크네, 애크논 등 여드름 균 제거 + 염증 억제 기능 피부가 민감한 사람도 무난히 사용 가능 ️ ️🏐블랙헤드, 화이드헤드, 좁쌀여드름 -&gt; 클리어틴 피지 녹이는 효과 자극적이면 2일에
+                1회 -&gt; 1일 1회 -&gt; 1일 2회로 점진적으로 적응해가기 ⚽️좁쌀, 화농성 모두 있는데 색소 침착 잘 생기는 사람 -&gt; 아젤리아 여드름균 증식 억제 + 모공 막히지 않도록 하는 기능+색소침착 방지 효과 🏀여드름 짠 직후 감염 예방 -&gt;
+                에스로반, 베아로반 모낭염에 잘 듣고, 추가 감염 예방에 좋은데 여드름과 모낭염은 육안 구분이 어렵긴 해요. 😓 *여드름이 잘 나는 분께 도움이 될만한 영양제* 💙오메가3 - 과도한 피지 분비 억제, 염증 억제 💙비타민 A D E 아연 -&gt; 염증과
+                관련된 비타민. 종합비타민을 드세요. 🌞여드름약 사용은 세안과 기초 스킨 로션 후에 바르고, 약을 바른 후 자외선차단제를 꼭 발라주세요!! 🫣여드름약이 필요한 친구가 있다면 공유 🤔궁금한 건 질문해주세요🙌🏻
+                <a title="약사" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EC%82%AC?refer=embed">#약사</a>
+                <a title="약국" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EA%B5%AD?refer=embed">#약국</a>
+                <a title="약스타그램" target="_blank" href="https://www.tiktok.com/tag/%EC%95%BD%EC%8A%A4%ED%83%80%EA%B7%B8%EB%9E%A8?refer=embed">#약스타그램</a>
+                <a title="여드름" target="_blank" href="https://www.tiktok.com/tag/%EC%97%AC%EB%93%9C%EB%A6%84?refer=embed">#여드름</a>
+                <a title="손댄스" target="_blank" href="https://www.tiktok.com/tag/%EC%86%90%EB%8C%84%EC%8A%A4?refer=embed">#손댄스</a>
+                <a target="_blank" title="♬ 可愛くてごめん (feat. かぴ) - HoneyWorks" href="https://www.tiktok.com/music/可愛くてごめん-feat-かぴ-7127871335373015041?refer=embed">♬ 可愛くてごめん (feat. かぴ) - HoneyWorks</a>
               </section>
             </blockquote>
             <!-- 닫기 버튼 -->
@@ -1059,10 +1023,38 @@
           <div class="video-title-bl"></div>
           <!-- youtube size  width="560" height="315" -->
           <div class="video-iframe-box">
-            <iframe width="650" height="370" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="460" height="250" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="310" height="170" src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe
+              width="650"
+              height="370"
+              src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <iframe
+              width="460"
+              height="250"
+              src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <iframe
+              width="310"
+              height="170"
+              src="https://www.youtube.com/embed/nG0a38iukHQ?si=UeIahBlmlssRlgqP"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
           </div>
         </div>
       </section>
@@ -1073,12 +1065,14 @@
         <div class="modal-main">
           <div class="modal-notice">
             <h2>
-              무항생제 여드름 치료제 <br />
-              <span class="span-md_1">파티마겔</span>을 무료로 써 보고 싶다면?
+              지금 무항생제 여드름 치료제 <br />
+              <span class="span-md_1">파티마겔</span>을 무료로 사용 해 보세요!
             </h2>
             <div class="modal-img"></div>
-            <h2>제품 스토리 보고<span class="span-md_2"> 퀴즈</span> 풀면 <br /><span class="span-md_2">파티마겔</span>을 드립니다!</h2>
-            <button class="modal-bt"><a href="/apply.html">퀴즈 풀러 가기</a></button>
+            <h2>샘플 사용 후 <span class="span-md_2">설문조사</span>에 <br />참여하시면 <span class="span-md_2">본품 할인권</span>을 드립니다!</h2>
+            <button class="modal-bt">
+              <a href="/apply.html">신청하러 가기</a>
+            </button>
           </div>
           <ul class="modal-close">
             <li>
@@ -1122,24 +1116,24 @@
           <div class="ft-top">
             <div class="ft_left">
               <div class="logo_tg">
-                <a href="#"><img src="images/tg_logo.png" alt="태극" /></a>
+                <a href="#"><img src="/images/tg_logo.png" alt="태극" /></a>
               </div>
               <div class="logo_lg">
-                <a href="#"><img src="images/lg_logo.png" alt="lg" /></a>
+                <a href="#"><img src="/images/lg_logo.png" alt="lg" /></a>
               </div>
             </div>
             <ul class="ft_right">
               <li class="yt_logo">
-                <a href="#"><img src="images/youtube_logo.png" alt="유튜브" /></a>
+                <a href="#"><img src="/images/youtube_logo.png" alt="유튜브" /></a>
               </li>
               <li class="ins_logo">
-                <a href="#"><img src="images/insta_logo.png" alt="인스타그램" /></a>
+                <a href="#"><img src="/images/insta_logo.png" alt="인스타그램" /></a>
               </li>
               <li class="fb_logo">
-                <a href="#"><img src="images/facebook_logo.png" alt="페이스북" /></a>
+                <a href="#"><img src="/images/facebook_logo.png" alt="페이스북" /></a>
               </li>
               <li class="naver_logo">
-                <a href="#"><img src="images/youtube_logo.png" alt="네이버" /></a>
+                <a href="#"><img src="/images/naver_logo.png" alt="네이버" /></a>
               </li>
             </ul>
           </div>
