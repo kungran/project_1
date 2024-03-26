@@ -847,11 +847,7 @@
     display: block;
   }
 }
-@media screen and (max-width: 550px){
-  .FAQ-box em {
-    padding: 3.93333vw 4.66667vw;
-  }
-}
+
 @media screen and (max-width: 490px){
     .video-iframe-box iframe:nth-child(3) {
         display: none;
@@ -986,70 +982,7 @@ animation: updown 1.5s infinite;
 }
 
 @media screen and (max-width: 550px){
-.app-inner{
-  width: 95vw;
-  margin: 0 auto;
-}
-  .app-box{
-width: 95vw;
-}
-.app-info{
-  width: 80.5vw;
-}
 
-.app-address{
-  width: 82vw;
-}
-.date{
-  width: 82vw;
-}
-select{
-  width: 40vw;
-}
-.js-click-modal{
-  width: 82vw;
-}
-
-
-.app-tell{
-  width: 82vw;
-}
-.tell-nb{
-  width: 82vw;
-}
-.tell-nb h3{
-  width: 20vw;
-  font-size: 3.5vw;
-}
-.tel{
-  width: 46vw;
-  font-size: 3vw;
-}
-.code-bt{
-  width: 16vw;
-  font-size: 3.5vw;
-}
-.tell-nb2{
-  width: 82vw;
-}
-.tell-nb2 h3{
-  width: 20vw;
-  font-size: 3.5vw;
-}
-.tel2{
-  width: 46vw;
-  font-size: 3vw;
-}
-.btn_auth{
-  width: 16vw;
-  font-size: 3.5vw;
-}
-.app-bt{
-  width: 82vw;
-}
-.time{
-  right: 21vw;
-}
 }
 @media screen and (max-width: 500px) {
   .info-info {
@@ -1106,10 +1039,111 @@ select{
         font-size: 16px;
     }
 
-    .app-info li{
+    .app-inner{
+      width: 95vw;
+      height: 100%;
+      margin: 0 auto;
+    }
+      .app-box{
+    width: 95vw;
+    height: 93vh;
+    
+    }
+    .app-info{
+      width: 80.5vw;  
+      height: 15vh;
+    }
+    .stap {
+      margin: 1.5vh auto;
+    }
+    h1 {
+      font-size: 3vh;
+    }
+    .app-tell h1 {
+      font-size: 3vh;
+    }
+    .app-address{
+      width: 82vw;
+      height: 29vh;
+      margin: 3% auto;
+      font-size: 14px;
+    }
+    .date{
+      width: 82vw;
+      margin-top: 2vh;
+      height: 4.5vh;
+      padding: 2vh;
+    }
+    select{
+      width: 40vw;
+      height: 4.5vh;
+      /* min-height: 42px; */
+    }
+    .js-click-modal{
+      width: 82vw;
+      height: 5vh;
+      margin-top: 0;
+      line-height: 5.5vh;
+    }
+    
+    
+    
+    .app-tell{
+      width: 82vw;
+      
+    }
+    .tell-nb{
+      width: 82vw;
+      height: 4.5vh;
+    }
+    .tell-nb h3{
+      width: 20vw;
+      height: 4.5vh;
       font-size: 3.5vw;
+    }
+    .tel{
+      width: 46vw;
+      height: 4.5vh;
+      font-size: 3vw;
+    }
+    .tel-wrap{
+      width: 46vw;
+      font-size: 3vw;
+    }
+    .code-bt{
+      width: 16vw;
+      height: 4.5vh;
+      font-size: 3.5vw;
+    }
+    .tell-nb2{
+      width: 82vw;
+      height: 4.5vh;
+    }
+    .tell-nb2 h3{
+      width: 20vw;
+      height: 4.5vh;
+      font-size: 3.5vw;
+    }
+    .tel2{
+      width: 46vw;
+      height: 4.5vh;
+      font-size: 3vw;
+    }
+    .btn_auth{
+      width: 16vw;
+      height: 4.5vh;
+      font-size: 3.5vw;
+    }
+    .app-bt{
+      width: 82vw;
+    }
+    .time{
+      right: 21vw;
+    }
+    .app-info li{
+      font-size: 3vw;
       margin-left: 10vw;
-      margin-top: 1.1vh;
+      margin-top: 0.5vh;
     }
     /* footer */
     footer{
