@@ -63,6 +63,7 @@ body {
   margin: 0 auto;
   /* margin-left: 20px;
   margin-right: 20px; */
+  overflow: hidden;
 }
 .app-left {
   width: 650px;
@@ -140,6 +141,8 @@ body {
   width: 132vw;
   height: 900px;
   max-width: 520px;
+  /* overflow-y: auto; */
+  
 }
 
 .app-box {
@@ -147,13 +150,12 @@ body {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 132vw;
   height: 900px;
-  max-width: 520px;
+  width: 520px;
   background-color: #fff;
   border-radius: 7px;
   padding-top: 25px;
-  /* overflow-y: auto; */
+
 }
 .app-box-1200 {
   position: absolute;
@@ -186,10 +188,11 @@ body {
   color: #333;
 }
 .app-info li {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
   margin-top: 15px;
   margin-left: 50px;
+  margin-right: 10px;
   color: #333;
   list-style: disc;
 }
@@ -198,6 +201,13 @@ h1 {
   font-weight: 600;
   color: #333;
   text-align: center;
+}
+.app-tell h1 {
+  font-size: 27px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 35px;
 }
 .app-address {
   width: 450px;
@@ -208,7 +218,7 @@ h1 {
 .date {
   width: 450px;
   height: 42px;
-  margin-top: 40px;
+  margin-top: 30px;
   border-radius: 7px;
   border: 1px solid #d9d9d9;
   padding: 20px;
@@ -280,6 +290,7 @@ select {
   filter: brightness(2);
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .js-click-modal {
@@ -297,26 +308,30 @@ select {
   text-align: center;
   line-height: 55px;
   margin: 0 auto;
+  margin-top: 25px;
 }
 /* js style */
 .find-store-result {
   width: 100%;
-  height: auto;
+  height: 233px;
   background-color: #e5effd;
   margin-top: 15px;
   line-height: 1.24;
   text-align: center;
   padding: 20px;
   display: none;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .cfr-title {
   font-size: 1.7rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #286cc3;
 }
 .cfr-store {
   font-weight: 700;
+  margin-bottom: 10px;
 }
 .cfr-addr {
   font-size: 1.4rem;
@@ -325,6 +340,7 @@ select {
 .confirm-link{
   cursor: pointer;
 }
+
 
 .add-body {
   position: relative;
@@ -417,24 +433,24 @@ select {
   width: 450px;
   height: 282px;
   /* background-color: aquamarine; */
-  margin: 20px auto;
+  margin: 30px auto;
 }
 .tell-nb {
   display: flex;
   width: 450px;
   height: 42px;
-  margin-bottom: 20px;
-  background-color: #e5effd;
+  background-color: #ecf4be;
   border: 1px solid #d9d9d9;
   border-radius: 7px;
-  margin-top: 40px;
+
 }
 .tell-nb2 {
   display: flex;
   width: 450px;
   height: 42px;
+  margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #e5effd;
+  background-color: #ecf4be;
   border: 1px solid #d9d9d9;
   border-radius: 7px;
 }
@@ -473,7 +489,9 @@ select {
   border-bottom-right-radius: 6px;
   cursor: pointer;
 }
+
 .tel-wrap {
+  position: relative;
   width: 250px;
   height: 40px;
   border: none;
@@ -484,18 +502,19 @@ select {
   width: 250px;
   height: 40px;
   border: none;
+  font-size: 16px;
   /* border-top-right-radius: 6px;
   border-bottom-right-radius: 6px; */
   text-align: center;
 }
 .time {
+  position: absolute;
+  top: 10px;
+  right: 0px;
   width: 50px;
   height: 16px;
-  position: absolute;
-  right: 130px;
-  bottom: 146px;
   color: rgb(236, 85, 30);
-  font-size: 16px;
+  font-size: 13px;
 }
 .btn_auth {
   width: 88px;
@@ -512,16 +531,21 @@ select {
   width: 450px;
   height: 56px;
   border: 0;
-  background-color: #778b06;
+  background-color: #bababa;
   border-radius: 7px;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
-  position: absolute;
+  /* position: absolute;
   bottom: 40px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
   margin: 0 auto;
+  margin-top: 5px;
+}
+.btn_auth_success{
+  background-color: #778b06;
+  color: #fff;
 }
 .app-modal_wrap {
   display: none;
