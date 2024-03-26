@@ -872,14 +872,18 @@
       right: 17px;
       bottom: 5px;
     }
-    .top-button .chat-btn img {
+    .top-button .search-btn {
+      display: none;
+    }
+
+    .top-button .FAQ-btn img {
 position: absolute;
 top: -20px;
 left: -30px;
 width: 60px;
 animation: updown 1.5s infinite;
     }
-    .top-button .chat-btn span {
+    .top-button .FAQ-btn span {
       right: 20px;
       top: 0;
       box-shadow: none;
