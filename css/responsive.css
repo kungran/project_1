@@ -1004,6 +1004,12 @@
   .video-iframe-box iframe:nth-child(3) {
     display: block;
   }
+  .swiper-button-prev {
+    display: none;
+  }
+  .swiper-button-next {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 490px){
