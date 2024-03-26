@@ -438,6 +438,7 @@ select {
 .tell-nb {
   display: flex;
   width: 450px;
+  max-height: 42px;
   height: 42px;
   background-color: #ecf4be;
   border: 1px solid #d9d9d9;
@@ -448,6 +449,7 @@ select {
   display: flex;
   width: 450px;
   height: 42px;
+  max-height: 42px;
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: #ecf4be;
@@ -458,6 +460,7 @@ select {
 .tell-nb h3 {
   width: 110px;
   height: 40px;
+  max-height: 40px;
   font-weight: 600;
   text-align: center;
   line-height: 40px;
@@ -466,6 +469,7 @@ select {
 .tell-nb2 h3 {
   width: 110px;
   height: 40px;
+  max-height: 40px;
   font-weight: 600;
   text-align: center;
   line-height: 40px;
@@ -474,6 +478,7 @@ select {
 .tel {
   width: 250px;
   height: 40px;
+  max-height: 40px;
   border: none;
   font-size: 16px;
   text-align: center;
@@ -482,6 +487,7 @@ select {
 .code-bt {
   width: 88px;
   height: 40px;
+  max-height: 40px;
   background-color: #bababa;
   color: #fff;
   border: none;
@@ -494,13 +500,16 @@ select {
   position: relative;
   width: 250px;
   height: 40px;
+  max-height: 40px;
   border: none;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
 .tel2 {
+  position: relative;
   width: 250px;
   height: 40px;
+  max-height: 40px;
   border: none;
   font-size: 16px;
   /* border-top-right-radius: 6px;
@@ -509,7 +518,8 @@ select {
 }
 .time {
   position: absolute;
-  top: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0px;
   width: 50px;
   height: 16px;
@@ -519,6 +529,7 @@ select {
 .btn_auth {
   width: 88px;
   height: 40px;
+  max-height: 40px;
   background-color: #bababa;
   color: #fff;
   border: none;
