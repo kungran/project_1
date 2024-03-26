@@ -36,17 +36,23 @@ $(document).ready(function () {
     // 확인 메시지 구성
     const resultLoadMsg = `
    
-     <h2 class="cfr-title">예약하신 약국을 확인해주세요.</h2>
+     <h2 class="cfr-title">선택하신 약국을 확인해주세요.</h2>
      <p class="cfr-store">${chsido}</p>
      <p class="cfr-addr">${chgugun}</p>
+     <a class="confirm-link">다시 선택하기</a> <!-- 링크 추가 -->
   
    `;
+   $('.app-address').hide();
     resultLoad.html(resultLoadMsg); // jQuery 객체에 대해 innerHTML 대신 html() 사용
     resultLoad.css({
       display: "block",
     });
     storeModal.hide();
+    // 다시 선택하기 링크 클릭 이벤트 처리
+  $(".confirm-link").on("click", function() {
+    location.reload(); // 페이지 리로드
   });
+})
   //hun
   var area0 = ["서울특별시", "인천광역시", "대전광역시", "광주광역시", "대구광역시", "울산광역시", "부산광역시", "경기도", "강원도", "충청북도", "충청남도", "전라북도", "전라남도", "경상북도", "경상남도", "제주도"];
   var areas = [
@@ -154,16 +160,10 @@ $(document).ready(function () {
     document.querySelector(".app-modal_wrap").style.display = "block";
   }
 
-  // 모달 닫기 함수
-  function closeModal() {
-    document.querySelector(".app-modal_wrap").style.display = "none";
-  }
-  $("#app-bt").prop("disabled", true);
-  // 신청하기 버튼 클릭 시 모달 열기
-  document.getElementById("app-bt").addEventListener("click", function (event) {
-    event.preventDefault(); // 폼 제출 이벤트 방지
-    openModal();
-  });
+
+$('.js-close-modal').click(function(){
+  $('.container').removeClass('modal-open');
+});
 
   // // 모달 외부 클릭 시 모달 닫기 이벤트 추가
   // document.querySelector(".app-modal_wrap").addEventListener("click", function (event) {
@@ -206,15 +206,43 @@ $(document).ready(function () {
 
     updateCountdown();
     // 1초마다 카운트다운 업데이트
-    countdown = setInterval(updateCountdown, 1000);
-  });
-  $btnAuth.on("click", function (e) {
-    e.preventDefault();
-    $btnSend.text("인증 요청");
-    alert("인증이 완료되었습니다.");
+    countdown = setInterval(updateCountdown, 1000); 
+});
+$btnAuth.on('click', function(e) {
+  e.preventDefault();
+  $btnSend.text('인증 요청');
+  alert('인증이 완료되었습니다.');
 
-    $timeSpan.hide();
-    // 신청 하기 버튼 활성화
-    $("#app-bt").prop("disabled", false);
+  $timeSpan.hide();
+  // 신청 하기 버튼 활성화
+  $('#app-bt').prop('disabled', false);
+  $('#app-bt').addClass('btn_auth_success'); // 버튼에 새로운 클래스 추가
+});
+document.addEventListener("DOMContentLoaded", function() {
+  // 버튼 요소 가져오기
+  var appButton = document.getElementById("app-bt");
+  
+  // 버튼 클릭 이벤트 처리
+  appButton.addEventListener("click", function() {
+    // 인증 완료 여부를 확인하고, 인증이 완료되었다면 버튼 스타일 변경
+    var isAuthSuccess = true; // 인증이 완료되었다고 가정
+    if (isAuthSuccess) {
+      appButton.classList.add("btn_auth_success"); // 버튼에 새로운 클래스 추가
+    }
   });
+});
+function openModal() {
+document.querySelector(".app-modal_wrap").style.display = "block";
+}
+
+// 모달 닫기 함수
+function closeModal() {
+document.querySelector(".app-modal_wrap").style.display = "none";
+}
+$('#app-bt').prop('disabled', true);
+// 신청하기 버튼 클릭 시 모달 열기
+document.getElementById("app-bt").addEventListener("click", function (event) {
+  event.preventDefault(); // 폼 제출 이벤트 방지
+  openModal();
+});
 });
