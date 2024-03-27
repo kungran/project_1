@@ -1206,7 +1206,15 @@ animation: updown 1.5s infinite;
     .modal-close li{
         font-size: 16px;
     }
-
+.wrap{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.app-page{
+  width: 100%;
+  height: 900px;
+}
     .app-inner{
       width: 95vw;
       height: 100%;
@@ -1216,6 +1224,7 @@ animation: updown 1.5s infinite;
     width: 95vw;
     /* max-height: 800px; */
     height: 93vh;
+    max-height: 900px;
     padding-top: 3vh;
     
     }
@@ -1356,6 +1365,40 @@ animation: updown 1.5s infinite;
       margin-top: 0;
       line-height: 5.2vh;
       font-size: 14px;
+    }
+ 
+    .app-modal_box {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding-top: 3vh;
+    }
+    .app-modal_wrap{
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+    }
+    .modal_close{
+      /* position: absolute; */
+      width: 82vw;
+      height: 5vh;
+      margin-top: 0;
+      line-height: 5.2vh;
+      font-size: 14px;
+      /* left: 75vw; */
+      /* bottom: 80px; */
+
+    }
+    .app-modal_top{
+      width: 100%;
+      height: 500px;
+    }
+    .app-modal_wrap p{
+      font-size: 10vw;
+      line-height: 50px;
+    }
+    .app-modal_wrap h1{
+      font-size: 4vw;
     }
     /* footer */
     footer{
