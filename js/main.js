@@ -108,7 +108,58 @@ window.onload = function () {
   langM.addEventListener("click", () => {
     langM.classList.remove("show");
   });
- 
+
+  //section direction
+  document.querySelectorAll(".sd-wrapper > li > a").forEach(function (element) {
+    element.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetSectionId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetSectionId);
+      var targetPosition = targetSection.offsetTop;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+
+      // 이전에 활성화된 메뉴들을 비활성화합니다.
+      document
+        .querySelectorAll(".sd-wrapper > li > a.sdw-focus")
+        .forEach(function (menu) {
+          menu.classList.remove("sdw-focus");
+        });
+
+      // 현재 메뉴를 활성화합니다.
+      element.classList.add("sdw-focus");
+    });
+  });
+// 각 섹션의 위치를 계산합니다.
+const sections = document.querySelectorAll(".sd-wrapper > li > a");
+const sectionOffsets = Array.from(sections).map(section => {
+  const sectionId = section.getAttribute("href").substring(1);
+  const targetSection = document.getElementById(sectionId);
+  return {
+    id: sectionId,
+    offsetTop: targetSection.offsetTop,
+    offsetBottom: targetSection.offsetTop + targetSection.offsetHeight
+  };
+});
+
+// 스크롤 이벤트를 처리합니다.
+window.addEventListener("scroll", function() {
+  const scrollPosition = window.scrollY;
+
+  // 스크롤 위치에 따라 현재 섹션을 확인하고 해당하는 메뉴를 활성화합니다.
+  sectionOffsets.forEach(section => {
+    const menuLink = document.querySelector(`.sd-wrapper > li > a[href="#${section.id}"]`);
+    if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetBottom) {
+      menuLink.classList.add("sdw-focus");
+    } else {
+      menuLink.classList.remove("sdw-focus");
+    }
+  });
+});
+
+
   //ani product link
   var fnScNavLinkElement = document.querySelector(".ani-product a");
   fnScNavLinkElement.addEventListener("click", function (e) {
@@ -122,12 +173,6 @@ window.onload = function () {
       top: targetPosition,
       behavior: "smooth",
     });
-    if (innerWidth > 1000) {
-      var aniProductElement = document.querySelector(".ani-product");
-      var aniProductAppear = document.querySelector("#insta-img");
-      aniProductElement.classList.add("hide");
-      aniProductAppear.classList.add("show");
-    }
   });
   var fnAniImgChg = document.querySelector(".ani-img");
   var fnAniArea = document.querySelector(".ani-product");
