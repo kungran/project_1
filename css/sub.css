@@ -307,7 +307,7 @@ body {
   width: 100%;
   min-width: 320px;
   height: 500px;
-  background-color: #fff;
+  background-color: #bababa;
 }
 .re-inner {
   width: 100%;
@@ -319,11 +319,9 @@ body {
 .re-h1 {
   font-size: 36px;
   font-weight: 600;
-  color: #fff;
+  color: #333333;
 }
-.img-btgel {
-  background: url("../images/bentraxgel.png") no-repeat center;
-  background-size: cover;
+.img-btgel img {
   width: 230px;
   height: 230px;
   background-color: #fff;
@@ -334,9 +332,11 @@ body {
 .re-h2 {
   font-size: 28px;
   font-weight: 600;
-  color: #fff;
+  color: #333333;
 }
 .re-p {
   font-size: 20px;
   margin-top: 20px;
+  color: red;
+  font-weight: 600;
 }

@@ -29,6 +29,8 @@ $(document).ready(function () {
   showResult.on("click", function (e) {
     e.preventDefault();
     const resultLoad = $(".find-store-result");
+     // 선택한 날짜 가져오기
+     const chdate = $("#date").val();
     // 입력 데이터 가져오기
     const chsido = $(this).siblings(".ml-txt-box").find(".ml-store-title").text();
     const chgugun = $(this).siblings(".ml-txt-box").find(".ml-store-address").text();
@@ -37,6 +39,7 @@ $(document).ready(function () {
     const resultLoadMsg = `
    
      <h2 class="cfr-title">선택하신 약국을 확인해주세요.</h2>
+     <p class="cfr-date">선택 날짜 : ${chdate}</p>
      <p class="cfr-store">${chsido}</p>
      <p class="cfr-addr">${chgugun}</p>
      <a class="confirm-link">다시 선택하기</a> <!-- 링크 추가 -->

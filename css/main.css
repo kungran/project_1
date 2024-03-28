@@ -164,9 +164,9 @@ body {
 /* section direction */
 .section-direction {
   position: fixed;
-  bottom: 10%;
+  top: 50%;
   left: 3%;
-  transform: translateY(-10%);
+  transform: translateY(-50%);
   display: block;
   z-index: 999;
 }
@@ -231,7 +231,9 @@ body {
   display: inline-block;
   -webkit-animation: bounce 0.3s ease 10 alternate;
   color: #ff6200;
-  text-shadow: 0 1px 0 #ffffff, 0 2px 0 #ffffff, 0 3px 0 #ffffff, 0 4px 0 #ffffff, 0 5px 0 #ffffff, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0);
+  text-shadow: 0 1px 0 #ffffff, 0 2px 0 #ffffff, 0 3px 0 #ffffff,
+    0 4px 0 #ffffff, 0 5px 0 #ffffff, 0 6px 0 transparent, 0 7px 0 transparent,
+    0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0);
 }
 
 .img-txt1 {
@@ -250,7 +252,9 @@ body {
 @-webkit-keyframes bounce {
   100% {
     top: 0;
-    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc, 0 50px 25px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 25px rgba(0, 0, 0, 0.2);
   }
 }
 .main-img-slide {
@@ -293,7 +297,7 @@ body {
   height: 100%;
   max-height: 980px;
   width: 100%;
-  margin: 8% 0;
+  margin: 8% 0 4%;
 }
 .main-quiz .inner {
   display: flex;
@@ -608,16 +612,22 @@ body {
 .main-svg-banner {
   position: relative;
   display: block;
-  width: 40%;
+  width: 30%;
   height: 100%;
 }
 .main-svg-banner svg {
+  display: none;
   stroke-width: 2px;
   fill: transparent;
   stroke-dashoffset: 1400;
   stroke-dasharray: 1400;
-  animation: stroke 1.2s linear;
-  animation-fill-mode: forwards;
+  -webkit-animation: stroke 1.2s linear;
+  animation-fill-mode: backwards;
+  animation-play-state: paused;
+}
+.main-svg-banner svg.active {
+  display: block;
+  animation-play-state: running; /* 애니메이션이 재생됩니다. */
 }
 @keyframes stroke {
   0% {
@@ -638,7 +648,37 @@ body {
 }
 .svg-second svg {
   transform: rotate(25deg);
-  stroke: #6ccbff;
+  stroke: #4fc1ff;
+}
+.svg-third {
+  position: absolute;
+  top: 380px;
+  left: 0%;
+  z-index: 12;
+}
+.svg-third svg {
+  transform: rotate(-25deg);
+  stroke: #fffc57;
+}
+.svg-fourth{
+  position: absolute;
+  top: 440px;
+  left: 0%;
+  z-index: 8;
+}
+.svg-fourth svg{
+  transform: rotate(-25deg);
+  stroke: #effaff;
+}
+.svg-fifth{
+  position: absolute;
+  top: 440px;
+  right: 0%;
+  z-index: 8;
+}
+.svg-fifth svg{
+  transform: rotate(-25deg);
+  stroke: #effaff;
 }
 .svg-first {
   position: absolute;
@@ -650,42 +690,43 @@ body {
 .svg-animate-img {
   position: absolute;
   top: 440px;
-  left: 0;
+  left: -15px;
   transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
-  animation: move 1.2s ease infinite;
+  animation: move 1.2s ease infinite; 
+ 
 }
 @keyframes move {
-  0% {
+  0%{
     transform: rotate(0deg);
   }
-  10% {
+  10%{
     transform: rotate(9deg);
   }
-  20% {
+  20%{
     transform: rotate(-9deg);
   }
-  30% {
+  30%{
     transform: rotate(7deg);
   }
-  40% {
+  40%{
     transform: rotate(-7deg);
   }
-  50% {
+  50%{
     transform: rotate(6deg);
   }
-  60% {
+  60%{
     transform: rotate(-6deg);
   }
-  70% {
+  70%{
     transform: rotate(0deg);
   }
-  100% {
+  100%{
     transform: rotate(0deg);
   }
 }
-.animate-img-b {
+.animate-img-b{
   position: relative;
   width: 100%;
   height: 0;
@@ -697,7 +738,7 @@ body {
   left: 0;
   transform: rotate(75deg);
   width: 100%;
-  height: 100%;
+  height: 100%;  
 }
 /* image position */
 .svg-img {
@@ -737,6 +778,7 @@ body {
   height: 0;
   padding-bottom: calc(462 / 360 * 100%);
   z-index: 5;
+  
 }
 .svg-frame-img img {
   position: absolute;
@@ -747,15 +789,17 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.svg-title {
+.svg-title{
   position: absolute;
   bottom: -10px;
   left: 0;
   font-size: 3.6rem;
   font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
   z-index: 9;
-  color: #595959;
+  color: #333;
   cursor: pointer;
+  border: 0;
+  background: none;
 }
 
 /* ran */
@@ -789,7 +833,8 @@ body {
   height: 84px;
   font-size: 13px;
   border-radius: 50px;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 50px inset, rgba(0, 0, 0, 0.1) -1px 4px 10px, rgba(0, 0, 0, 0.1) 1px 2px 5px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 50px inset,
+    rgba(0, 0, 0, 0.1) -1px 4px 10px, rgba(0, 0, 0, 0.1) 1px 2px 5px;
   /* border: 1px solid #6f6f6f; */
 }
 .quickmenu ul li a p {
@@ -910,7 +955,7 @@ body {
   background-color: #fff;
   border-radius: 23px;
   padding: 8px 10px;
-  font-size: 16px;
+  font-family: inherit;
   text-align: center;
   font-weight: 200;
   box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
@@ -979,75 +1024,68 @@ body {
   z-index: 999;
 }
 .FAQ-modal-content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    max-width: 343px;
-    max-height: 528px;
-    background-color: #f1f5f8;
-    border-radius: 7px;
-
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  max-width: 366px;
+  max-height: 574px;
+  min-width: 343px;
+  min-height: 574px;
+  background-color: #f1f5f8;
+  border-radius: 7px;
+  /* box-shadow: 5px 5px gray; */
 }
 .FAQ-modal-inner {
-    width: 285px;
-    height: fit-content;
-    margin: 0 auto;
-    padding: 41px 0 57px;
-    font-family: inherit;
-    /* background-color: #d0d4b4; */
+  width: 295px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 41px 0 57px;
+  font-family: inherit;
+  /* background-color: #d0d4b4; */
 }
 .FAQ-modal-title {
-    display: flex;
-    justify-content: center;
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 27px;
-    padding: 17px 0 27px;
-    color: #333333;
-    border-bottom: 1px solid #333333;
+  word-wrap: break-word;
+  font-family: inherit;
+  font-size: 27px;
+  padding-bottom: 30px;
+  color: #333333;
 }
-
-.FAQ-modal-title p {
-  color: #a3c100;
+.FAQ-modal-title em {
   font-weight: 700;
 }
 .FAQ-box {
-    text-align: left;
-    padding-top: 5px;
-    width: 100%;
-    /* height: 365px; */
-    font-size: 16px;
-    border-radius: 10px;
-    font-weight: 700;
-    background-color: #f1f5f8;
+  text-align: left;
+  padding-top: 5px;
+  width: 100%;
+  height: 100%;
+  max-width: 310px;
+  max-height: 365px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: #ffffff;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 50px inset,
+    rgba(0, 0, 0, 0.1) -1px 1px 10px, rgba(0, 0, 0, 0.1) 0.5px 0.5px 2px;
 }
 .FAQ-box em span {
-    color: #a3c100;
-    padding-right: 3px;
+  color: #a3c100;
+  padding-right: 11px;
 }
-.accordion-header {
-    display: block;
-   font-size: 18px;
-   padding: 22px 12px;
-    cursor: pointer;
-    border-bottom: 1px solid #d6d6d6;
-     background-color: #f1f5f8;
+.FAQ-box em {
+  display: block;
+  padding: 21px;
 }
-.accordion-content {
-    height: 50%;
-    font-size: 15px;
-    font-weight: 300;
-    display: none;
-    padding: 18px;
-    background-color: #fff;
-    word-break: keep-all;
-    /* border-radius: 10px; */
+.FAQ-modal-inner hr {
+  display: block;
+  margin: auto;
+  width: 250px;
+  border: 0;
+  height: 1px;
+  background: #e9e6e3;
 }
-
-
 
 /* 신청조회 모달 */
 .search-modal {
@@ -1085,7 +1123,7 @@ body {
 .search-modal-title strong {
   padding: 10px 0;
   font-size: 27px;
-  font-weight: 600;
+  font-weight: 700;
   color: #333333;
 }
 .search-modal-title h4 {
@@ -1302,7 +1340,8 @@ body {
 .short-pn .swiper-horizontal > .swiper-pagination-progressbar,
 .swiper-pagination-progressbar.swiper-pagination-horizontal,
 .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
-.swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+.swiper-vertical
+  > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
   height: 2px;
   overflow: hidden;
 }
@@ -1432,50 +1471,17 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  height: 500px;
+  height: 400px;
   background-color: #fff;
   border-radius: 20px;
   text-align: center;
 }
-.modal-notice {
-  position: absolute;
-  top: 34px;
-  left: 50%;
-  transform: translateX(-50%);
-  line-height: 25px;
-  color: #333;
-}
-.modal-notice h2 {
-  font-size: 18px;
-  font-weight: 700;
-}
-.span-md_1 {
-  background-color: #a3c100;
-  color: #fff;
-}
-.span-md_2 {
-  color: #a3c100;
-}
 .modal-img {
-  background: url("../images/modal-img.png") no-repeat center;
+  background: url("../images/modal.png") no-repeat center;
   background-size: cover;
-  width: 250px;
-  height: 147px;
-  margin: 20px auto;
-}
-.modal-bt {
-  width: 268px;
-  height: 52px;
-  background-color: #a3c100;
-  border-radius: 8px;
-  border: none;
-  margin-top: 30px;
-  cursor: pointer;
-}
-.modal-bt a {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
+  width: 360px;
+  height: 350px;
+  margin: 0 auto;
 }
 .modal-close {
   border-top: 1px solid #d9d9d9;
