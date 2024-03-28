@@ -141,18 +141,35 @@ window.addEventListener("load", function () {
   //     SearchModal.style.display = "block";
   //   }
   // });
-  // 비디오 영역 닫기 했을때 유투브 소리 안들리게 하기
-  $("img").on("click", function () {
-    var videoPath = "https://www.youtube.com/embed/" + $(this).attr("data-youtube-id");
-          $(".popPage iframe").attr("src", videoPath);
-          $(".youtubePop").css("display", "flex");
+
+
+//쇼츠 닫기버튼 클릭시 계속 재생되는 문제 해결
+$(document).ready(function() {
+    // 모든 모달에 대한 참조를 담을 객체
+    var modals = {};
+    // 모달 ID들을 배열로 초기화
+    var modalIds = [
+        'youtube-modal', 
+        'youtube-modal-2', 
+        'youtube-modal-3', 
+        'youtube-modal-4', 
+        'youtube-modal-5', 
+        'youtube-modal-6'
+    ];
+    // 각 모달 ID에 대해 반복하며 modals 객체에 jQuery 객체로 저장
+    $.each(modalIds, function(index, value) {
+        modals[value] = $("#" + value);
     });
-    //비디오 팝업 닫기 버튼
-    $(".popPageClose").on("click", function () {
-    $(".youtubePop").hide();
-    $(".youtubePop iframe").attr("src", "");
+    // 모든 ".s-close" 버튼에 대한 클릭 이벤트 핸들러
+    $(".s-close").click(function() {
+        // 클릭된 버튼이 속한 모달의 ID를 찾음
+        var modalId = $(this).closest(".s-modal").attr("id");
+        // 해당 모달 내의 iframe의 src 속성을 빈 문자열로 설정
+        modals[modalId].find("iframe").attr("src", "");
+        // 선택적: 해당 모달을 숨김
+        // modals[modalId].hide();
     });
-  
+});
 
 
   // FAQ 모달 창 열기
@@ -166,12 +183,12 @@ window.addEventListener("load", function () {
     });
   });
   // FAQ 모달 아코디언 메뉴기능
-  $(document).ready(function(){
-    $('.accordion-header').click(function(){
-      $(this).next('.accordion-content').slideToggle();
-      $('.accordion-content').not($(this).next()).slideUp();
+  $(document).ready(function () {
+    $(".accordion-header").click(function () {
+      $(this).next(".accordion-content").slideToggle();
+      $(".accordion-content").not($(this).next()).slideUp();
     });
-  });  
+  });
 
   //   신청조회 모달 창 열기
   document.getElementById("search-btn").addEventListener("click", function () {
