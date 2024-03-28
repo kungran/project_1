@@ -1,46 +1,4 @@
 window.addEventListener("load", function () {
-  // ran
-  // Swiper 설정
-//   var swiper = new Swiper(".swiper-short", {
-//     loop: true,
-//     autoplay: {
-//       delay: 1000, //1초의 딜레이를 주고 자동 재생된다
-//     },
-//     // slidesPerView: 5,
-//     spaceBetween: 10, //여백
-
-//     pagination: {
-//       el: ".swiper-short .short-pn .swiper-pagination",
-//       type: "progressbar",
-//     },
-//     navigation: {
-//       nextEl: ".swiper-short .short-pn .swiper-button-next",
-//       prevEl: ".swiper-short .short-pn .swiper-button-prev",
-//     },
-//     breakpoints: {
-//       900: {
-//         //브라우저 화면너비 900이상일때
-//         slidesPerView: 5.8,
-//         spaceBetween: 50,
-//       },
-//       786: {
-//         slidesPerView: 4.7,
-//         spaceBetween: 30,
-//       },
-//       600: {
-//         slidesPerView: 4,
-//         spaceBetween: 20,
-//       },
-//       320: {
-//         slidesPerView: 3,
-//         spaceBetween: 20,
-//       },
-//       200: {
-//         slidesPerView: 2.3,
-//         spaceBetween: 20,
-//       },
-//     },
-//   });
   // 쇼츠 기능
   // 첫번째 모달 창 열기
   document.getElementById("youtube-link").addEventListener("click", function () {
@@ -110,66 +68,71 @@ window.addEventListener("load", function () {
     });
   });
 
+//쇼츠 닫기버튼 클릭시 계속 재생되는 문제 해결
+$(document).ready(function() {
+    // 모든 모달에 대한 참조를 담을 객체
+    var modals = {};
+    // 모달 ID들을 배열로 초기화
+    var modalIds = [
+        'youtube-modal', 
+        'youtube-modal-2', 
+        'youtube-modal-3', 
+        'youtube-modal-4', 
+        'youtube-modal-5', 
+        'youtube-modal-6'
+    ];
+    // 각 모달 ID에 대해 반복하며 modals 객체에 jQuery 객체로 저장
+    $.each(modalIds, function(index, value) {
+        modals[value] = $("#" + value);
+    });
+    // 모든 ".s-close" 버튼에 대한 클릭 이벤트 핸들러
+    $(".s-close").click(function() {
+        // 클릭된 버튼이 속한 모달의 ID를 찾음
+        var modalId = $(this).closest(".s-modal").attr("id");
+        // 해당 모달 내의 iframe의 src 속성을 빈 문자열로 설정
+        modals[modalId].find("iframe").attr("src", "");
+        // 선택적: 해당 모달을 숨김
+        // modals[modalId].hide();
+    });
+});
 
-// // ===== 퀵메뉴 신청조회 클릭
-// const searchBtn = document.getElementById("search-btn");
-// const searchModal = document.querySelector(".search-modal");
-
-// searchBtn.addEventListener("click", function (event) {
-//   // chat-text-box의 display 속성을 토글하여 나타내거나 숨김
-//   if (
-//     searchModal.style.display === "none" ||
-//     searchModal.style.display === ""
-//   ) {
-//     searchModal.style.display = "block";
-//   } else {
-//     searchModal.style.display = "none";
-//   }
-// });
-
-// // ===== 퀵메뉴 신청조회 닫기
-// const quickClose = document.getElementById("q-m-close");
-// const SearchModal = document.querySelector(".search-modal");
-
-// quickClose.addEventListener("click", function (event) {
-//   // chat-text-box의 display 속성을 토글하여 나타내거나 숨김
-//   if (
-//     SearchModal.style.display === "block" ||
-//     SearchModal.style.display === ""
-//   ) {
-//     SearchModal.style.display = "none";
-//   } else {
-//     SearchModal.style.display = "block";
-//   }
-// });
-
-
-
-  // FAQ 모달 창 열기
+  
+  
+  
+  // FAQ 모달 열기
   document.getElementById("FAQ-btn").addEventListener("click", function () {
     document.getElementById("FAQ-modal").style.display = "block";
   });
 
-  // FAQ 모달 창 닫기
+  // FAQ 모달 닫기
   document.querySelectorAll("#FAQ-modal .q-m-close").forEach(function (element) {
     element.addEventListener("click", function () {
       document.getElementById("FAQ-modal").style.display = "none";
     });
   });
+
+  // FAQ 모달 아코디언 메뉴기능
+  $(document).ready(function () {
+    $(".accordion-header").click(function () {
+      $(this).next(".accordion-content").slideToggle();
+      $(".accordion-content").not($(this).next()).slideUp();
+    });
+  });
+
   
-//   신청조회 모달 창 열기
+  // 신청조회 모달 열기
   document.getElementById("search-btn").addEventListener("click", function () {
     document.getElementById("search-modal").style.display = "block";
   });
-//   신청조회 모달 창 닫기
+// 신청조회 모달 닫기
   document.querySelectorAll("#search-modal .q-m-close").forEach(function (element) {
     element.addEventListener("click", function () {
       document.getElementById("search-modal").style.display = "none";
     });
   });
 
+  
   // 탑 버튼
-
   // ===== top으로 가는 버튼
   const topBtn = document.getElementById("quick_3");
   topBtn.addEventListener("click", function (event) {
@@ -187,7 +150,7 @@ window.addEventListener("load", function () {
       });
     }
   });
-
+  
   // 수직 스크롤 값 가져오기
   var scrollTop = window.scrollY || document.documentElement.scrollTop;
 
