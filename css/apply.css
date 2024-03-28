@@ -141,6 +141,7 @@ body {
   width: 132vw;
   height: 900px;
   max-width: 520px;
+  
   /* overflow-y: auto; */
   
 }
@@ -155,7 +156,7 @@ body {
   background-color: #fff;
   border-radius: 7px;
   padding-top: 25px;
-overflow-y: scroll;
+
 }
 .app-box-1200 {
   position: absolute;
@@ -425,7 +426,28 @@ select {
   background-color: #dfdfdf;
   color: #5a5a5a;
 }
-
+.find-store-result {
+  height: 232px;
+}
+.cfr-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.cfr-date{
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.cfr-store {
+  margin-bottom: 15px;
+}
+.cfr-addr {
+  margin-bottom: 15px;
+}
+.confirm-link {
+color: #44578F;
+     font-size: 1.5rem;
+text-decoration: underline;
+}
 .container.modal-open .modal {
   top: 0;
 }
