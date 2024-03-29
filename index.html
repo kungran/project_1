@@ -691,49 +691,24 @@
       </section>
 
       <!-- hun -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
       <!-- 모달 -->
       <div class="modal-wrap" id="popup">
         <div class="modal-main">
           <div class="modal-notice">
             <div class="modal-img"></div>
+            <button class="modal-bt" id="quiz-button">퀴즈 풀러 가기</button>
           </div>
-          <ul class="modal-close">
-            <!-- <li>
-              <i id="neverShowAgain">다시 보지 않기</i>
-            </li> -->
-            <li id="close">
-              <i>닫기</i>
-            </li>
-          </ul>
+          <p class="closeWrap">
+            <input type="checkbox" name="expiresChk" id="expiresChk" />
+            <label for="expiresChk">하루 동안 이 창 열지않기</label>
+            <button class="closeBtn">닫기</button>
+          </p>
         </div>
       </div>
-      <script>
-        // 모달창
-        // 모달을 숨기는 함수
-        function hideModal() {
-          document.getElementById("popup").style.display = "none";
-        }
 
-        // // "다시 보지 않기" 버튼 이벤트 리스너
-        // document.getElementById("neverShowAgain").addEventListener("click", function () {
-        //    // localStorage에 사용자의 선택 저장
-        //    localStorage.setItem("hideModal", "true");
-        //    hideModal();
-        // });
-
-        // // // 페이지 로드 시 모달 상태 확인
-        //  window.onload = function () {
-        //   // 사용자가 "다시 보지 않기"를 선택했는지 확인
-        //    if (localStorage.getItem("hideModal") === "true") {
-        //      hideModal();
-        //   }
-        // };
-
-        // "닫기" 버튼 이벤트 리스너 (선택적 구현)
-        document.getElementById("close").addEventListener("click", function () {
-          hideModal();
-        });
-      </script>
+     
       <footer>
         <div class="ft_inner">
           <div class="ft-top">

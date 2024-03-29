@@ -1,16 +1,16 @@
 window.onload = function () {
   // 모달창
   // 모달을 숨기는 함수
-  function hideModal() {
-    document.getElementById("popup").style.display = "none";
-  }
+  // function hideModal() {
+  //   document.getElementById("popup").style.display = "none";
+  // }
 
-  // // "다시 보지 않기" 버튼 이벤트 리스너
-  // document.getElementById("neverShowAgain").addEventListener("click", function () {
-  //   // localStorage에 사용자의 선택 저장
-  //   localStorage.setItem("hideModal", "true");
-  //   hideModal();
-  // });
+  // // // "다시 보지 않기" 버튼 이벤트 리스너
+  //  document.getElementById("neverShowAgain").addEventListener("click", function () {
+  //    // localStorage에 사용자의 선택 저장
+  //    localStorage.setItem("hideModal", "true");
+  //    hideModal();
+  //  });
 
   // // 페이지 로드 시 모달 상태 확인
   // window.onload = function () {
@@ -540,4 +540,24 @@ window.onload = function () {
   });
 
   // hun
+  document.getElementById('quiz-button').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none'; // 팝업 숨기기
+    document.getElementById('quiz-area').scrollIntoView(); // 퀴즈 영역으로 스크롤 이동
+  });
 };
+$(document).ready(function(){
+  $(".modal-wrap").show();
+  var $expChk = $("#expiresChk");
+  $(".closeBtn").on("click", function () {
+    //1일 동안 이 창 열지않기
+    if ($expChk.is(":checked")) {
+      // popup이라는 이름의 쿠키를 설정
+      $.cookie("popup", "none", { expires: 1, path: "/" });
+    }
+    $(".modal-wrap").hide();
+  });
+  if ($.cookie("popup") == "none") {
+    $(".modal-wrap").hide();
+  }
+});
+
