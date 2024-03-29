@@ -61,13 +61,16 @@ window.onload = function () {
     // 새로 고침 / url 입력해서 html 출력시
     // 1.스크롤바의 픽셀 위치값을 파악해서
     scy = this.document.documentElement.scrollTop;
+    const innerWidth = window.innerWidth;
     // 2.class 적용 여부 결정
-    if (scy > 0) {
-      topLogo.classList.add("logoh");
-      langBox.classList.add("logoh");
-    } else {
-      topLogo.classList.remove("logoh");
-      langBox.classList.remove("logoh");
+    if (innerWidth > 780) {
+      if (scy > 0) {
+        topLogo.classList.add("logoh");
+        langBox.classList.add("logoh");
+      } else {
+        topLogo.classList.remove("logoh");
+        langBox.classList.remove("logoh");
+      }
     }
   });
   //language
@@ -80,20 +83,60 @@ window.onload = function () {
     langM.classList.remove("show");
   });
   //qna swiper
-  const swQna = new Swiper(".sw-qna", {
-    loop: true,
-    effect: "fade",
-    speed: 300,
-    on: {
-      slidesChange: function () {
-        const idx = this.realIndex;
-        for (let menu of menus) {
-          menu.classList.remove("act");
-        }
-        menus[idx].classList.add("act");
+  //반응형 스와이퍼
+
+  let ww = window.innerWidth;
+  let swQna = null; // null로 초기화
+
+  responsiveSwiper();
+
+  function initSwiper(effect) {
+    if (swQna !== null) {
+      swQna.destroy(); // 기존 슬라이더가 존재하면 파괴
+    }
+
+    let slidesPerViewValue = 1; // 슬라이드 당 보여질 개수 기본값
+    let spaceBetweenValue = 20; // 슬라이드 사이의 간격 기본값
+
+    if (ww < 780) {
+      slidesPerViewValue = 1; // 980px 미만일 때 1.1개의 슬라이드를 보여줌
+      spaceBetweenValue = 20; // 980px 미만일 때 슬라이드 사이의 간격을 10px로 설정
+    }
+
+    swQna = new Swiper(".sw-qna", {
+      fadeEffect: { crossFade: true },
+      speed: 500,
+      loop: false,
+      slidesPerView: slidesPerViewValue, // slidesPerView 설정
+      spaceBetween: spaceBetweenValue,
+      on: {
+        slideChange: function () {
+          const idx = this.realIndex;
+          for (let menu of menus) {
+            menu.classList.remove("act");
+          }
+          menus[idx].classList.add("act");
+        },
       },
-    },
+      effect: effect,
+    });
+
+    return swQna;
+  }
+
+  function responsiveSwiper() {
+    if (ww < 780) {
+      initSwiper("slide");
+    } else if (ww >= 780) {
+      initSwiper("fade");
+    }
+  }
+
+  window.addEventListener("resize", function () {
+    ww = window.innerWidth;
+    responsiveSwiper();
   });
+
   const menus = document.querySelectorAll(".sub-qna-wrapper .qna-click-list .fn-qcl");
   function getElementIndex(element) {
     return Array.from(element.parentElement.children).indexOf(element);
@@ -112,6 +155,7 @@ window.onload = function () {
       swQna.slideTo(idx);
     });
   });
+
   // ran
 
   // hun
