@@ -596,6 +596,7 @@
   .ani-product > a > img {
     width: 260px;
   }
+
   .main-quiz {
     margin: 5% 0 20%;
   }
@@ -1203,14 +1204,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 570px) {
-  .swiper-button-prev {
-    display: none;
-  }
-  .swiper-button-next {
-    display: none;
-  }
-}
+
 @media screen and (max-width: 490px) {
   .video-iframe-box iframe:nth-child(3) {
     display: none;
@@ -1238,20 +1232,7 @@
   .top-button .search-btn {
     display: none;
   }
-  .FAQ-modal-content .FAQ-modal-inner {
-    width: 67vw;
-    padding: 20px 0 20px;
-  }
-  .FAQ-modal-content .FAQ-modal-title h2 {
-    letter-spacing: -0.26667vw;
-    font-size: 8.26667vw;
-    line-height: 1.3;
-  }
-  .FAQ-modal-content .FAQ-modal-title p {
-    letter-spacing: -0.26667vw;
-    font-size: 8.26667vw;
-    line-height: 1.3;
-  }
+
   .top-button .FAQ-btn img {
     position: absolute;
     top: -20px;
@@ -1267,21 +1248,6 @@
   }
   .top-button .shop-btn {
     display: none;
-  }
-  .FAQ-modal-content {
-    width: 80vw;
-    height: fit-content;
-    overflow: auto;
-  }
-  .accordion-header {
-    font-size: 4.26667vw;
-    line-height: 1.4;
-    padding: 4.93333vw 2.66667vw;
-  }
-  .accordion-content {
-    font-size: 3.73333vw;
-    line-height: 1.4;
-    padding: 4.93333vw 2.66667vw;
   }
 }
 @media screen and (max-width: 470px) {

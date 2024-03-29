@@ -68,37 +68,49 @@ window.addEventListener("load", function () {
     });
   });
 
-  //쇼츠 닫기버튼 클릭시 계속 재생되는 문제 해결
-  $(document).ready(function () {
+//쇼츠 닫기버튼 클릭시 계속 재생되는 문제 해결
+$(document).ready(function() {
     // 모든 모달에 대한 참조를 담을 객체
     var modals = {};
     // 모달 ID들을 배열로 초기화
-    var modalIds = ["youtube-modal", "youtube-modal-2", "youtube-modal-3", "youtube-modal-4", "youtube-modal-5", "youtube-modal-6"];
+    var modalIds = [
+        'youtube-modal', 
+        'youtube-modal-2', 
+        'youtube-modal-3', 
+        'youtube-modal-4', 
+        'youtube-modal-5', 
+        'youtube-modal-6'
+    ];
     // 각 모달 ID에 대해 반복하며 modals 객체에 jQuery 객체로 저장
-    $.each(modalIds, function (index, value) {
-      modals[value] = $("#" + value);
+    $.each(modalIds, function(index, value) {
+        modals[value] = $("#" + value);
     });
     // 모든 ".s-close" 버튼에 대한 클릭 이벤트 핸들러
-    $(".s-close").click(function () {
-      // 클릭된 버튼이 속한 모달의 ID를 찾음
-      var modalId = $(this).closest(".s-modal").attr("id");
-      // 해당 모달 내의 iframe의 src 속성을 빈 문자열로 설정
-      modals[modalId].find("iframe").attr("src", "");
-      // 선택적: 해당 모달을 숨김
-      // modals[modalId].hide();
+    $(".s-close").click(function() {
+        // 클릭된 버튼이 속한 모달의 ID를 찾음
+        var modalId = $(this).closest(".s-modal").attr("id");
+        // 해당 모달 내의 iframe의 src 속성을 빈 문자열로 설정
+        modals[modalId].find("iframe").attr("src", "");
+        // 선택적: 해당 모달을 숨김
+        // modals[modalId].hide();
     });
-  });
+});
 
-  // FAQ 모달 창 열기
+  
+  
+  
+  // FAQ 모달 열기
   document.getElementById("FAQ-btn").addEventListener("click", function () {
     document.getElementById("FAQ-modal").style.display = "block";
   });
-  // FAQ 모달 창 닫기
+
+  // FAQ 모달 닫기
   document.querySelectorAll("#FAQ-modal .q-m-close").forEach(function (element) {
     element.addEventListener("click", function () {
       document.getElementById("FAQ-modal").style.display = "none";
     });
   });
+
   // FAQ 모달 아코디언 메뉴기능
   $(document).ready(function () {
     $(".accordion-header").click(function () {
@@ -107,28 +119,28 @@ window.addEventListener("load", function () {
     });
   });
 
-  //   신청조회 모달 창 열기
+  
+  // 신청조회 모달 열기
   document.getElementById("search-btn").addEventListener("click", function () {
     document.getElementById("search-modal").style.display = "block";
   });
-  //   신청조회 모달 창 닫기
+// 신청조회 모달 닫기
   document.querySelectorAll("#search-modal .q-m-close").forEach(function (element) {
     element.addEventListener("click", function () {
       document.getElementById("search-modal").style.display = "none";
     });
   });
 
-  //   top 버튼 스크롤 기능
-  const topBtn = document.getElementById("top-btn");
-
+  
+  // 탑 버튼
+  // ===== top으로 가는 버튼
+  const topBtn = document.getElementById("quick_3");
   topBtn.addEventListener("click", function (event) {
     event.preventDefault();
-
-    console.log(window.scrollY);
-
+    // 조건문 수정
     if (window.scrollY === 0) {
       window.scrollTo({
-        top: 1050, //맨 아래 스크롤값 2952
+        top: 2952,
         behavior: "smooth",
       });
     } else {
@@ -138,15 +150,13 @@ window.addEventListener("load", function () {
       });
     }
   });
+  
+  // 수직 스크롤 값 가져오기
+  var scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-  // 화살표 이미지 회전
-  const topBtnImg = document.getElementById("top-btn-img");
-  window.addEventListener("scroll", function (scTop) {
-    scTop = window.document.documentElement.scrollTop;
-    if (scTop > 0) {
-      topBtnImg.classList.add("up");
-    } else {
-      topBtnImg.classList.remove("up");
-    }
-  });
+  // 수평 스크롤 값 가져오기
+  var scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+
+  console.log("수직 스크롤 값: " + scrollTop);
+  console.log("수평 스크롤 값: " + scrollLeft);
 });
