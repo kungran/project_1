@@ -220,7 +220,7 @@ body {
   }
   .sub-qna-wrapper .inner {
     max-width: 750px;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 0 0 120px;
     background: #a3c100; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #a3c100, #dce35b); /* Chrome 10-25, Safari 5.1-6 */
@@ -240,16 +240,19 @@ body {
     display: none;
   }
   .qna-content {
-    width: 85%;
-    margin-top: 30%;
+    width: 80%;
+    margin: 30% 5% 0;
     /* padding-bottom: 50px; */
     border-radius: 25px;
+    overflow: visible;
   }
-  .qna-content {
+
+  .sw-qna .swiper-slide {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(4.5px);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     border: 1px solid rgba(255, 255, 255, 0.37);
+    border-radius: 25px;
   }
   .sw-img-wrap {
     position: relative;
@@ -266,7 +269,7 @@ body {
     height: 100%;
     object-fit: cover;
     vertical-align: middle;
-    border-radius: 0 0 25px 25px;
+    border-radius: 25px;
   }
   .sw-qna-bg-mb {
     padding: 20px 10px;
@@ -302,7 +305,7 @@ body {
     font-size: 5.6vw;
   }
   .sw-qna-text-sub {
-    font-size: 4.2vw;
+    font-size: 3.2vw;
   }
 }
 @media screen and (max-width: 460px) {

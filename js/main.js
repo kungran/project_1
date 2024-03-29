@@ -215,7 +215,7 @@ window.onload = function () {
   var fnSvgImgChg = document.querySelector(".animate-img-b img");
   var fnSvgArea = document.querySelector(".svg-title");
 
-  fnSvgArea.addEventListener("mouseenter", function () {
+  fnSvgArea.addEventListener("click", function () {
     fnSvgImgChg.src = "images/ani-product-h-01.png";
   });
 
