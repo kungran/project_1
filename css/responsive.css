@@ -78,6 +78,9 @@
   .main-quiz .quiz-insta-bg img {
     width: 450px;
   }
+  .svg-animate-img img {
+    width: 95%;
+  }
 }
 @media all and (max-width: 1420px) {
   .header .inner {
@@ -243,6 +246,9 @@
   .ani-product > a > img {
     width: 250px;
   }
+  .main-quiz {
+    margin: 10% 0 4%;
+  }
   .main-quiz .inner {
     max-width: 890px;
   }
@@ -372,6 +378,9 @@
     padding: 0 20px;
   }
   .top-menu > li:last-of-type {
+    display: none;
+  }
+  .section-direction {
     display: none;
   }
   .main-img-area .inner {
@@ -586,9 +595,6 @@
   }
   .ani-product > a > img {
     width: 260px;
-  }
-  .section-direction {
-    display: none;
   }
   .main-quiz {
     margin: 5% 0 20%;
@@ -1262,7 +1268,6 @@
   .top-button .shop-btn {
     display: none;
   }
-
   .FAQ-modal-content {
     width: 80vw;
     height: fit-content;
