@@ -40,7 +40,7 @@ body {
 .sub-qna-wrapper {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 100px 30px;
 }
 .sub-qna-wrapper .inner {
@@ -60,8 +60,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 20px;
-  width: 50%;
+  gap: 45px;
+  width: 40%;
   height: 100%;
   margin-left: 3%;
 }
@@ -97,7 +97,8 @@ body {
 .qna-title-h2 {
   font-size: 7.2rem;
   line-height: 1.26;
-  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
+  font-family: "VitroCore";
+  text-transform: capitalize;
 }
 .xi-long-arrow-right {
   font-size: 6rem;
@@ -118,7 +119,7 @@ body {
   color: #d8d8d8;
   padding-bottom: 10px;
 }
-.qna-menu-list-focus{
+.qna-menu-list-focus {
   color: #ffffff !important;
 }
 .qna-click-list {
@@ -159,7 +160,7 @@ body {
 }
 
 .qna-content {
-  width: 42%;
+  width: 46%;
   height: 100%;
   overflow: hidden;
   border-radius: 35px;
@@ -181,7 +182,182 @@ body {
   width: 100%;
   height: 100%;
 }
-
+.fsc-none {
+  display: none;
+}
+/* 반응형 */
+@media screen and (max-width: 1240px) {
+  .qna-title-h2 {
+    font-size: 6.8rem;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .qna-title-h2 {
+    font-size: 5.8rem;
+  }
+  .qna-message-b {
+    width: 35%;
+    gap: 45px;
+  }
+  .qna-content {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .qna-title-h2 {
+    font-size: 5.8rem;
+  }
+  .qna-click-list {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .fsc-none {
+    display: block;
+  }
+  .sub-qna-wrapper {
+    padding: 100px 0;
+  }
+  .sub-qna-wrapper .inner {
+    max-width: 750px;
+    justify-content: center;
+    padding: 0 0 120px;
+    background: #a3c100; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a3c100, #dce35b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a3c100, #dce35b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .qna-message-b {
+    justify-content: flex-start;
+    position: absolute;
+    top: 35px;
+    left: 0;
+  }
+  .lined::after {
+    background-color: #e9e9e9;
+  }
+  .qna-menu-list,
+  .qna-click-list {
+    display: none;
+  }
+  .qna-content {
+    width: 85%;
+    margin-top: 30%;
+    /* padding-bottom: 50px; */
+    border-radius: 25px;
+  }
+  .qna-content {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4.5px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.37);
+  }
+  .sw-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: calc(995 / 1030 * 100%);
+  }
+  .sw-img-wrap img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 0 0 25px 25px;
+  }
+  .sw-qna-bg-mb {
+    padding: 20px 10px;
+    color: #fff;
+    text-align: left;
+  }
+  .sw-qna-text {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 2;
+  }
+  .sw-qna-text-sub {
+    font-size: 2.4rem;
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 750px) {
+  .sub-qna-wrapper .inner {
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sub-qna-wrapper .inner {
+    max-width: 460px;
+  }
+  .qna-title-h2 {
+    font-size: 4.6rem;
+  }
+  .qna-content {
+    margin-top: 38%;
+  }
+  .sw-qna-text {
+    font-size: 5.6vw;
+  }
+  .sw-qna-text-sub {
+    font-size: 4.2vw;
+  }
+}
+@media screen and (max-width: 460px) {
+  .sub-qna-wrapper .inner {
+    max-width: 430px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .sub-qna-wrapper .inner {
+    max-width: 400px;
+    padding: 0 0 80px;
+  }
+  .qna-title-h2 {
+    font-size: 4rem;
+  }
+  .qna-content {
+    margin-top: 40%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .sub-qna-wrapper .inner {
+    max-width: 370px;
+    padding: 0 0 80px;
+  }
+  .qna-title-h2 {
+    font-size: 4rem;
+  }
+  .qna-content {
+    margin-top: 44%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .sub-qna-wrapper .inner {
+    max-width: 350px;
+    padding: 0 0 80px;
+  }
+  .qna-title-h2 {
+    font-size: 3.7rem;
+  }
+  .qna-content {
+    margin-top: 46%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .sub-qna-wrapper .inner {
+    max-width: 295px;
+    padding: 0 0 50px;
+  }
+  .qna-title-h2 {
+    font-size: 3rem;
+  }
+  .qna-content {
+    margin-top: 50%;
+  }
+}
 /* ran */
 /* hun */
 

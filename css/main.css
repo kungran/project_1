@@ -219,7 +219,7 @@ body {
   height: 100px;
   text-align: center;
   font-size: 6.7rem;
-  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
+  font-family: 'VitroCore';
   z-index: 9;
 }
 
@@ -230,7 +230,7 @@ body {
   top: 5px;
   display: inline-block;
   -webkit-animation: bounce 0.3s ease 10 alternate;
-  color: #ff6200;
+  color: #ffab25;
   text-shadow: 0 1px 0 #ffffff, 0 2px 0 #ffffff, 0 3px 0 #ffffff,
     0 4px 0 #ffffff, 0 5px 0 #ffffff, 0 6px 0 transparent, 0 7px 0 transparent,
     0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0);
@@ -317,7 +317,7 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
+  font-family: 'VitroCore';
   gap: 5%;
   margin-bottom: 7%;
 }
@@ -395,7 +395,7 @@ body {
   margin: 0 auto;
   border: 1px solid #ececec;
   border-radius: 35px;
-  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
+  font-family: 'VitroCore';
   font-size: 2.2rem;
   text-align: center;
   background: #fff;
@@ -524,7 +524,7 @@ body {
 }
 .quiz-result-title {
   font-size: 4rem;
-  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
+  font-family: 'VitroCore';
   color: #4b4b4b;
   z-index: 5;
 }
@@ -543,7 +543,7 @@ body {
 }
 .sample-apply-guide {
   font-size: 2.2rem;
-  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
+  font-family: 'VitroCore';
   z-index: 5;
   margin-top: 45px;
 }
@@ -728,7 +728,7 @@ body {
 }
 .animate-img-b{
   position: relative;
-  width: 100%;
+  width: 95%;
   height: 0;
   padding-bottom: calc(246 / 418 * 100%);
 }
@@ -794,7 +794,7 @@ body {
   bottom: -10px;
   left: 0;
   font-size: 3.6rem;
-  font-family: "VITRO CORE TTF", "TTHakgyoansimJiugaeR";
+  font-family: 'VitroCore';
   z-index: 9;
   color: #333;
   cursor: pointer;
