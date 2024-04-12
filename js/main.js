@@ -223,7 +223,6 @@ window.onload = function () {
     fnSvgImgChg.src = "images/ani-product.png";
   });
 
-  AOS.init();
   const fnAnswerBox = document.querySelectorAll(".answer-box .answer-box-li");
   const fnChoiceBox = document.querySelectorAll(".choice-box .choice-box-li");
   const fnChkAnswerSub = document.querySelector(".answer-sub");
